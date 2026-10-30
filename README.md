@@ -19,6 +19,7 @@ pipeline/filtro_juridico.py            Regex jurídico: âncoras, exclusões, n�
 pipeline/geo.py                        inferência de UF e município pelo texto do ato
 pipeline/coletor_municipal.py          Querido Diário (API pública)
 pipeline/coletor_federal.py            DOU Seção 1 (INLABS ou Leitura do Jornal)
+pipeline/coletor_dioe_pr.py            Diário Oficial Executivo do Paraná (API de busca do portal dioe.pr.gov.br)
 pipeline/coletor_estadual.py           reserva estadual: notícias oficiais .gov.br (Google News RSS)
 scripts/reconhecimento.py              diagnóstico de portais para novos raspadores
 scripts/gerar_index.py                 gera index.html (GitHub Pages) a partir de dashboard.html
@@ -52,15 +53,16 @@ data/exemplo.json                      dados FICTÍCIOS para demonstração do D
 
 | Fonte | Esfera | Como foi validada |
 |---|---|---|
-| Querido Diário `/gazettes` | Municipal | parâmetros conferidos no código-fonte da API (okfn-brasil/querido-diario-api, v0.19) |
+| Querido Diário `/gazettes` | Municipal | testado ao vivo em 30/10/2026 (domínio novo api.queridodiario.org.br); filtro calibrado com 78 diários reais |
 | INLABS (XML) | Federal | protocolo do script oficial da Imprensa Nacional; formato testado com XML real |
-| Leitura do Jornal in.gov.br | Federal | estrutura `#params`/`jsonArray` testada com JSON real de set/2026 |
+| Leitura do Jornal in.gov.br | Federal | estrutura `#params`/`jsonArray` confirmada pelo GitHub Actions em 30/10/2026 |
 | Google News RSS `.gov.br` | Estadual (reserva) | formato RSS 2.0 padrão; registros marcados como `fonte_secundaria` |
-| DIOE/PR direto | Estadual | **pendente**: depende do `debug/` gerado pelo reconhecimento |
+| DIOE/PR (dioe.pr.gov.br) | Estadual | API de busca mapeada ao vivo em 30/10/2026; testes com trechos reais da edição 12.254 |
 
-Nenhuma das fontes foi chamada ao vivo durante o desenvolvimento (rede
-bloqueada no ambiente de desenvolvimento). A primeira execução no Actions é o
-teste real: confira `data/meta.json` e o resumo de cada execução.
+Confira `data/meta.json` e o resumo de cada execução no Actions para o
+estado de cada fonte. O portal antigo do DIOE (www.documentos.dioe.pr.gov.br)
+e o host data.queridodiario.org.br falham no TLS; os coletores usam os
+endereços que funcionam.
 
 ## Dashboard
 
