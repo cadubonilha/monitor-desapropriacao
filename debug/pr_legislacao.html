@@ -1,0 +1,379 @@
+
+
+
+
+
+
+
+
+<head>
+<title>Sistema Legisla&ccedil;&atilde;o</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/default.css;jsessionid=60SHJmub3cj26wkpouGbPMmMsopkIG-AO0fPBwjb.sparana00940" rel="stylesheet" type="text/css" />
+<link href="css/screen.css;jsessionid=60SHJmub3cj26wkpouGbPMmMsopkIG-AO0fPBwjb.sparana00940" rel="stylesheet" type="text/css" />
+</head>
+
+
+<html>
+<body id="body_login">
+	<div class="login_bg_br">
+		<div class="login_corpo">
+			<div align=center>
+				<div id="login" align="center">
+					<table class="login">
+						<tr>
+							<td class="login_label">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Avisos -->
+
+
+<!-- Erros -->
+
+
+<!-- Sucesso -->
+
+
+<!-- Struts Validator -->
+
+
+<!-- Mensagens em Alert -->
+
+
+<div id="msg" style="display: none;" ></div>
+
+<script type="text/javascript">
+	if( (typeof globalMsgError) != "undefined" && globalMsgError != '' ) {
+		var divmsg = document.getElementById('msg');
+		divmsg.innerHTML = globalMsgError;
+		divmsg.style.display = 'block';
+	}
+</script>
+
+<!-- Mensagens do Verificador.js -->
+<div id="__msgVerificador"></div>
+<div id="__divTopoDirMsgFlutua" class="flutua"></div>
+							</td>
+						</tr>
+						<tr>
+							<td class="login_label"></td>
+						</tr>
+						<tr>
+							<td>
+
+
+
+	<form id='autoatendimento' action='https://www.sentinela.pr.gov.br/sentinela/portalAutoatendimento.do' method='post'>
+		<input type='hidden' name='acao'>
+		<input type='hidden' name='voltar' value='https://www.legislacao.pr.gov.br/legislacao'>
+	</form>
+<form name="formLogin" id="formLogin" data-ajax="false" action="/legislacao/entrada.do?action=carregarEntrada"  onsubmit="return efetuarLoginSentinela()"  method="post">
+<table border= '0' bordercolor='green' class="login">
+<tr valign='top'>
+	<td>
+		<table border ='0'  bordercolor='white' class="login_table">
+		<tr>
+			<td class="login_label">Usu&aacute;rio</td><td><input type="text" name="CHAVE" id="CHAVE" size="20" maxlength="50" value="" style="border: 1px solid black"></td>
+		</tr>
+		<tr>
+			<td class="login_label">Senha</td><td><input type="password" name="CHAVE_ENCRIPT" id="CHAVE_ENCRIPT" size="20" style="border: 1px solid black"></td>
+		</tr>
+		<tr>
+			<td class="login_versao">Versão 2.7.0</td><td nowrap="nowrap"><input type="submit" value="Entrar" class="login_botao" >&nbsp;&nbsp;&nbsp;&nbsp;<img src="?SENTINELA=SENTINELA_REQUEST_IMAGE&IMAGEM=/gov/pr/celepar/sentinela/authentication/jaas/module/JBoss7JDBCLoginModule.png"  border="0"  align="top" title="null" />			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+	<tr>
+		 <td colspan='2' style='text-align:center'>
+			 <a class="form_opcoes"  href="javascript:acessarAutoAtendimento();">N&atilde;o consigo acessar o sistema</a>
+		</td>
+	</tr>
+<tr>
+	<td></td>
+</tr>
+</table> 
+<input type="hidden" name="SENTINELA" value="SENTINELA_REQUEST_LOGIN">
+</form>
+<script type="text/javascript">
+function efetuarLoginSentinela(){		
+		if(window.document.formLogin){		
+				var chave = window.document.formLogin.CHAVE;		
+				if (chave.value.replace(/^[\s]+/g,'') == '') {			
+					alert('Informe o campo Usu&aacute;rio!');		
+						chave.focus(); 
+						return false; 
+				}	
+				var senha = window.document.formLogin.CHAVE_ENCRIPT;
+				if (senha.value.replace(/^[\s]+/g,'') == '') {
+						alert('Informe o campo Senha!'); 
+						senha.focus(); 
+						return false; 
+				}
+				window.document.formLogin.SENTINELA.value='SENTINELA_REQUEST_LOGIN';		
+				execDigester();		
+				return true;	
+		}	
+		else{		
+				return false;	
+		}	
+}
+function esqueciSenha(){
+	if(window.document.formLogin){
+		window.document.formLogin.SENTINELA.value="SENTINELA_REQUEST_LOST_PASSWORD";
+		window.document.formLogin.submit();
+	}
+}
+function mudarSenha(){  
+ 		if(window.document.formLogin){  
+ 				window.document.formLogin.SENTINELA.value="SENTINELA_REQUEST_CHANGE_PASSWORD_LOGIN";   
+				window.document.formLogin.submit();   
+		}   
+}   
+function retornaLogin(){
+	if(window.document.formLogin){
+		window.document.formLogin.SENTINELA.value="SENTINELA_REQUEST_LOGOFF";
+		window.document.formLogin.submit();
+	}
+}
+function efetuarTrocaSenha(){
+	if(window.document.formLogin){
+		var senhaatual = window.document.formLogin.SENHA_ATUAL;
+		var senhanova = window.document.formLogin.NEW_SENHA;
+		var senhanova2 = window.document.formLogin.NEW_SENHA_CONF;
+		var chave = window.document.formLogin.CHAVE;
+		if (chave.value.replace(/^[\s]+/g,'') == '') {
+		alert('Informe o campo Usu&aacute;rio!'); chave.focus(); return false; }
+		if (senhaatual.value.replace(/^[\s]+/g,'') == '') {
+			alert('Informe o campo Senha!'); senhaatual.focus(); return false; }
+		if (senhanova.value.replace(/^[\s]+/g,'') == '') {
+			alert('Informe o campo Nova Senha!'); senhanova.focus(); return false; }
+		if (senhanova2.value.replace(/^[\s]+/g,'') == '') {
+			alert('Informe o campo Redigite Senha!'); senhanova2.focus(); return false; }
+		if (senhaatual.value == senhanova.value) {
+			alert('Valor do campo Nova Senha deve ser diferente do valor do campo Senha!'); senhanova.focus(); return false;}
+		if (senhanova.value != senhanova2.value) {
+			alert('Valores dos campos Nova Senha e Redigite Senha são diferentes!'); senhanova.focus(); return false;}
+		return true;
+	}else{
+		return false;
+	}
+}
+function efetuarEsqueciSenha(){
+	if(window.document.formLogin){
+		var chave = window.document.formLogin.CHAVE;
+		if (chave.value.replace(/^[\s]+/g,'') == '') {
+		alert('Informe o campo Usu&aacute;rio!'); chave.focus(); return false; }
+		var cpf = window.document.formLogin.CPF;
+		if (cpf.value.replace(/^[\s]+/g,'') == '') {
+			alert('Informe o campo CPF!'); cpf.focus(); return false; }
+		return true;
+	}else{
+		return false;
+	}
+}
+function execDigester(){
+
+	if(window.document.formLogin){
+	var pass = window.document.formLogin.CHAVE_ENCRIPT.value;
+	var login = window.document.formLogin.CHAVE.value;
+	var code = "148db2c2-43d5-421d-a3f8-d16038279178";
+	var key = hex_md5(login + pass);
+	key = code + key;
+	var out = hex_md5(key);
+	window.document.formLogin.CHAVE_ENCRIPT.value = out;
+	}
+		return false;
+}
+// algorit: md5
+var hexcase = 0,b64pad  = "",chrsz   = 8;
+function hex_md5(s){ return binl2hex(core_md5(str2binl(s), s.length * chrsz));}
+function b64_md5(s){ return binl2b64(core_md5(str2binl(s), s.length * chrsz));}
+function str_md5(s){ return binl2str(core_md5(str2binl(s), s.length * chrsz));}
+function hex_hmac_md5(key, data) { return binl2hex(core_hmac_md5(key, data)); }
+function b64_hmac_md5(key, data) { return binl2b64(core_hmac_md5(key, data)); }
+function str_hmac_md5(key, data) { return binl2str(core_hmac_md5(key, data)); }
+function md5_vm_test(){
+ return hex_md5("abc") == "900150983cd24fb0d6963f7d28e17f72";
+}
+function core_md5(x, len){
+  x[len >> 5] |= 0x80 << ((len) % 32);
+  x[(((len + 64) >>> 9) << 4) + 14] = len;
+  var a =  1732584193,b = -271733879,c = -1732584194,d =  271733878;
+  for(var i = 0; i < x.length; i += 16)
+{
+    var olda = a, oldb = b, oldc = c, oldd = d;
+    a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
+    d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
+    c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
+   b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
+    a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
+    d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
+    c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
+    b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
+    a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
+    d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
+    c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
+    b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
+    a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
+    d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
+    c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
+    b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
+    a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
+    d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
+    c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
+    b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
+    a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
+    d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
+    c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
+    b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
+    a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
+    d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
+    c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
+    b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
+    a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
+    d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
+    c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
+    b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
+    a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
+    d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
+    c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
+    b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
+    a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
+    d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
+    c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
+    b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
+    a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
+    d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
+    c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
+    b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
+    a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
+    d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
+    c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
+    b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
+    a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
+    d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
+    c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
+    b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
+    a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
+    d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
+    c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
+    b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
+    a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
+    d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
+    c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
+    b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
+    a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
+    d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
+    c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
+    b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
+    a = safe_add(a, olda);
+    b = safe_add(b, oldb);
+    c = safe_add(c, oldc);
+    d = safe_add(d, oldd);
+  }
+  return Array(a, b, c, d);}
+function md5_cmn(q, a, b, x, s, t){
+ return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
+}
+function md5_ff(a, b, c, d, x, s, t){
+ return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+}
+function md5_gg(a, b, c, d, x, s, t){
+ return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+}
+function md5_hh(a, b, c, d, x, s, t){
+ return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+}
+function md5_ii(a, b, c, d, x, s, t){
+ return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+}
+function core_hmac_md5(key, data){
+  var bkey = str2binl(key);  if(bkey.length > 16) bkey = core_md5(bkey, key.length * chrsz);  var ipad = Array(16), opad = Array(16);  for(var i = 0; i < 16; i++){    ipad[i] = bkey[i] ^ 0x36363636;    opad[i] = bkey[i] ^ 0x5C5C5C5C;  }  var hash = core_md5(ipad.concat(str2binl(data)), 512 + data.length * chrsz);  return core_md5(opad.concat(hash), 512 + 128);}
+function safe_add(x, y){
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF), msw = (x >> 16) + (y >> 16) + (lsw >> 16);  return (msw << 16) | (lsw & 0xFFFF);}
+function bit_rol(num, cnt){
+ return (num << cnt) | (num >>> (32 - cnt));}
+function str2binl(str){
+  var bin = Array(), mask = (1 << chrsz) - 1;  for(var i = 0; i < str.length * chrsz; i += chrsz)    bin[i>>5] |= (str.charCodeAt(i / chrsz) & mask) << (i%32);  return bin;}
+function binl2str(bin){
+  var str = "", mask = (1 << chrsz) - 1;  for(var i = 0; i < bin.length * 32; i += chrsz)    str += String.fromCharCode((bin[i>>5] >>> (i % 32)) & mask);  return str;}
+function binl2hex(binarray){
+  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef", str = "";  for(var i = 0; i < binarray.length * 4; i++){
+    str += hex_tab.charAt((binarray[i>>2] >> ((i%4)*8+4)) & 0xF) +           hex_tab.charAt((binarray[i>>2] >> ((i%4)*8  )) & 0xF);  }
+  return str;}
+function binl2b64(binarray){
+  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",str = "";  for(var i = 0; i < binarray.length * 4; i += 3){
+    var triplet = (((binarray[i   >> 2] >> 8 * ( i   %4)) & 0xFF) << 16)                | (((binarray[i+1 >> 2] >> 8 * ((i+1)%4)) & 0xFF) << 8 )                |  ((binarray[i+2 >> 2] >> 8 * ((i+2)%4)) & 0xFF);
+  for(var j = 0; j < 4; j++){
+      if(i * 8 + j * 6 > binarray.length * 32) str += b64pad;      else str += tab.charAt((triplet >> 6*(3-j)) & 0x3F);    }
+  }
+  return str;
+}
+</script>
+<script type="text/javascript">
+function SEN_reload(){
+window.location.href=window.location.href;
+}
+var wSEN_re=setInterval('SEN_reload()',600000);
+</script><script type="text/javascript">
+	 function acessarAutoAtendimento() { 
+		 frmauto = document.getElementById('autoatendimento');
+		 frmauto.submit();
+	 }
+	</script>
+</td>
+						</tr>
+						<tr>
+							<td align="center"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<div id="rodape">
+	<table align="center" cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<td><a href="http://www.pr.gov.br/" target="_blank"> <img
+					src="/legislacao/images/brasao_gov.jpg"
+					width="69" height="79" border="0">
+			</a></td>
+			<td class="text_rodape">Melhor visualizado em 800x600 <br />pelo
+				navegador Mozilla Firefox 2. <br />Vers&atilde;o 2.12.62 30/09/2026
+			</td>
+			<td><a href="http://www.celepar.br/" target="_blank"> <img
+					src="/legislacao/images/logo_celepar.jpg"
+					width="69" height="79" border="0">
+			</a></td>
+		</tr>
+	</table>
+	<!-- Link para download do Firefox -->
+	<div id="logos_download" style="padding-top: 20px;" align="center">
+		<a href="http://www.mozilla.com/" target="_blank"> <img
+			src="/legislacao/images/get_firefox_2.png"
+			title="Obtenha aqui o Mozilla Firefox para utilizar o sistema"
+			width="105" height="31" border="0"></a> &nbsp;&nbsp;&nbsp; <a
+			href="http://www.softwarelivreparana.org.br/" target="_blank"><img
+			src="/legislacao/images/logo_sfw_livre_pr.png"
+			border="0"></a>
+	</div>
+	<!-- Link para download do Firefox -->
+</div>
+
+</body>
+</html>
