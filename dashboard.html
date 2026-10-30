@@ -1,454 +1,753 @@
 <title>Monitor de Desapropriações</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Atos declaratórios de desapropriação publicados em Diários Oficiais (fase administrativa).">
+<meta name="description" content="Barioni & Macedo Advogados · decretos de desapropriação publicados em Diários Oficiais, na fase administrativa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
 <style>
-/* Layout: cabeçalho institucional, faixa de filtros, resumo, lista de atos com o trecho do decreto em destaque. */
-:root{
-  --bg:#f5f7f6; --surface:#ffffff; --surface-2:#eef2f0; --line:#d6dedb; --fg:#16211d; --muted:#5a6964;
-  --accent:#17604b; --accent-fg:#ffffff; --accent-soft:#dcebe5; --mark:#fbe7a6;
-  --ok:#1e7a4f; --warn:#a86a06; --low:#8a5a5a;
-  --fed:#2c4f8a; --est:#7a4a12; --mun:#17604b;
-  --font-ui:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --font-data:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
-  --r:6px;
+/* Estilo: achromatic-ledger (taste-skill, semente 1094432228) com a marca Barioni & Macedo.
+   Shell "open plane": barra lateral de 248px no fundo da página, sem barra superior.
+   Grade: tela fluida com 40px de margem e 12 colunas de gap 20px. A 1440px a área útil é
+   1440 - 248 - 2 x 40 = 1112px; 12c + 11 x 20 = 1112 dá c = 74,33; span 8 = 734,7 e span 4 = 357,3;
+   734,7 + 20 + 357,3 = 1112, então os cartões fecham nas duas bordas. */
+:root {
+  --ground: #f5f5f7;  --surface: #ffffff;  --raised: #f2f2f4;  --active: #e8e8ed;
+  --border: #e3e3e8;  --rule: #eeeef1;     --control: #d2d2d7;
+  --text: #16263a;    --muted: #556070;    --faint: #646d7a;
+  --accent: #7c2832;  /* bordô da marca: só no dado principal e no foco */
+  --accent-tint: #f6ecee;
+  --primary: #16263a; --primary-ink: #ffffff;
+  --positive: #247b50; --negative: #b3261e;
+  --pill-neutral-bg: #ececf0; --pill-neutral-ink: #2c3a4d;
+  --pill-warning-bg: #fffbeb; --pill-warning-ink: #92400e;
+  --chart-1: var(--accent); --chart-muted: #c7cbd3; --grid: #ececf0; --axis-ink: var(--muted); --ink: var(--text);
+  --chart-span: 0.06;
+
+  --font: "Poppins", "SF Pro Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-title: 28px; --fs-section: 16px; --fs-lead: 34px; --fs-kpi: 24px; --fs-body: 14px; --fs-small: 12px;
+
+  --sidebar: 248px; --pad: 40px; --gap: 20px; --card-pad: 24px;
+  --radius-card: 16px; --radius-control: 999px; --radius-chip: 999px;  /* par suave: 16 / pílula */
+  --control-height: 36px; --nav-row: 36px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1); --t-hover: 150ms; --t-ui: 240ms;
+  color-scheme: light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0f1513; --surface:#161e1b; --surface-2:#1d2723; --line:#2c3833; --fg:#e3ebe7; --muted:#97a6a0;
-  --accent:#5cc49c; --accent-fg:#0c1411; --accent-soft:#1f3a30; --mark:#5b4a12;
-  --ok:#62c48f; --warn:#e0a94a; --low:#d19a9a; --fed:#8fb0e8; --est:#e0ad6e; --mun:#5cc49c; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0f1513; --surface:#161e1b; --surface-2:#1d2723; --line:#2c3833; --fg:#e3ebe7; --muted:#97a6a0;
-  --accent:#5cc49c; --accent-fg:#0c1411; --accent-soft:#1f3a30; --mark:#5b4a12;
-  --ok:#62c48f; --warn:#e0a94a; --low:#d19a9a; --fed:#8fb0e8; --est:#e0ad6e; --mun:#5cc49c; color-scheme:dark}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --ground: #000000; --surface: #111113; --raised: #1c1c1f; --active: #2a2a2e;
+  --border: #232327; --rule: #1d1d21; --control: #3a3a40;
+  --text: #f5f5f7; --muted: #b4b6bd; --faint: #9a9ca4;
+  --accent: #d9707d; --accent-tint: #3a1d22;
+  --primary: #f5f5f7; --primary-ink: #111113;
+  --positive: #3fc07a; --negative: #e5566f;
+  --pill-neutral-bg: #2a2a2e; --pill-neutral-ink: #e6e6ea;
+  --pill-warning-bg: #2b2414; --pill-warning-ink: #e5a93b;
+  --chart-muted: #4a4c53; --grid: #242428; --chart-span: 0.12;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --ground: #000000; --surface: #111113; --raised: #1c1c1f; --active: #2a2a2e;
+  --border: #232327; --rule: #1d1d21; --control: #3a3a40;
+  --text: #f5f5f7; --muted: #b4b6bd; --faint: #9a9ca4;
+  --accent: #d9707d; --accent-tint: #3a1d22;
+  --primary: #f5f5f7; --primary-ink: #111113;
+  --positive: #3fc07a; --negative: #e5566f;
+  --pill-neutral-bg: #2a2a2e; --pill-neutral-ink: #e6e6ea;
+  --pill-warning-bg: #2b2414; --pill-warning-ink: #e5a93b;
+  --chart-muted: #4a4c53; --grid: #242428; --chart-span: 0.12;
+  color-scheme: dark;
+}
 
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--font-ui);font-size:15px;line-height:1.5}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-header.top{background:var(--surface);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;padding-block:20px 16px}
-.marca small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.marca h1{margin:2px 0 0;font-size:22px;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
-.marca p{margin:4px 0 0;color:var(--muted);font-size:13px;max-width:62ch}
-.fonte{display:flex;flex-direction:column;gap:6px;align-items:flex-end;font-size:12px;color:var(--muted);min-width:0}
-.fonte .acoes{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
-button,.btn{font:inherit;font-size:13px;font-weight:600;border-radius:var(--r);border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:7px 12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;line-height:1.2}
-button:hover,.btn:hover{border-color:var(--accent)}
-.btn.primario{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.aviso{margin-top:14px;padding:10px 14px;border-radius:var(--r);background:var(--accent-soft);font-size:13px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.aviso.erro{background:color-mix(in srgb,var(--low) 18%,var(--surface))}
-.carregar{display:none;margin-top:12px;gap:8px;flex-wrap:wrap;align-items:center}
-.carregar.aberto{display:flex}
-.carregar input[type=url]{flex:1 1 320px;min-width:0}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--ground); color: var(--text); font: 400 var(--fs-body)/20px var(--font); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+svg { display: block; max-width: 100%; }
+button, input, select { font: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.num, table, .kpi-value { font-variant-numeric: tabular-nums; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-main.wrap{padding-block:18px 48px;display:flex;flex-direction:column;gap:18px}
-.filtros{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px}
-.filtros .busca{grid-column:1/-1}
-label.campo{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:0}
-input,select{font:inherit;font-size:14px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:7px 9px;min-width:0;width:100%}
-.chips{display:flex;flex-wrap:wrap;gap:6px;grid-column:1/-1;align-items:center}
-.chips span.rot{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:4px}
-.chip{border-radius:999px;padding:4px 11px;font-size:12px;font-weight:600}
-.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
-.limpar{justify-self:start}
+/* ---------- shell ---------- */
+.app { display: grid; grid-template-columns: var(--sidebar) minmax(0, 1fr); min-height: 100svh; }
+.sidebar { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; padding: 28px 16px 20px; padding-left: max(16px, env(safe-area-inset-left, 0px)); overflow: auto; border-right: 1px solid var(--border); }
+.brand { display: flex; align-items: center; gap: 10px; padding: 0 8px; }
+.brand svg { width: 34px; height: 22px; flex: none; }
+.brand b { display: block; font-size: 17px; line-height: 20px; font-weight: 600; letter-spacing: -0.01em; }
+.brand span { display: block; font-size: var(--fs-small); line-height: 16px; color: var(--muted); }
+.scope { margin: 22px 8px 0; padding: 10px 12px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); }
+.scope small { display: block; font-size: var(--fs-small); color: var(--muted); }
+.scope strong { display: block; font-weight: 500; }
+.group-label { margin: 28px 8px 8px; font-size: var(--fs-small); color: var(--faint); }
+.nav-item { display: flex; align-items: center; gap: 10px; height: var(--nav-row); margin-bottom: 2px; padding: 0 10px; border-radius: 10px; color: var(--muted); transition: background-color var(--t-hover) ease, color var(--t-hover) ease; }
+.nav-item svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.nav-item:hover { background: var(--raised); color: var(--text); }
+.nav-item[aria-current="page"] { background: var(--active); color: var(--text); }
+.sidebar .bottom { margin-top: auto; padding: 16px 8px 0; color: var(--muted); font-size: var(--fs-small); line-height: 18px; }
+.sidebar .bottom strong { color: var(--text); font-weight: 500; }
+.topbar { display: none; }
+.canvas { min-width: 0; padding: 36px var(--pad) 56px; padding-right: max(var(--pad), env(safe-area-inset-right, 0px)); }
 
-.resumo{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:18px}
-@media (max-width:760px){.resumo{grid-template-columns:1fr}}
-.numeros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.numeros div{background:var(--surface);padding:12px 14px}
-.numeros b{display:block;font-family:var(--font-data);font-size:24px;font-weight:500;font-variant-numeric:tabular-nums}
-.numeros span{font-size:12px;color:var(--muted)}
-.porUF{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;min-width:0}
-.porUF h2,.lista-cab h2{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.barras{display:grid;grid-template-columns:auto 1fr auto;gap:5px 10px;align-items:center;font-size:13px}
-.barras button{all:unset;cursor:pointer;font-family:var(--font-data);font-weight:500}
-.barras button:focus-visible{outline:2px solid var(--accent)}
-.barra{height:10px;background:var(--surface-2);border-radius:3px;overflow:hidden}
-.barra i{display:block;height:100%;background:var(--accent);border-radius:3px}
-.barras em{font-style:normal;font-family:var(--font-data);font-variant-numeric:tabular-nums;color:var(--muted);text-align:right}
+/* ---------- título ---------- */
+.title-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.title-row h1 { font-size: var(--fs-title); line-height: 34px; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
+.title-row .sub { margin-top: 6px; max-width: 68ch; color: var(--muted); font-size: 15px; line-height: 22px; }
+.title-row .sub strong { color: var(--text); font-weight: 500; }
+.title-actions { display: flex; align-items: center; gap: 12px; flex: none; }
+.stamp { color: var(--faint); font-size: var(--fs-small); white-space: nowrap; }
 
-.lista-cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
-.lista-cab select{width:auto}
-.atos{display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0}
-.ato{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--mun);border-radius:var(--r);padding:14px 16px;display:grid;gap:8px;min-width:0}
-.ato[data-esfera="Federal"]{border-left-color:var(--fed)}
-.ato[data-esfera="Estadual"]{border-left-color:var(--est)}
-.ato .linha1{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-size:13px;color:var(--muted)}
-.ato time{font-family:var(--font-data);color:var(--fg);font-variant-numeric:tabular-nums}
-.pill{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid currentColor}
-.pill.Federal{color:var(--fed)}.pill.Estadual{color:var(--est)}.pill.Municipal{color:var(--mun)}
-.ato h3{margin:0;font-size:16px;font-weight:600;line-height:1.35;text-wrap:balance}
-.ato h3 .num{font-family:var(--font-data);font-weight:500}
-.trecho{margin:0;font-size:14px;line-height:1.6;color:var(--fg);background:var(--surface-2);padding:10px 12px;border-radius:var(--r);overflow-wrap:anywhere}
-mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
-.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}
-.tag{border:1px solid var(--line);border-radius:4px;padding:1px 7px;color:var(--muted);white-space:nowrap}
-.tag.fim{border-color:transparent;background:var(--accent-soft);color:var(--fg)}
-.tag.dado{font-family:var(--font-data);color:var(--fg)}
-.tag.alerta{border-color:var(--warn);color:var(--warn)}
-.conf{display:inline-flex;align-items:center;gap:5px;font-weight:600}
-.conf::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
-.conf.alta{color:var(--ok)}.conf.media{color:var(--warn)}.conf.baixa{color:var(--low)}
-.rodape-ato{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center}
-.vazio{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px;text-align:center;color:var(--muted)}
-.mais{align-self:center}
-footer.wrap{padding-block:0 32px;font-size:12px;color:var(--muted)}
-@media (prefers-reduced-motion:no-preference){.ato{transition:border-color .15s}}
+/* ---------- painéis ---------- */
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
+.grid.top { align-items: start; }
+.span-8 { grid-column: span 8; } .span-4 { grid-column: span 4; } .span-12 { grid-column: 1 / -1; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); padding: var(--card-pad); min-width: 0; }
+.panel > header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.panel h2 { font-size: var(--fs-section); line-height: 22px; font-weight: 600; letter-spacing: -0.005em; }
+.meta { color: var(--faint); font-size: var(--fs-small); }
+
+/* KPIs: uma faixa dividida, rótulo acima do número, o primeiro é a resposta da tela */
+.kpis { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1fr; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); margin-bottom: var(--gap); }
+.kpi { padding: 20px var(--card-pad); min-width: 0; }
+.kpi + .kpi { border-left: 1px solid var(--border); }
+.kpi-label { color: var(--muted); }
+.kpi-value { margin-top: 8px; font-size: var(--fs-kpi); line-height: 30px; font-weight: 500; letter-spacing: -0.01em; }
+.kpi.lead .kpi-value { font-size: var(--fs-lead); line-height: 40px; }
+.kpi-value small { font-size: 14px; color: var(--muted); font-weight: 400; margin-left: 4px; letter-spacing: 0; }
+.delta { margin-top: 6px; font-size: var(--fs-small); color: var(--muted); }
+
+/* gráfico e lista de UFs */
+.chart { min-width: 0; }
+.uf-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; padding: 9px 0; cursor: pointer; border-radius: 0; }
+.uf-list li + li { border-top: 1px solid var(--rule); }
+.uf-list li .bar { grid-column: 1 / -1; height: 2px; margin-top: 6px; background: var(--chart-muted); }
+.uf-list li:first-child .bar { background: var(--text); }
+.uf-list li[aria-pressed="true"] span:first-child { font-weight: 600; }
+.uf-list li:hover span:first-child { text-decoration: underline; text-underline-offset: 3px; }
+.uf-list .n { color: var(--text); font-weight: 500; }
+
+/* filtros */
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 32px 0 16px; }
+.filters .spacer { flex: 1; }
+.segmented { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--active); }
+.segmented button { height: 30px; padding: 0 14px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; transition: background-color var(--t-hover) ease, color var(--t-hover) ease; }
+.segmented button:hover { color: var(--text); }
+.segmented button[aria-pressed="true"] { background: var(--surface); color: var(--text); font-weight: 500; }
+.select { height: var(--control-height); padding: 0 34px 0 14px; border: 1px solid var(--control); border-radius: var(--radius-control); background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5 6 7.5 9 4.5' fill='none' stroke='%23556070' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") right 12px center / 12px no-repeat; appearance: none; max-width: 210px; cursor: pointer; }
+.search { position: relative; flex: 0 1 300px; min-width: 200px; }
+.search input { width: 100%; height: var(--control-height); padding: 0 14px 0 38px; border: 1px solid var(--control); border-radius: var(--radius-control); background: var(--surface); }
+.search input::placeholder { color: var(--faint); }
+.search svg { position: absolute; left: 14px; top: 50%; width: 15px; height: 15px; transform: translateY(-50%); fill: none; stroke: var(--muted); stroke-width: 1.5; pointer-events: none; }
+
+/* botões */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: var(--control-height); padding: 0 16px; border-radius: var(--radius-control); border: 1px solid var(--control); background: var(--surface); font-weight: 500; cursor: pointer; white-space: nowrap; transition: background-color var(--t-hover) ease, transform 120ms var(--ease), opacity var(--t-hover) ease; }
+.btn:hover { background: var(--raised); }
+.btn:active { transform: scale(0.98); }
+.btn.primary { background: var(--primary); color: var(--primary-ink); border-color: transparent; }
+.btn.primary:hover { opacity: 0.88; }
+.btn.secondary { background: var(--active); border-color: transparent; }
+.btn.secondary:hover { background: var(--control); }
+.btn[aria-disabled="true"] { cursor: not-allowed; opacity: 0.6; }
+.btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* tabela de atos */
+.list-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; }
+.atos-table { table-layout: fixed; }
+.atos-table td { overflow-wrap: break-word; hyphens: manual; }
+thead th { height: 36px; padding: 0 12px; text-align: left; font-weight: 400; font-size: var(--fs-small); color: var(--muted); white-space: nowrap; border-bottom: 1px solid var(--border); }
+thead th:first-child, tbody td:first-child { padding-left: 0; }
+thead th:last-child, tbody td:last-child { padding-right: 0; }
+tbody td { padding: 14px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tbody tr { cursor: pointer; transition: background-color var(--t-hover) ease; }
+tbody tr:hover td { background: var(--raised); }
+tbody tr[aria-selected="true"] td { background: var(--active); }
+tbody tr:last-child td { border-bottom: 0; }
+td .main { display: block; font-weight: 500; }
+td .sub { display: block; margin-top: 3px; font-size: var(--fs-small); line-height: 16px; color: var(--muted); }
+td.date { white-space: nowrap; }
+.track { position: relative; display: block; height: 4px; margin-top: 8px; border-radius: 999px; background: var(--rule); overflow: hidden; }
+.track i { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 999px; }
+.dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 6px; vertical-align: 2px; }
+.more { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 16px; }
+
+/* painel de detalhe */
+.detail { position: sticky; top: 24px; }
+.detail .kind { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.pill { display: inline-flex; align-items: center; height: 22px; padding: 0 10px; border-radius: 999px; font-size: var(--fs-small); font-weight: 500; background: var(--pill-neutral-bg); color: var(--pill-neutral-ink); white-space: nowrap; flex: none; }
+.pill.warn { background: var(--pill-warning-bg); color: var(--pill-warning-ink); }
+.detail h2 { margin-top: 12px; font-size: 20px; line-height: 26px; letter-spacing: -0.015em; }
+.detail .org { margin-top: 4px; color: var(--muted); }
+.detail .excerpt { margin-top: 18px; padding: 16px; border-radius: 12px; background: var(--raised); font-size: 14px; line-height: 22px; max-height: 300px; overflow: auto; }
+mark { background: var(--accent-tint); color: inherit; border-radius: 3px; padding: 0 1px; text-decoration: underline 1px var(--accent); text-underline-offset: 3px; }
+.facts { margin-top: 18px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 16px; }
+.facts dt { color: var(--muted); }
+.facts dd { text-align: right; font-weight: 500; overflow-wrap: anywhere; }
+.clock { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--rule); }
+.clock h3 { font-size: var(--fs-body); font-weight: 600; }
+.clock p { margin-top: 4px; color: var(--muted); font-size: 13px; line-height: 19px; }
+.clock .track { height: 6px; margin-top: 12px; }
+.clock .ends { display: flex; justify-content: space-between; margin-top: 6px; font-size: var(--fs-small); color: var(--muted); }
+.detail .actions { display: grid; gap: 8px; margin-top: 22px; }
+.detail .actions .btn { width: 100%; }
+.detail .note { margin-top: 12px; font-size: var(--fs-small); line-height: 17px; color: var(--muted); }
+.back { display: none; }
+
+/* fontes e coleta */
+.src-table td { vertical-align: baseline; cursor: default; }
+.src-table tbody tr { cursor: default; }
+.src-table tbody tr:hover td { background: none; }
+th.n, td.n { text-align: right; }
+.loader { display: grid; gap: 14px; }
+.loader .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.loader input[type="url"] { flex: 1 1 320px; min-width: 0; height: var(--control-height); padding: 0 14px; border: 1px solid var(--control); border-radius: var(--radius-control); background: var(--surface); }
+.notice { margin-bottom: var(--gap); padding: 12px 16px; border-radius: 12px; background: var(--pill-warning-bg); color: var(--pill-warning-ink); font-size: 13px; line-height: 19px; }
+.notice.error { background: color-mix(in srgb, var(--negative) 12%, var(--surface)); color: var(--negative); }
+.empty { padding: 28px 16px; border: 1px dashed var(--control); border-radius: 12px; color: var(--muted); text-align: center; }
+.law { color: var(--muted); font-size: 13px; line-height: 20px; }
+.law + .law { margin-top: 10px; }
+.law strong { color: var(--text); font-weight: 500; }
+[hidden] { display: none !important; }
+
+/* ---------- tablet e celular ---------- */
+@media (max-width: 1180px) {
+  .detail-col { display: none; }
+  .list-col { grid-column: 1 / -1; }
+  .detail-col.open { display: block; position: fixed; inset: 0; z-index: 30; overflow: auto; background: var(--ground); padding: 16px; padding-top: max(16px, env(safe-area-inset-top, 0px)); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .detail-col.open .detail { position: static; max-width: 640px; margin: 0 auto; }
+  .back { display: inline-flex; margin-bottom: 12px; }
+}
+@media (max-width: 900px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .sidebar { position: fixed; inset: 0; z-index: 40; width: 100%; height: 100%; background: var(--ground); transform: translateX(-100%); transition: transform var(--t-ui) var(--ease); border-right: 0; padding-top: max(20px, env(safe-area-inset-top, 0px)); }
+  .sidebar.open { transform: none; }
+  .topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 52px; padding: 0 16px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); background: var(--ground); border-bottom: 1px solid var(--border); }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 21; background: var(--ground); }
+  .topbar .brand { padding: 0; }
+  .topbar .brand b { font-size: 15px; }
+  .menu-btn { width: 40px; height: 40px; padding: 0; }
+  .close-menu { display: inline-flex !important; align-self: flex-end; margin-bottom: 8px; }
+  .canvas { padding: 20px 16px 40px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .grid > * { grid-column: 1 / -1 !important; }
+  .title-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .title-row h1 { font-size: 24px; line-height: 30px; }
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpi + .kpi { border-left: 0; }
+  .kpi:nth-child(n + 3) { border-top: 1px solid var(--border); }
+  .kpi:nth-child(2n) { border-left: 1px solid var(--border); }
+  .kpi.lead .kpi-value { font-size: 30px; line-height: 36px; }
+  .filters { margin-top: 24px; }
+  .search { flex: 1 1 100%; }
+  .select { flex: 1 1 calc(50% - 5px); max-width: none; }
+  .segmented { width: 100%; overflow-x: auto; }
+  .segmented button { flex: 1; }
+}
+.close-menu { display: none !important; }
+@media (max-width: 640px) {
+  thead { display: none; }
+  tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  tbody tr:last-child { border-bottom: 0; }
+  tbody td { display: block; padding: 0; border: 0; }
+  .atos-table { table-layout: auto; }
+  colgroup { display: none; }
+  tbody td.ato { grid-column: 1; grid-row: 1; }
+  tbody td.date { grid-column: 2; grid-row: 1; text-align: right; width: auto; }
+  tbody td.local { grid-column: 1 / -1; width: auto; }
+  tbody td.fim { display: none; }
+  tbody td.prazo { grid-column: 1 / -1; width: auto; }
+  tbody tr:hover td, tbody tr[aria-selected="true"] td { background: none; }
+  .src-table tbody tr { grid-template-columns: minmax(0, 1fr) auto; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; animation: none !important; } }
 </style>
 
-<header class="top">
-  <div class="wrap">
-    <div class="marca">
-      <small>Decreto-Lei 3.365/1941 · Lei 4.132/1962</small>
-      <h1>Monitor de Desapropriações</h1>
-      <p>Declarações de utilidade pública, necessidade pública e interesse social publicadas em Diários Oficiais, na fase administrativa.</p>
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Navegação">
+    <button type="button" class="btn ghost close-menu" id="fecharMenu">Fechar</button>
+    <div class="brand">
+      <svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 2h5l9 18h-5z" fill="var(--accent)"/><path d="M15 20c0-5 3-8 6.5-8S28 15 28 20" fill="none" stroke="var(--accent)" stroke-width="3"/><circle cx="31" cy="17.5" r="2.5" fill="var(--accent)"/></svg>
+      <div><b>barioni &amp; macedo</b><span>Advogados</span></div>
     </div>
-    <div class="fonte">
-      <span id="status">Carregando dados…</span>
-      <div class="acoes">
-        <button type="button" id="btnFonte" aria-expanded="false" aria-controls="painelFonte">Trocar fonte de dados</button>
+    <div class="scope"><small>Monitor de</small><strong>Desapropriações</strong></div>
+    <p class="group-label">Monitor</p>
+    <nav>
+      <a class="nav-item" href="#atos" data-view="atos"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 1.75h6l3 3v9.5h-9z"/><path d="M9.5 1.75v3h3M5.75 8h4.5M5.75 10.75h4.5"/></svg>Atos publicados</a>
+      <a class="nav-item" href="#fontes" data-view="fontes"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25"/><path d="M8 4.5V8l2.5 1.5"/></svg>Fontes e coleta</a>
+    </nav>
+    <div class="bottom">
+      <strong>Coleta automática</strong><br>Todos os dias às 06:23 e às 20:47<br><span id="ultimaColeta">Aguardando dados</span>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="brand">
+        <svg viewBox="0 0 34 22" aria-hidden="true"><path d="M2 2h5l9 18h-5z" fill="var(--accent)"/><path d="M15 20c0-5 3-8 6.5-8S28 15 28 20" fill="none" stroke="var(--accent)" stroke-width="3"/><circle cx="31" cy="17.5" r="2.5" fill="var(--accent)"/></svg>
+        <div><b>barioni &amp; macedo</b></div>
       </div>
-    </div>
+      <button type="button" class="btn menu-btn" id="abrirMenu" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/></svg></button>
+    </header>
+
+    <main class="canvas">
+      <!-- ===================== ATOS ===================== -->
+      <section id="view-atos" aria-labelledby="t-atos">
+        <div class="title-row">
+          <div>
+            <h1 id="t-atos">Atos de desapropriação</h1>
+            <p class="sub" id="achado">Carregando os atos coletados nos Diários Oficiais.</p>
+          </div>
+          <div class="title-actions">
+            <span class="stamp" id="stamp"></span>
+            <button type="button" class="btn secondary" id="btnCsv"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.75 7.5 8 10.75l3.25-3.25M3 13.25h10"/></svg>Exportar CSV</button>
+          </div>
+        </div>
+        <div id="avisoExemplo" class="notice" hidden>Você está vendo dados de exemplo fictícios. Em <a href="#fontes"><u>Fontes e coleta</u></a>, carregue o arquivo atos.json gerado pela coleta.</div>
+        <div id="avisoErro" class="notice error" hidden></div>
+
+        <div class="kpis" aria-label="Resumo">
+          <div class="kpi lead"><div class="kpi-label">Publicados nos últimos 7 dias</div><div class="kpi-value" id="k7">0</div><div class="delta" id="k7d"></div></div>
+          <div class="kpi"><div class="kpi-label">Últimos 30 dias</div><div class="kpi-value" id="k30">0</div><div class="delta" id="k30d"></div></div>
+          <div class="kpi"><div class="kpi-label">Com urgência declarada</div><div class="kpi-value" id="kUrg">0</div><div class="delta">nos últimos 30 dias</div></div>
+          <div class="kpi"><div class="kpi-label">No Paraná em 30 dias</div><div class="kpi-value" id="kPR">0</div><div class="delta" id="kPRd"></div></div>
+        </div>
+
+        <div class="grid">
+          <section class="panel span-8" aria-labelledby="t-semanas">
+            <header><h2 id="t-semanas">Atos publicados por semana</h2><span class="meta" id="semanasMeta">semana atual em destaque</span></header>
+            <div class="chart" id="graficoSemanas"></div>
+          </section>
+          <section class="panel span-4" aria-labelledby="t-ufs">
+            <header><h2 id="t-ufs">Onde foram publicados</h2><span class="meta">por UF</span></header>
+            <ul class="uf-list" id="ufs"></ul>
+          </section>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtros">
+          <div class="segmented" id="esferas" role="group" aria-label="Esfera"></div>
+          <label class="visually-hidden" for="fUF">UF</label><select class="select" id="fUF"></select>
+          <label class="visually-hidden" for="fMun">Município</label><select class="select" id="fMun"></select>
+          <label class="visually-hidden" for="fFim">Finalidade</label><select class="select" id="fFim"></select>
+          <label class="visually-hidden" for="fTag">Característica</label><select class="select" id="fTag"></select>
+          <label class="visually-hidden" for="fPer">Período</label><select class="select" id="fPer">
+            <option value="7">Últimos 7 dias</option><option value="30">Últimos 30 dias</option><option value="60">Últimos 60 dias</option><option value="0" selected>Todo o acervo</option>
+          </select>
+          <span class="spacer"></span>
+          <div class="search"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.75"/><path d="m10.5 10.5 3 3"/></svg><label class="visually-hidden" for="q">Buscar no trecho</label><input type="search" id="q" placeholder="Buscar rodovia, matrícula, Sanepar"></div>
+        </div>
+
+        <div class="grid top">
+          <section class="panel span-8 list-col" aria-labelledby="t-lista">
+            <div class="list-head"><h2 id="t-lista">Atos encontrados</h2>
+              <label class="meta" for="ordem">Ordenar por <select id="ordem" class="select" style="height:30px;margin-left:6px;max-width:none">
+                <option value="data">mais recentes</option><option value="prazo">prazo mais curto</option><option value="conf">maior confiança</option></select></label></div>
+            <table class="atos-table">
+              <colgroup><col style="width:60px"><col><col style="width:22%"><col style="width:21%"><col style="width:124px"></colgroup>
+              <thead><tr><th scope="col">Publicação</th><th scope="col">Ato</th><th scope="col">Local</th><th scope="col">Finalidade</th><th scope="col">Prazo de caducidade</th></tr></thead>
+              <tbody id="lista"></tbody>
+            </table>
+            <div class="empty" id="vazio" hidden>Nenhum ato corresponde a estes filtros. Amplie o período ou limpe a busca.</div>
+            <div class="more"><span class="meta" id="faixa"></span><button type="button" class="btn" id="btnMais" hidden>Mostrar mais 40</button></div>
+          </section>
+          <aside class="span-4 detail-col" id="detailCol" aria-label="Detalhe do ato selecionado">
+            <div class="panel detail" id="detalhe"><div class="empty">Selecione um ato na lista para ler o trecho e abrir o Diário Oficial.</div></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ===================== FONTES ===================== -->
+      <section id="view-fontes" aria-labelledby="t-fontes" hidden>
+        <div class="title-row">
+          <div>
+            <h1 id="t-fontes">Fontes e coleta</h1>
+            <p class="sub" id="fontesSub">Situação de cada Diário Oficial monitorado na última execução.</p>
+          </div>
+        </div>
+        <div class="grid top">
+          <section class="panel span-8" aria-labelledby="t-src">
+            <header><h2 id="t-src">Última execução por fonte</h2><span class="meta" id="srcStamp"></span></header>
+            <table class="src-table">
+              <thead><tr><th scope="col">Fonte</th><th scope="col">Período</th><th scope="col" class="n">Atos novos</th><th scope="col" class="n">Erros</th></tr></thead>
+              <tbody id="fontesLista"></tbody>
+            </table>
+            <div class="empty" id="fontesVazio" hidden>Sem registro de coleta neste arquivo. O relatório data/meta.json aparece aqui quando os dados vêm do repositório.</div>
+          </section>
+          <section class="panel span-4" aria-labelledby="t-load">
+            <header><h2 id="t-load">Carregar outro arquivo</h2></header>
+            <div class="loader">
+              <label class="visually-hidden" for="urlJson">URL do atos.json</label>
+              <div class="row"><input type="url" id="urlJson" placeholder="https://raw.githubusercontent.com/.../data/atos.json"></div>
+              <div class="row">
+                <button type="button" class="btn primary" id="btnUrl">Carregar URL</button>
+                <label class="btn" for="arquivo">Enviar arquivo</label>
+                <input type="file" id="arquivo" accept=".json,application/json" hidden>
+                <button type="button" class="btn ghost" id="btnExemplo">Ver exemplo</button>
+              </div>
+            </div>
+          </section>
+          <section class="panel span-12" aria-labelledby="t-prazos">
+            <header><h2 id="t-prazos">Como o prazo de caducidade é contado</h2></header>
+            <p class="law"><strong>Utilidade pública, 5 anos.</strong> A desapropriação deve se efetivar por acordo ou ser ajuizada em cinco anos da expedição do decreto, sob pena de caducidade (Decreto-Lei nº 3.365/1941, art. 10).</p>
+            <p class="law"><strong>Interesse social, 2 anos.</strong> O expropriante tem dois anos, a partir da decretação, para efetivar a desapropriação (Lei nº 4.132/1962, art. 3º). Para reforma agrária, a ação deve ser proposta em dois anos da publicação do decreto (Lei Complementar nº 76/1993, art. 3º).</p>
+            <p class="law"><strong>Urgência, 120 dias.</strong> Alegada a urgência, a imissão provisória deve ser requerida em até 120 dias (Decreto-Lei nº 3.365/1941, art. 15, §2º).</p>
+            <p class="law">O monitor conta a partir da data de publicação no Diário, que pode ser posterior à expedição. Confira sempre a data do decreto no documento oficial.</p>
+          </section>
+        </div>
+      </section>
+    </main>
   </div>
-  <div class="wrap" style="padding-block:0 14px">
-    <div id="avisoExemplo" class="aviso" hidden>
-      <strong>Dados de exemplo fictícios.</strong>
-      <span>Municípios, atos e links são inventados. Envie o seu <code>atos.json</code> ou informe a URL Raw do repositório.</span>
-    </div>
-    <div id="avisoErro" class="aviso erro" hidden></div>
-    <div id="painelFonte" class="carregar">
-      <input type="url" id="urlJson" placeholder="https://raw.githubusercontent.com/USUARIO/REPOSITORIO/main/data/atos.json" aria-label="URL do atos.json">
-      <button type="button" class="primario btn" id="btnUrl">Carregar URL</button>
-      <label class="btn" for="arquivo">Enviar arquivo</label>
-      <input type="file" id="arquivo" accept=".json,application/json" hidden>
-      <button type="button" id="btnExemplo">Ver exemplo</button>
-    </div>
-  </div>
-</header>
+</div>
 
-<main class="wrap">
-  <section class="filtros" aria-label="Filtros">
-    <label class="campo busca" for="q">Busca no trecho, órgão, número ou matrícula
-      <input type="search" id="q" placeholder="ex.: rodovia, saneamento, linha de transmissão, matrícula 45.678">
-    </label>
-    <div class="chips" id="chipsEsfera" role="group" aria-label="Esfera"><span class="rot">Esfera</span></div>
-    <label class="campo" for="fUF">UF<select id="fUF"></select></label>
-    <label class="campo" for="fMun">Município<select id="fMun"></select></label>
-    <label class="campo" for="fDe">Publicado de<input type="date" id="fDe"></label>
-    <label class="campo" for="fAte">até<input type="date" id="fAte"></label>
-    <label class="campo" for="fFim">Finalidade<select id="fFim"></select></label>
-    <label class="campo" for="fConf">Confiança mínima<select id="fConf">
-      <option value="baixa">Todas</option><option value="media">Média ou alta</option><option value="alta">Só alta</option></select></label>
-    <div class="chips" id="chipsTag" role="group" aria-label="Características"><span class="rot">Características</span></div>
-    <button type="button" class="limpar" id="btnLimpar">Limpar filtros</button>
-  </section>
-
-  <section class="resumo" aria-label="Resumo">
-    <div class="numeros">
-      <div><b id="nTotal">0</b><span>atos no filtro</span></div>
-      <div><b id="n7">0</b><span>publicados nos últimos 7 dias</span></div>
-      <div><b id="nUrg">0</b><span>com urgência (imissão provisória)</span></div>
-      <div><b id="nMat">0</b><span>com matrícula identificada</span></div>
-    </div>
-    <div class="porUF"><h2>Atos por UF (clique para filtrar)</h2><div class="barras" id="barras"></div></div>
-  </section>
-
-  <section aria-label="Atos">
-    <div class="lista-cab">
-      <h2 id="tituloLista">Atos</h2>
-      <label class="campo" for="ordem" style="flex-direction:row;align-items:center;gap:8px">Ordenar
-        <select id="ordem"><option value="data">Mais recentes</option><option value="score">Maior confiança</option><option value="uf">UF e município</option></select>
-      </label>
-    </div>
-    <ol class="atos" id="lista"></ol>
-    <div style="display:flex;justify-content:center;margin-top:12px"><button type="button" class="mais" id="btnMais" hidden>Mostrar mais</button></div>
-  </section>
-</main>
-<footer class="wrap">
-  Coleta automática diária por expressões regulares, sem inteligência artificial no ciclo. A extração pode conter erros: confira sempre o ato no Diário Oficial antes de qualquer providência.
-</footer>
-
+<script src="assets/charts.js"></script>
 <script>
 (() => {
   "use strict";
+  document.documentElement.lang = "pt-BR";
   const $ = (id) => document.getElementById(id);
   const POR_PAGINA = 40;
-  const ORDEM_CONF = { baixa: 0, media: 1, alta: 2 };
-  const TAG_ROTULO = {
-    utilidade_publica: "Utilidade pública", interesse_social: "Interesse social",
-    necessidade_publica: "Necessidade pública", servidao: "Servidão administrativa",
-    urgencia: "Urgência", reforma_agraria: "Reforma agrária", revogacao: "Revogação",
-    retificacao: "Retificação", matricula: "Matrícula", coordenadas: "Coordenadas",
-    fonte_secundaria: "Fonte secundária (notícia)", sem_declaracao_explicita: "Sem declaração explícita"
-  };
-  const TAGS_FILTRO = ["utilidade_publica", "interesse_social", "servidao", "urgencia", "reforma_agraria", "matricula", "revogacao"];
+  const DIA = 864e5;
   const ESFERAS = ["Federal", "Estadual", "Municipal"];
+  const CONF = { baixa: 0, media: 1, alta: 2 };
+  const TAG = { utilidade_publica: "Utilidade pública", interesse_social: "Interesse social", necessidade_publica: "Necessidade pública",
+    servidao: "Servidão administrativa", urgencia: "Urgência", reforma_agraria: "Reforma agrária", revogacao: "Revogação",
+    retificacao: "Retificação", matricula: "Matrícula identificada", coordenadas: "Coordenadas", fonte_secundaria: "Notícia oficial" };
+  const TAGS_FILTRO = ["urgencia", "servidao", "interesse_social", "reforma_agraria", "matricula", "revogacao"];
+  const FONTES = { querido_diario: "Diários municipais (Querido Diário)", dou: "Diário Oficial da União, Seção 1", dioe_pr: "Diário Oficial do Paraná", google_news_rss: "Notícias oficiais (.gov.br)", exemplo: "Exemplo fictício" };
 
-  let dados = [], meta = null, origem = "", limite = POR_PAGINA;
-  const f = { q: "", esferas: new Set(), uf: "", mun: "", de: "", ate: "", fim: "", conf: "baixa", tags: new Set() };
+  let dados = [], meta = null, origem = "", limite = POR_PAGINA, selId = null;
+  const f = { esfera: "", uf: "", mun: "", fim: "", tag: "", per: 0, q: "" };
 
-  // ---------- utilidades ----------
   const norm = (s) => (s || "").toString().normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const esc = (s) => (s ?? "").toString().replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const fmtData = (iso) => { const [a, m, d] = (iso || "").split("-"); return d ? `${d}/${m}/${a}` : iso; };
-  const hojeISO = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
-  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+  const nf = new Intl.NumberFormat("pt-BR");
+  const hoje = () => { const d = new Date(Date.now() - 3 * 3600e3); return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())); };
+  const dataISO = (iso) => new Date(iso + "T00:00:00Z");
+  const fmtData = (iso) => { const [a, m, d] = (iso || "").split("-"); return d ? `${d}/${m}/${a}` : ""; };
+  const fmtCurta = (iso) => { const [, m, d] = (iso || "").split("-"); return d ? `${d}/${m}` : ""; };
+  const semana = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"];
   const ler = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
 
-  // Destaca os termos da busca no texto já escapado, ignorando acentos.
+  // Prazo legal de caducidade de cada ato, contado da publicação
+  function prazo(a) {
+    if (a.tags.includes("revogacao")) return null;
+    const dois = a.tags.includes("reforma_agraria") || (a.tags.includes("interesse_social") && !a.tags.includes("utilidade_publica"));
+    const anos = dois ? 2 : 5;
+    const base = a.tags.includes("reforma_agraria") ? "LC 76/1993, art. 3º" : dois ? "Lei 4.132/1962, art. 3º" : "DL 3.365/1941, art. 10";
+    const ini = dataISO(a.data_publicacao);
+    const fim = new Date(ini); fim.setUTCFullYear(fim.getUTCFullYear() + anos);
+    const total = fim - ini, passado = Math.max(0, Math.min(total, hoje() - ini));
+    const restaDias = Math.max(0, Math.round((fim - hoje()) / DIA));
+    return { anos, base, fim: fim.toISOString().slice(0, 10), frac: passado / total, restaDias };
+  }
+  function restante(dias) {
+    if (dias <= 0) return "prazo encerrado";
+    const anos = Math.floor(dias / 365), meses = Math.floor((dias % 365) / 30.44);
+    if (anos === 0 && meses === 0) return `${dias} ${dias === 1 ? "dia" : "dias"}`;
+    const partes = [];
+    if (anos) partes.push(`${anos} ${anos === 1 ? "ano" : "anos"}`);
+    if (meses) partes.push(`${meses} ${meses === 1 ? "mês" : "meses"}`);
+    return partes.join(" e ");
+  }
+  function urgencia(a) {
+    if (!a.tags.includes("urgencia")) return null;
+    const ini = dataISO(a.data_publicacao), fim = new Date(ini.getTime() + 120 * DIA);
+    const resta = Math.round((fim - hoje()) / DIA);
+    return { fim: fim.toISOString().slice(0, 10), frac: Math.max(0, Math.min(1, (hoje() - ini) / (120 * DIA))), resta };
+  }
+  const numeroAto = (a) => !a.numero_ato ? "sem número identificado" : a.numero_ato.startsWith("s/nº") ? a.numero_ato : `nº ${a.numero_ato}`;
+  const tipo = (a) => (a.tipo_ato && a.tipo_ato !== "Não identificado") ? a.tipo_ato : "Ato";
+  const orgaoCurto = (a) => { const o = a.orgao_emissor || a.esfera; return /^Prefeitura Municipal de /.test(o) ? "Prefeitura Municipal" : o; };
+  const local = (a) => a.municipio ? `${a.municipio}, ${a.uf}` : (a.uf === "BR" ? "Âmbito nacional" : a.uf);
+
   function destacar(texto, termos) {
     const seguro = esc(texto);
     if (!termos.length) return seguro;
-    const base = norm(seguro);
-    const marcas = [];
-    for (const t of termos) {
-      let i = base.indexOf(t);
-      while (i !== -1) { marcas.push([i, i + t.length]); i = base.indexOf(t, i + t.length); }
-    }
-    if (!marcas.length) return seguro;
-    marcas.sort((a, b) => a[0] - b[0]);
+    const base = norm(seguro), marcas = [];
+    for (const t of termos) { let i = base.indexOf(t); while (i !== -1) { marcas.push([i, i + t.length]); i = base.indexOf(t, i + t.length); } }
+    marcas.sort((x, y) => x[0] - y[0]);
     let out = "", pos = 0;
     for (const [i, j] of marcas) {
-      if (i < pos) continue;
-      // não corta entidades HTML (&amp; etc.)
-      if (seguro.lastIndexOf("&", i) > seguro.lastIndexOf(";", i)) continue;
-      out += seguro.slice(pos, i) + "<mark>" + seguro.slice(i, j) + "</mark>";
-      pos = j;
+      if (i < pos || seguro.lastIndexOf("&", i) > seguro.lastIndexOf(";", i)) continue;
+      out += seguro.slice(pos, i) + "<mark>" + seguro.slice(i, j) + "</mark>"; pos = j;
     }
     return out + seguro.slice(pos);
   }
 
-  // ---------- carga de dados ----------
-  function validar(lista) {
+  // ---------- dados ----------
+  function preparar(lista) {
     if (!Array.isArray(lista)) throw new Error("o arquivo não contém uma lista de atos");
     const obrig = ["id", "data_publicacao", "esfera", "uf", "resumo_contexto", "url_fonte"];
     const ok = lista.filter((a) => a && obrig.every((k) => k in a));
-    if (lista.length && !ok.length) throw new Error("nenhum registro tem os campos obrigatórios do Monitor");
-    return ok.map((a) => ({
-      ...a, tags: a.tags || [], finalidades: a.finalidades || [], matriculas: a.matriculas || [],
-      areas: a.areas || [], confianca: a.confianca || "baixa",
-      _busca: norm([a.resumo_contexto, a.orgao_emissor, a.numero_ato, a.municipio, a.tipo_ato, (a.matriculas || []).join(" "), (a.finalidades || []).join(" ")].join(" "))
-    }));
+    if (lista.length && !ok.length) throw new Error("nenhum registro tem os campos do Monitor");
+    return ok.map((a) => {
+      const r = { ...a, tags: a.tags || [], finalidades: a.finalidades || [], matriculas: a.matriculas || [], areas: a.areas || [], confianca: a.confianca || "baixa" };
+      r._busca = norm([r.resumo_contexto, r.orgao_emissor, r.numero_ato, r.municipio, r.tipo_ato, r.matriculas.join(" "), r.finalidades.join(" ")].join(" "));
+      r._prazo = prazo(r);
+      return r;
+    });
   }
-
   function aplicar(lista, rotulo, exemplo) {
-    dados = validar(lista);
-    origem = rotulo;
-    $("avisoExemplo").hidden = !exemplo;
-    $("avisoErro").hidden = true;
-    montarOpcoes();
-    render();
+    dados = preparar(lista); origem = rotulo; selId = null; limite = POR_PAGINA;
+    $("avisoExemplo").hidden = !exemplo; $("avisoErro").hidden = true;
+    opcoes(); render(); renderFontes();
   }
-
-  function erro(msg) {
-    const el = $("avisoErro");
-    el.textContent = msg;
-    el.hidden = false;
-  }
-
-  async function buscarJSON(url) {
-    const r = await fetch(url, { cache: "no-cache" });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  }
-
+  function erro(msg) { const e = $("avisoErro"); e.textContent = msg; e.hidden = false; }
+  async function json(url) { const r = await fetch(url, { cache: "no-cache" }); if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); }
   async function carregarURL(url) {
     try {
-      const lista = await buscarJSON(url);
-      aplicar(lista, url.replace(/^https?:\/\//, ""), false);
-      guardar("monitor_url", url);
-      try { meta = await buscarJSON(url.replace(/atos\.json(\?.*)?$/, "meta.json")); } catch (e) { meta = null; }
-      render();
-      return true;
+      const lista = await json(url);
+      try { meta = await json(url.replace(/atos\.json(\?.*)?$/, "meta.json")); } catch (e) { meta = null; }
+      aplicar(lista, url.replace(/^https?:\/\//, ""), false); guardar("monitor_url", url); return true;
     } catch (e) {
-      erro(`Não foi possível ler ${url} (${e.message}). Se esta página estiver aberta no Claude, endereços externos ficam bloqueados: use "Enviar arquivo". No GitHub Pages a URL Raw funciona.`);
+      erro(`Não foi possível ler ${url} (${e.message}). Dentro do Claude, endereços externos são bloqueados: use Enviar arquivo.`);
       return false;
     }
   }
-
-  async function carregarExemplo() {
-    try { aplicar(await buscarJSON("data/exemplo.json"), "exemplo fictício", true); }
-    catch (e) { erro("Arquivo de exemplo indisponível."); }
-  }
-
+  async function carregarExemplo() { try { meta = null; aplicar(await json("data/exemplo.json"), "exemplo fictício", true); } catch (e) { erro("Arquivo de exemplo indisponível."); } }
   async function iniciar() {
-    // 1) Parâmetro ?dados=URL  2) data/atos.json ao lado da página (GitHub Pages)
-    // 3) última URL usada neste navegador  4) exemplo fictício
-    const param = new URLSearchParams(location.search).get("dados");
-    if (param && await carregarURL(param)) return;
+    const p = new URLSearchParams(location.search).get("dados");
+    if (p && await carregarURL(p)) return;
     try {
-      const lista = await buscarJSON("data/atos.json");
-      if (Array.isArray(lista) && lista.length) {
-        aplicar(lista, "data/atos.json", false);
-        try { meta = await buscarJSON("data/meta.json"); } catch (e) { meta = null; }
-        render();
-        return;
-      }
-    } catch (e) { /* ausente: segue para as alternativas */ }
+      const lista = await json("data/atos.json");
+      if (Array.isArray(lista) && lista.length) { try { meta = await json("data/meta.json"); } catch (e) { meta = null; } aplicar(lista, "repositório", false); return; }
+    } catch (e) { /* segue para as alternativas */ }
     const salva = ler("monitor_url");
     if (salva) { $("urlJson").value = salva; if (await carregarURL(salva)) return; }
     await carregarExemplo();
   }
 
   // ---------- filtros ----------
-  function montarOpcoes() {
+  function opcoes() {
+    $("esferas").innerHTML = ["", ...ESFERAS].map((e) => `<button type="button" data-v="${e}" aria-pressed="${f.esfera === e}">${e || "Todas"}</button>`).join("");
     const ufs = [...new Set(dados.map((a) => a.uf))].sort();
-    $("fUF").innerHTML = `<option value="">Todas</option>` + ufs.map((u) => `<option>${esc(u)}</option>`).join("");
-    $("fUF").value = ufs.includes(f.uf) ? f.uf : (f.uf = "");
-    montarMunicipios();
-    const fins = [...new Set(dados.flatMap((a) => a.finalidades))].sort((a, b) => a.localeCompare(b, "pt-BR"));
-    $("fFim").innerHTML = `<option value="">Todas</option>` + fins.map((x) => `<option>${esc(x)}</option>`).join("");
-    $("fFim").value = fins.includes(f.fim) ? f.fim : (f.fim = "");
+    $("fUF").innerHTML = `<option value="">Todas as UFs</option>` + ufs.map((u) => `<option value="${esc(u)}">${u === "BR" ? "Âmbito nacional" : esc(u)}</option>`).join("");
+    if (!ufs.includes(f.uf)) f.uf = ""; $("fUF").value = f.uf;
+    municipios();
+    const fins = [...new Set(dados.flatMap((a) => a.finalidades))].sort((x, y) => x.localeCompare(y, "pt-BR"));
+    $("fFim").innerHTML = `<option value="">Todas as finalidades</option>` + fins.map((x) => `<option>${esc(x)}</option>`).join("");
+    if (!fins.includes(f.fim)) f.fim = ""; $("fFim").value = f.fim;
+    $("fTag").innerHTML = `<option value="">Todas as características</option>` + TAGS_FILTRO.map((t) => `<option value="${t}">${TAG[t]}</option>`).join("");
+    $("fTag").value = f.tag;
   }
-
-  function montarMunicipios() {
-    const muns = [...new Set(dados.filter((a) => !f.uf || a.uf === f.uf).map((a) => a.municipio).filter(Boolean))]
-      .sort((a, b) => a.localeCompare(b, "pt-BR"));
-    $("fMun").innerHTML = `<option value="">Todos</option>` + muns.map((m) => `<option>${esc(m)}</option>`).join("");
-    $("fMun").value = muns.includes(f.mun) ? f.mun : (f.mun = "");
+  function municipios() {
+    const muns = [...new Set(dados.filter((a) => !f.uf || a.uf === f.uf).map((a) => a.municipio).filter(Boolean))].sort((x, y) => x.localeCompare(y, "pt-BR"));
+    $("fMun").innerHTML = `<option value="">Todos os municípios</option>` + muns.map((m) => `<option>${esc(m)}</option>`).join("");
+    if (!muns.includes(f.mun)) f.mun = ""; $("fMun").value = f.mun;
   }
-
-  function filtrar() {
-    const termos = norm(f.q).split(/\s+/).filter((t) => t.length > 1);
-    const minConf = ORDEM_CONF[f.conf] || 0;
+  const termos = () => norm(f.q).split(/\s+/).filter((t) => t.length > 1);
+  function filtrar({ ignorarPeriodo = false } = {}) {
+    const ts = termos(), corte = f.per ? new Date(hoje() - (f.per - 1) * DIA).toISOString().slice(0, 10) : "";
     return dados.filter((a) =>
-      (!f.esferas.size || f.esferas.has(a.esfera)) &&
-      (!f.uf || a.uf === f.uf) &&
-      (!f.mun || a.municipio === f.mun) &&
-      (!f.de || a.data_publicacao >= f.de) &&
-      (!f.ate || a.data_publicacao <= f.ate) &&
+      (!f.esfera || a.esfera === f.esfera) && (!f.uf || a.uf === f.uf) && (!f.mun || a.municipio === f.mun) &&
       (!f.fim || a.finalidades.includes(f.fim)) &&
-      (ORDEM_CONF[a.confianca] || 0) >= minConf &&
-      [...f.tags].every((t) => a.tags.includes(t)) &&
-      termos.every((t) => a._busca.includes(t))
-    );
+      (!f.tag || (f.tag === "matricula" ? a.matriculas.length > 0 : a.tags.includes(f.tag))) &&
+      (ignorarPeriodo || !corte || a.data_publicacao >= corte) &&
+      ts.every((t) => a._busca.includes(t)));
+  }
+  function ordenar(l) {
+    const porData = (x, y) => y.data_publicacao.localeCompare(x.data_publicacao) || (y.score || 0) - (x.score || 0);
+    const m = $("ordem").value;
+    if (m === "prazo") return l.sort((x, y) => (x._prazo ? x._prazo.restaDias : 1e9) - (y._prazo ? y._prazo.restaDias : 1e9) || porData(x, y));
+    if (m === "conf") return l.sort((x, y) => (CONF[y.confianca] - CONF[x.confianca]) || porData(x, y));
+    return l.sort(porData);
   }
 
-  function ordenar(lista) {
-    const modo = $("ordem").value;
-    const porData = (a, b) => b.data_publicacao.localeCompare(a.data_publicacao);
-    if (modo === "score") return lista.sort((a, b) => (b.score || 0) - (a.score || 0) || porData(a, b));
-    if (modo === "uf") return lista.sort((a, b) => a.uf.localeCompare(b.uf) || (a.municipio || "").localeCompare(b.municipio || "", "pt-BR") || porData(a, b));
-    return lista.sort((a, b) => porData(a, b) || (b.score || 0) - (a.score || 0));
-  }
+  // ---------- render ----------
+  function contar(lista, de, ate) { return lista.filter((a) => a.data_publicacao >= de && a.data_publicacao <= ate).length; }
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  function sinal(n) { return n > 0 ? `+${nf.format(n)}` : n < 0 ? `−${nf.format(-n)}` : "0"; }
 
-  // ---------- renderização ----------
   function render() {
-    const lista = ordenar(filtrar());
-    const termos = norm(f.q).split(/\s+/).filter((t) => t.length > 1);
+    const h = hoje(), d0 = iso(h);
+    const i7 = iso(new Date(h - 6 * DIA)), i14 = iso(new Date(h - 13 * DIA)), f14 = iso(new Date(h - 7 * DIA));
+    const i30 = iso(new Date(h - 29 * DIA)), i60 = iso(new Date(h - 59 * DIA)), f60 = iso(new Date(h - 30 * DIA));
+    const n7 = contar(dados, i7, d0), n7a = contar(dados, i14, f14), n30 = contar(dados, i30, d0), n30a = contar(dados, i60, f60);
+    const recentes = dados.filter((a) => a.data_publicacao >= i30);
+    const urg = recentes.filter((a) => a.tags.includes("urgencia")).length;
+    const pr = recentes.filter((a) => a.uf === "PR").length;
+    const prMun = new Set(recentes.filter((a) => a.uf === "PR" && a.municipio).map((a) => a.municipio)).size;
+    $("k7").textContent = nf.format(n7);
+    $("k7d").textContent = `${sinal(n7 - n7a)} sobre os 7 dias anteriores`;
+    $("k30").textContent = nf.format(n30);
+    $("k30d").textContent = `${sinal(n30 - n30a)} sobre os 30 dias anteriores`;
+    $("kUrg").textContent = nf.format(urg);
+    $("kPR").textContent = nf.format(pr);
+    $("kPRd").textContent = prMun ? `em ${prMun} ${prMun === 1 ? "município" : "municípios"}` : "nenhum município identificado";
 
-    // status da fonte
-    const ult = meta && meta.ultima_execucao ? ` · última coleta ${fmtData(meta.ultima_execucao.slice(0, 10))} ${meta.ultima_execucao.slice(11, 16)}` : "";
-    $("status").textContent = `${dados.length} atos · fonte: ${origem}${ult}`;
+    // achado: a frase sob o título
+    const ult = dados.reduce((m, a) => (a.data_publicacao > m ? a.data_publicacao : m), "");
+    const urg7 = dados.filter((a) => a.data_publicacao >= i7 && a.tags.includes("urgencia")).length;
+    const pr7 = dados.filter((a) => a.data_publicacao >= i7 && a.uf === "PR").length;
+    $("achado").innerHTML = n7
+      ? `<strong>${nf.format(n7)} ${n7 === 1 ? "ato publicado" : "atos publicados"} nos últimos 7 dias</strong>, ${nf.format(urg7)} com urgência declarada e ${nf.format(pr7)} no Paraná.`
+      : dados.length ? `Nenhum ato novo nos últimos 7 dias. O mais recente é de ${fmtData(ult)}.` : "Nenhum ato carregado.";
+    const exec = meta && meta.ultima_execucao;
+    $("stamp").textContent = exec ? `Coletado em ${fmtData(exec.slice(0, 10))} às ${exec.slice(11, 16)}` : `Fonte: ${origem}`;
+    $("ultimaColeta").textContent = exec ? `Última: ${fmtData(exec.slice(0, 10))}, ${exec.slice(11, 16)}` : `Fonte: ${origem}`;
 
-    // números
-    const corte7 = new Date(new Date(hojeISO()).getTime() - 7 * 864e5).toISOString().slice(0, 10);
-    $("nTotal").textContent = lista.length.toLocaleString("pt-BR");
-    $("n7").textContent = lista.filter((a) => a.data_publicacao >= corte7).length.toLocaleString("pt-BR");
-    $("nUrg").textContent = lista.filter((a) => a.tags.includes("urgencia")).length.toLocaleString("pt-BR");
-    $("nMat").textContent = lista.filter((a) => a.matriculas.length).length.toLocaleString("pt-BR");
-
-    // barras por UF (top 10)
-    const cont = {};
-    lista.forEach((a) => { cont[a.uf] = (cont[a.uf] || 0) + 1; });
-    const top = Object.entries(cont).sort((a, b) => b[1] - a[1]).slice(0, 10);
-    const max = top.length ? top[0][1] : 1;
-    $("barras").innerHTML = top.length ? top.map(([uf, n]) =>
-      `<button type="button" data-uf="${esc(uf)}" title="Filtrar ${esc(uf)}">${esc(uf === "BR" ? "BR*" : uf)}</button>` +
-      `<div class="barra"><i style="width:${Math.max(3, (n / max) * 100)}%"></i></div><em>${n}</em>`).join("")
-      : `<span style="grid-column:1/-1;color:var(--muted)">Sem atos no filtro.</span>`;
-
-    // lista
-    $("tituloLista").textContent = lista.length === dados.length ? "Atos" : `Atos filtrados (${lista.length} de ${dados.length})`;
-    const visiveis = lista.slice(0, limite);
-    $("lista").innerHTML = visiveis.length ? visiveis.map((a) => cartao(a, termos)).join("")
-      : `<li class="vazio">Nenhum ato corresponde aos filtros. Use "Limpar filtros" ou amplie o período.</li>`;
-    $("btnMais").hidden = lista.length <= limite;
-    $("btnMais").textContent = `Mostrar mais (${lista.length - limite} restantes)`;
-
-    // chips
-    document.querySelectorAll("#chipsEsfera .chip").forEach((c) => c.setAttribute("aria-pressed", f.esferas.has(c.dataset.v)));
-    document.querySelectorAll("#chipsTag .chip").forEach((c) => c.setAttribute("aria-pressed", f.tags.has(c.dataset.v)));
+    semanas(filtrar({ ignorarPeriodo: true }));
+    ufs(filtrar());
+    lista();
   }
 
-  function cartao(a, termos) {
-    const local = [a.municipio, a.uf === "BR" ? "âmbito nacional" : a.uf].filter(Boolean).join(" / ");
-    const numero = a.numero_ato ? `<span class="num">nº ${esc(a.numero_ato.replace(/^s\/nº,?\s*/i, "s/nº "))}</span>` : `<span class="num">sem número identificado</span>`;
-    const numeroTxt = a.numero_ato && a.numero_ato.startsWith("s/nº") ? `<span class="num">${esc(a.numero_ato)}</span>` : numero;
-    const tags = a.tags.filter((t) => TAG_ROTULO[t] && t !== "matricula")
-      .map((t) => `<span class="tag${t === "fonte_secundaria" || t === "revogacao" || t === "sem_declaracao_explicita" ? " alerta" : ""}">${esc(TAG_ROTULO[t])}</span>`).join("");
-    const fins = a.finalidades.map((x) => `<span class="tag fim">${esc(x)}</span>`).join("");
-    const mats = a.matriculas.map((m) => `<span class="tag dado">Matr. ${destacar(m, termos)}</span>`).join("");
-    const areas = a.areas.map((x) => `<span class="tag dado">${esc(x)}</span>`).join("");
-    const confTxt = { alta: "Confiança alta", media: "Confiança média", baixa: "Confiança baixa" }[a.confianca] || "";
-    const ficticio = a.tags.includes("exemplo_ficticio");
-    const link = ficticio
-      ? `<span class="btn" aria-disabled="true" title="Exemplo fictício: sem documento real">Documento fictício</span>`
-      : `<a class="btn primario" href="${esc(a.url_fonte)}" target="_blank" rel="noopener noreferrer">${a.tipo_ato === "Notícia oficial" ? "Abrir notícia oficial" : "Abrir no Diário Oficial"} ↗</a>`;
-    return `<li class="ato" data-esfera="${esc(a.esfera)}">
-      <div class="linha1"><time datetime="${esc(a.data_publicacao)}">${fmtData(a.data_publicacao)}</time>
-        <span class="pill ${esc(a.esfera)}">${esc(a.esfera)}</span><span>${esc(local)}</span><span>${destacar(a.orgao_emissor || "", termos)}</span></div>
-      <h3>${esc(a.tipo_ato && a.tipo_ato !== "Não identificado" ? a.tipo_ato : "Ato")} ${numeroTxt}</h3>
-      <p class="trecho">${destacar(a.resumo_contexto, termos)}</p>
-      <div class="meta">${fins}${tags}${mats}${areas}</div>
-      <div class="rodape-ato"><span class="conf ${esc(a.confianca)}">${confTxt}</span>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">
-          <button type="button" data-copiar="${esc(a.id)}">Copiar referência</button>${link}</div></div>
-    </li>`;
+  function semanas(base) {
+    // 10 semanas de segunda a domingo; a última é a semana corrente
+    const h = hoje(), dow = (h.getUTCDay() + 6) % 7, seg = new Date(h - dow * DIA);
+    const labels = [], values = [];
+    for (let k = 9; k >= 0; k--) {
+      const ini = new Date(seg - k * 7 * DIA), fim = new Date(ini.getTime() + 6 * DIA);
+      labels.push(k === 0 ? "Esta semana" : fmtCurta(iso(ini)));
+      values.push(contar(base, iso(ini), iso(fim)));
+    }
+    const el = $("graficoSemanas"); el.innerHTML = "";
+    if (window.Charts) Charts.bars(el, { labels, values, highlight: 9, height: 262, format: (v) => `${nf.format(v)} ${v === 1 ? "ato" : "atos"}`, tickFormat: (v) => nf.format(v), xAt: [0, 2, 4, 6, 8, 9] });
+    const total = values.reduce((s, v) => s + v, 0);
+    $("semanasMeta").textContent = `${nf.format(total)} em 10 semanas · semana atual em bordô`;
   }
 
-  function referencia(a) {
-    const local = [a.municipio, a.uf].filter(Boolean).join("/");
-    return `${a.tipo_ato || "Ato"} ${a.numero_ato ? "nº " + a.numero_ato : ""} (${a.orgao_emissor || a.esfera}, ${local}), publicado em ${fmtData(a.data_publicacao)}. Fonte: ${a.url_fonte}`.replace(/\s+/g, " ");
+  function ufs(base) {
+    const cont = {}; base.forEach((a) => { cont[a.uf] = (cont[a.uf] || 0) + 1; });
+    const top = Object.entries(cont).sort((x, y) => y[1] - x[1]).slice(0, 6), max = top.length ? top[0][1] : 1;
+    $("ufs").innerHTML = top.length ? top.map(([uf, n]) =>
+      `<li tabindex="0" role="button" data-uf="${esc(uf)}" aria-pressed="${f.uf === uf}"><span>${uf === "BR" ? "Âmbito nacional" : esc(uf)}</span><span class="n num">${nf.format(n)}</span><i class="bar" style="width:${(n / max) * 100}%"></i></li>`).join("")
+      : `<li><div class="empty">Sem atos neste filtro.</div></li>`;
   }
 
-  // ---------- eventos ----------
+  function lista() {
+    const l = ordenar(filtrar()), ts = termos();
+    $("t-lista").textContent = l.length === dados.length ? `${nf.format(l.length)} atos` : `${nf.format(l.length)} de ${nf.format(dados.length)} atos`;
+    const vis = l.slice(0, limite);
+    $("vazio").hidden = l.length > 0;
+    $("lista").innerHTML = vis.map((a) => {
+      const p = a._prazo, dia = semana[dataISO(a.data_publicacao).getUTCDay()];
+      const prazoTxt = p ? `caduca em ${fmtData(p.fim)}` : "ato revogatório";
+      return `<tr tabindex="0" data-id="${esc(a.id)}" aria-selected="${a.id === selId}">
+        <td class="date num"><span class="main">${fmtCurta(a.data_publicacao)}</span><span class="sub">${dia}</span></td>
+        <td class="ato"><span class="main">${a.tags.includes("urgencia") ? '<span class="dot" title="Urgência declarada"></span>' : ""}${esc(tipo(a))} ${esc(numeroAto(a))}</span><span class="sub">${destacar(orgaoCurto(a), ts)}</span></td>
+        <td class="local"><span class="main">${destacar(local(a), ts)}</span><span class="sub">${esc(a.esfera)}</span></td>
+        <td class="fim"><span class="main" style="font-weight:400">${esc(a.finalidades[0] || "Não informada")}</span>${a.finalidades.length > 1 ? `<span class="sub">e mais ${a.finalidades.length - 1}</span>` : ""}</td>
+        <td class="prazo"><span class="sub" style="margin-top:0">${prazoTxt}</span>${p ? `<span class="track" aria-hidden="true"><i style="width:${Math.max(2, p.frac * 100)}%"></i></span>` : ""}</td>
+      </tr>`;
+    }).join("");
+    $("faixa").textContent = l.length ? `1 a ${nf.format(vis.length)} de ${nf.format(l.length)}` : "";
+    $("btnMais").hidden = l.length <= limite;
+    if (!selId && vis.length && matchMedia("(min-width: 1181px)").matches) { selId = vis[0].id; marcarSel(); }
+    detalhe();
+  }
+  function marcarSel() { document.querySelectorAll("#lista tr").forEach((tr) => tr.setAttribute("aria-selected", tr.dataset.id === selId)); }
+
+  function detalhe() {
+    const a = dados.find((x) => x.id === selId), box = $("detalhe");
+    if (!a) { box.innerHTML = `<div class="empty">Selecione um ato na lista para ler o trecho e abrir o Diário Oficial.</div>`; return; }
+    const ts = termos(), p = a._prazo, u = urgencia(a), fict = a.tags.includes("exemplo_ficticio");
+    const tags = a.tags.filter((t) => TAG[t] && !["utilidade_publica", "matricula"].includes(t));
+    const linha = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : "";
+    box.innerHTML = `
+      <button type="button" class="btn back" id="voltar">Voltar à lista</button>
+      <div class="kind"><span class="pill">${esc(a.esfera)}</span>${tags.map((t) => `<span class="pill${t === "urgencia" || t === "revogacao" || t === "fonte_secundaria" ? " warn" : ""}">${esc(TAG[t])}</span>`).join("")}</div>
+      <h2>${esc(tipo(a))} ${esc(numeroAto(a))}</h2>
+      <p class="org">${esc(a.orgao_emissor || "")} · ${esc(local(a))}</p>
+      <div class="excerpt">${destacar(a.resumo_contexto, ts)}</div>
+      <dl class="facts">
+        ${linha("Publicado em", fmtData(a.data_publicacao))}
+        ${linha("Finalidade", esc(a.finalidades.join(", ")))}
+        ${linha("Matrícula", esc(a.matriculas.join(", ")))}
+        ${linha("Área", esc(a.areas.join(", ")))}
+        ${linha("Fonte", esc(FONTES[a.fonte] || a.fonte || ""))}
+        ${linha("Confiança da extração", { alta: "Alta", media: "Média", baixa: "Baixa" }[a.confianca])}
+      </dl>
+      ${p ? `<div class="clock"><h3>Prazo de caducidade: ${p.anos} anos</h3>
+        <p>Restam ${restante(p.restaDias)} para acordo ou ajuizamento (${esc(p.base)}), contados da publicação.</p>
+        <span class="track" aria-hidden="true"><i style="width:${Math.max(1.5, p.frac * 100)}%"></i></span>
+        <div class="ends num"><span>${fmtData(a.data_publicacao)}</span><span>${fmtData(p.fim)}</span></div></div>` : ""}
+      ${u ? `<div class="clock"><h3>Urgência: imissão em 120 dias</h3>
+        <p>${u.resta > 0 ? `O expropriante tem até ${fmtData(u.fim)} para requerer a imissão provisória (DL 3.365/1941, art. 15, §2º). Restam ${u.resta} dias.` : `O prazo de 120 dias para requerer a imissão provisória terminou em ${fmtData(u.fim)}.`}</p>
+        <span class="track" aria-hidden="true"><i style="width:${Math.max(1.5, u.frac * 100)}%"></i></span></div>` : ""}
+      <div class="actions">
+        ${fict ? `<span class="btn primary" aria-disabled="true">Documento fictício</span>`
+          : `<a class="btn primary" href="${esc(a.url_fonte)}" target="_blank" rel="noopener noreferrer">${a.tipo_ato === "Notícia oficial" ? "Abrir notícia oficial" : "Abrir no Diário Oficial"}<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5h6.5V10M12.5 3.5 4 12"/></svg></a>`}
+        <button type="button" class="btn" id="copiar">Copiar referência</button>
+      </div>
+      <p class="note">${a.fonte === "dioe_pr" ? "O texto do Diário do Paraná vem de PDF em duas colunas: confira o número do decreto na página aberta." : "Extração automática por expressões regulares. Confira o ato no documento oficial antes de qualquer providência."}</p>`;
+    $("voltar").addEventListener("click", fecharDetalhe);
+    $("copiar").addEventListener("click", async (ev) => {
+      const txt = `${tipo(a)} ${numeroAto(a)} (${a.orgao_emissor || a.esfera}, ${local(a)}), publicado em ${fmtData(a.data_publicacao)}. Fonte: ${a.url_fonte}`;
+      try { await navigator.clipboard.writeText(txt); ev.target.textContent = "Referência copiada"; }
+      catch (e) { ev.target.textContent = "Não foi possível copiar"; }
+      setTimeout(() => { ev.target.textContent = "Copiar referência"; }, 2000);
+    });
+  }
+  function abrirDetalhe() { if (!matchMedia("(min-width: 1181px)").matches) { $("detailCol").classList.add("open"); $("voltar") && $("voltar").focus(); } }
+  function fecharDetalhe() { $("detailCol").classList.remove("open"); const tr = document.querySelector(`#lista tr[data-id="${CSS.escape(selId || "")}"]`); tr && tr.focus(); }
+
+  // ---------- fontes ----------
+  function renderFontes() {
+    const fs = meta && meta.fontes ? Object.entries(meta.fontes) : [];
+    $("fontesVazio").hidden = fs.length > 0;
+    $("fontesLista").innerHTML = fs.map(([k, v]) => `<tr><td><span class="main">${esc(FONTES[k] || k)}</span><span class="sub">${v.executado_em ? `${fmtData(v.executado_em.slice(0, 10))} às ${v.executado_em.slice(11, 16)}` : ""}${v.modo ? ` · modo ${esc(v.modo)}` : ""}</span></td>
+      <td><span class="main" style="font-weight:400">${esc((v.periodo || "").split(" a ").map(fmtData).join(" a "))}</span></td>
+      <td class="n num"><span class="main">${nf.format(v.novos ?? 0)}</span><span class="sub">${nf.format(v.atos_extraidos ?? 0)} extraídos</span></td>
+      <td class="n num"><span class="main" style="${(v.erros || []).length ? "color:var(--negative)" : ""}">${nf.format((v.erros || []).length)}</span></td></tr>`).join("");
+    $("srcStamp").textContent = meta && meta.ultima_execucao ? `${nf.format(meta.total_atos || dados.length)} atos no acervo` : "";
+    $("fontesSub").textContent = `Arquivo em uso: ${origem}. Coleta automática todos os dias às 06:23 e às 20:47 (horário de Brasília).`;
+  }
+
+  // ---------- CSV ----------
+  function csv() {
+    const l = ordenar(filtrar()), cols = ["data_publicacao", "esfera", "uf", "municipio", "orgao_emissor", "tipo_ato", "numero_ato", "finalidades", "matriculas", "confianca", "url_fonte", "resumo_contexto"];
+    const q = (v) => `"${String(Array.isArray(v) ? v.join("; ") : v ?? "").replace(/"/g, '""')}"`;
+    const txt = "﻿" + [cols.join(";"), ...l.map((a) => cols.map((c) => q(a[c])).join(";"))].join("\r\n");
+    const url = URL.createObjectURL(new Blob([txt], { type: "text/csv;charset=utf-8" }));
+    const link = document.createElement("a"); link.href = url; link.download = `atos-desapropriacao-${iso(hoje())}.csv`;
+    document.body.appendChild(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 2000);
+  }
+
+  // ---------- navegação ----------
+  function rota() {
+    const v = location.hash === "#fontes" ? "fontes" : "atos";
+    $("view-atos").hidden = v !== "atos"; $("view-fontes").hidden = v !== "fontes";
+    document.querySelectorAll(".nav-item").forEach((n) => { if (n.dataset.view === v) n.setAttribute("aria-current", "page"); else n.removeAttribute("aria-current"); });
+    menu(false);
+  }
+  function menu(abrir) { $("sidebar").classList.toggle("open", abrir); $("abrirMenu").setAttribute("aria-expanded", abrir); }
+
   function ligar() {
-    ESFERAS.forEach((e) => $("chipsEsfera").insertAdjacentHTML("beforeend", `<button type="button" class="chip" data-v="${e}" aria-pressed="false">${e}</button>`));
-    TAGS_FILTRO.forEach((t) => $("chipsTag").insertAdjacentHTML("beforeend", `<button type="button" class="chip" data-v="${t}" aria-pressed="false">${TAG_ROTULO[t]}</button>`));
-
     const reset = () => { limite = POR_PAGINA; render(); };
     let t;
-    $("q").addEventListener("input", (e) => { clearTimeout(t); t = setTimeout(() => { f.q = e.target.value; reset(); }, 150); });
-    $("chipsEsfera").addEventListener("click", (e) => { const c = e.target.closest(".chip"); if (!c) return; f.esferas.has(c.dataset.v) ? f.esferas.delete(c.dataset.v) : f.esferas.add(c.dataset.v); reset(); });
-    $("chipsTag").addEventListener("click", (e) => { const c = e.target.closest(".chip"); if (!c) return; f.tags.has(c.dataset.v) ? f.tags.delete(c.dataset.v) : f.tags.add(c.dataset.v); reset(); });
-    $("fUF").addEventListener("change", (e) => { f.uf = e.target.value; montarMunicipios(); reset(); });
+    $("q").addEventListener("input", (e) => { clearTimeout(t); t = setTimeout(() => { f.q = e.target.value; reset(); }, 160); });
+    $("esferas").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; f.esfera = b.dataset.v; document.querySelectorAll("#esferas button").forEach((x) => x.setAttribute("aria-pressed", x === b)); reset(); });
+    $("fUF").addEventListener("change", (e) => { f.uf = e.target.value; municipios(); reset(); });
     $("fMun").addEventListener("change", (e) => { f.mun = e.target.value; reset(); });
-    $("fDe").addEventListener("change", (e) => { f.de = e.target.value; reset(); });
-    $("fAte").addEventListener("change", (e) => { f.ate = e.target.value; reset(); });
     $("fFim").addEventListener("change", (e) => { f.fim = e.target.value; reset(); });
-    $("fConf").addEventListener("change", (e) => { f.conf = e.target.value; reset(); });
+    $("fTag").addEventListener("change", (e) => { f.tag = e.target.value; reset(); });
+    $("fPer").addEventListener("change", (e) => { f.per = +e.target.value; reset(); });
     $("ordem").addEventListener("change", reset);
-    $("barras").addEventListener("click", (e) => { const b = e.target.closest("button[data-uf]"); if (!b) return; f.uf = f.uf === b.dataset.uf ? "" : b.dataset.uf; $("fUF").value = f.uf; montarMunicipios(); reset(); });
-    $("btnLimpar").addEventListener("click", () => {
-      Object.assign(f, { q: "", uf: "", mun: "", de: "", ate: "", fim: "", conf: "baixa" }); f.esferas.clear(); f.tags.clear();
-      ["q", "fDe", "fAte"].forEach((id) => { $(id).value = ""; }); $("fUF").value = ""; $("fFim").value = ""; $("fConf").value = "baixa"; montarMunicipios(); reset();
+    const escolherUF = (li) => { if (!li || !li.dataset.uf) return; f.uf = f.uf === li.dataset.uf ? "" : li.dataset.uf; $("fUF").value = f.uf; municipios(); reset(); };
+    $("ufs").addEventListener("click", (e) => escolherUF(e.target.closest("li")));
+    $("ufs").addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolherUF(e.target.closest("li")); } });
+    const escolher = (tr) => { if (!tr) return; selId = tr.dataset.id; marcarSel(); detalhe(); abrirDetalhe(); };
+    $("lista").addEventListener("click", (e) => escolher(e.target.closest("tr")));
+    $("lista").addEventListener("keydown", (e) => {
+      const tr = e.target.closest("tr"); if (!tr) return;
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); escolher(tr); }
+      if (e.key === "ArrowDown" && tr.nextElementSibling) { e.preventDefault(); tr.nextElementSibling.focus(); escolher(tr.nextElementSibling); }
+      if (e.key === "ArrowUp" && tr.previousElementSibling) { e.preventDefault(); tr.previousElementSibling.focus(); escolher(tr.previousElementSibling); }
     });
-    $("btnMais").addEventListener("click", () => { limite += POR_PAGINA; render(); });
-    $("btnFonte").addEventListener("click", () => { const p = $("painelFonte"); const ab = p.classList.toggle("aberto"); $("btnFonte").setAttribute("aria-expanded", ab); if (ab) $("urlJson").focus(); });
-    $("btnUrl").addEventListener("click", () => { const u = $("urlJson").value.trim(); if (u) carregarURL(u); });
-    $("urlJson").addEventListener("keydown", (e) => { if (e.key === "Enter") $("btnUrl").click(); });
-    $("btnExemplo").addEventListener("click", carregarExemplo);
+    $("btnMais").addEventListener("click", () => { limite += POR_PAGINA; lista(); });
+    $("btnCsv").addEventListener("click", csv);
+    $("btnUrl").addEventListener("click", () => { const u = $("urlJson").value.trim(); if (u) carregarURL(u).then((ok) => { if (ok) location.hash = "#atos"; }); });
+    $("btnExemplo").addEventListener("click", () => carregarExemplo().then(() => { location.hash = "#atos"; }));
     $("arquivo").addEventListener("change", (e) => {
       const arq = e.target.files[0]; if (!arq) return;
-      const leitor = new FileReader();
-      leitor.onload = () => { try { meta = null; aplicar(JSON.parse(leitor.result), arq.name, false); } catch (err) { erro(`Arquivo inválido: ${err.message}`); } };
-      leitor.readAsText(arq, "utf-8");
-      e.target.value = "";
+      const r = new FileReader();
+      r.onload = () => { try { meta = null; aplicar(JSON.parse(r.result), arq.name, false); location.hash = "#atos"; } catch (err) { location.hash = "#atos"; erro(`Arquivo inválido: ${err.message}`); } };
+      r.readAsText(arq, "utf-8"); e.target.value = "";
     });
-    $("lista").addEventListener("click", async (e) => {
-      const b = e.target.closest("button[data-copiar]"); if (!b) return;
-      const a = dados.find((x) => x.id === b.dataset.copiar); if (!a) return;
-      const txt = referencia(a);
-      try { await navigator.clipboard.writeText(txt); b.textContent = "Copiado"; }
-      catch (err) { b.textContent = "Copie: " + txt.slice(0, 40) + "…"; }
-      setTimeout(() => { b.textContent = "Copiar referência"; }, 2200);
-    });
+    $("abrirMenu").addEventListener("click", () => menu(true));
+    $("fecharMenu").addEventListener("click", () => menu(false));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") { menu(false); fecharDetalhe(); } });
+    addEventListener("hashchange", rota);
   }
 
-  ligar();
-  iniciar();
+  ligar(); rota(); iniciar();
 })();
 </script>

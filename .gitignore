@@ -5,3 +5,4 @@ __pycache__/
 venv/
 data/*.tmp
 data/*.corrompido.json
+.taste-skill/
