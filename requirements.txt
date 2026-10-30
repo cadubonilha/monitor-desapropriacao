@@ -1,0 +1,4 @@
+requests>=2.31,<3
+urllib3>=2.0,<3
+beautifulsoup4>=4.12,<5
+pytest>=8,<9

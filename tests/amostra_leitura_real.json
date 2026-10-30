@@ -1,0 +1,79 @@
+{
+ "typeNormDay": {
+  "DO2ESP": false,
+  "DO1ESP": false,
+  "DO1A": false,
+  "DO3E": false,
+  "DO2E": false,
+  "DO1E": false
+ },
+ "idPortletInstance": "Kujrw0TZC2Mb",
+ "dateUrl": "09-09-2026",
+ "section": "DO1",
+ "jsonArray": [
+  {
+   "pubName": "DO3",
+   "urlTitle": "extrato-de-termo-aditivo-n-11/2026-uasg-110097-730564370",
+   "numberPage": "1",
+   "subTitulo": "",
+   "titulo": "",
+   "title": "EXTRATO DE TERMO ADITIVO Nº 11/2026 - UASG 110097",
+   "pubDate": "09/09/2026",
+   "content": "EXTRATO DE TERMO ADITIVO Nº 11/2026 - UASG 110097 Número do Contrato: 12/2017. Nº Processo: 00588.000481/2016-75. Dispensa. Nº 30/2017. Contratante: SUPERINTENDENCIA REG. DE ADMIN. DA 4ª REGIAO. Contratado: 10.619.354/0001-72 - MEKPAR COMERCIO E PARTICIPACOES S/A. Objeto: Prorrogação da vigência contratual pelo período de 30 (trinta) dias. Vigência: 05/09/2026 a 04/10/2026. Valor Total Atualizado...",
+   "editionNumber": "170",
+   "hierarchyLevelSize": 5,
+   "artType": "Extrato de Termo Aditivo",
+   "pubOrder": "DO300001:00001:00001:00001:00001:00000:00000:00000:00000:00000:00001:00000",
+   "hierarchyStr": "Presidência da República/Advocacia-Geral da União/Secretaria-Geral de Consultoria/Secretaria de Gestão Administrativa/Superintendência Regional de Administração da 4ª Região",
+   "hierarchyList": [
+    "Presidência da República",
+    "Advocacia-Geral da União",
+    "Secretaria-Geral de Consultoria",
+    "Secretaria de Gestão Administrativa",
+    "Superintendência Regional de Administração da 4ª Região"
+   ]
+  },
+  {
+   "pubName": "DO3",
+   "urlTitle": "edital-730576555",
+   "numberPage": "1",
+   "subTitulo": "",
+   "titulo": "",
+   "title": "EDITAL",
+   "pubDate": "09/09/2026",
+   "content": "EDITAL APROVAÇÃO DE PROJETO PROGRAMA MAIS LEITE SAUDÁVEL PROCESSO Nº 21012.007741/2022-76 O SUPERINTENDENTE DO MINISTÉRIO DA AGRICULTURA E PECUÁRIA NO ESTADO DA BAHIA no uso das suas atribuições, com base nas análises técnicas constantes nos autos do Processo nº 308793.6453036/2026, protocolado em 07/07/2026 e, em conformidade com o Decreto nº 8.533, de 30 de setembro de 2015, DEFERE a habilitação...",
+   "editionNumber": "170",
+   "hierarchyLevelSize": 4,
+   "artType": "Edital",
+   "pubOrder": "DO300002:00002:00002:00002:00001:00000:00000:00000:00000:00000:00001:00000",
+   "hierarchyStr": "Ministério da Agricultura e Pecuária/Secretaria Executiva/Subsecretaria de Governança das Superintendências/Superintendência de Agricultura e Pecuária do Estado da Bahia",
+   "hierarchyList": [
+    "Ministério da Agricultura e Pecuária",
+    "Secretaria Executiva",
+    "Subsecretaria de Governança das Superintendências",
+    "Superintendência de Agricultura e Pecuária do Estado da Bahia"
+   ]
+  },
+  {
+   "pubName": "DO3",
+   "urlTitle": "aviso-de-licitacao-modalidade-pregao-6/2026-730570001",
+   "numberPage": "1",
+   "subTitulo": "",
+   "titulo": "",
+   "title": "AVISO DE LICITAÇÃO",
+   "pubDate": "09/09/2026",
+   "content": "AVISO DE LICITAÇÃO Modalidade: Pregão 6/2026 / Número do processo: 21054.000849/2026-75 / Objeto: Contratação dos serviços de apoio administrativo Data de início de recebimento de propostas: 09/09/2026, 08:00. Forma de apresentação: Eletrônica Data de Abertura: 24/09/2026, 09:00 Endereço eletrônico do Edital: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/compras/acompanhamento-c...",
+   "editionNumber": "170",
+   "hierarchyLevelSize": 4,
+   "artType": "Aviso de Licitação-Pregão",
+   "pubOrder": "DO300003:00003:00003:00003:00002:00000:00000:00000:00000:00000:00001:00000",
+   "hierarchyStr": "Ministério da Agricultura e Pecuária/Secretaria Executiva/Subsecretaria de Governança das Superintendências/Superintendência de Agricultura e Pecuária do Estado de Sergipe",
+   "hierarchyList": [
+    "Ministério da Agricultura e Pecuária",
+    "Secretaria Executiva",
+    "Subsecretaria de Governança das Superintendências",
+    "Superintendência de Agricultura e Pecuária do Estado de Sergipe"
+   ]
+  }
+ ]
+}

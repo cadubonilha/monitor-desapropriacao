@@ -1,0 +1,102 @@
+# Coleta diária de decretos de desapropriação (zero-token: apenas Python e Regex).
+# Roda no GitHub Actions; gratuito em repositório público.
+name: Coleta diaria de decretos
+
+on:
+  schedule:
+    # 09:23 UTC = 06:23 em Brasília. Minuto quebrado evita a fila do topo da hora.
+    - cron: "23 9 * * *"
+    # Segunda passada às 20:47 de Brasília (edições extras e indexação tardia).
+    - cron: "47 23 * * *"
+  workflow_dispatch:
+    inputs:
+      dias:
+        description: "Dias retroativos (use 60 a 90 na primeira carga)"
+        required: false
+        default: "5"
+      ufs:
+        description: "UFs separadas por vírgula (vazio = todas)"
+        required: false
+        default: ""
+      modo_municipal:
+        description: "indexacao (diário) ou publicacao (carga histórica)"
+        required: false
+        default: "indexacao"
+
+permissions:
+  contents: write   # necessário para gravar data/*.json no repositório
+
+concurrency:
+  group: coleta-diaria
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      TZ: America/Sao_Paulo
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Testes (bloqueiam a coleta se falharem)
+        run: python -m pytest -q
+
+      # Cada fonte roda isolada: a queda de uma não impede as demais.
+      - name: Municipal (Querido Diário)
+        id: municipal
+        continue-on-error: true
+        env:
+          DIAS_RETROATIVOS: ${{ github.event.inputs.dias || '5' }}
+          QD_UFS: ${{ github.event.inputs.ufs || vars.QD_UFS }}
+          QD_MODO: ${{ github.event.inputs.modo_municipal || 'indexacao' }}
+        run: python -m pipeline.coletor_municipal
+
+      - name: Federal (DOU Seção 1)
+        id: federal
+        continue-on-error: true
+        env:
+          # Opcionais: com eles o coletor usa o INLABS (texto integral em XML).
+          INLABS_EMAIL: ${{ secrets.INLABS_EMAIL }}
+          INLABS_SENHA: ${{ secrets.INLABS_SENHA }}
+          DIAS_RETROATIVOS_DOU: ${{ github.event.inputs.dias || '3' }}
+        run: python -m pipeline.coletor_federal
+
+      - name: Estadual (notícias oficiais .gov.br)
+        id: estadual
+        continue-on-error: true
+        env:
+          DIAS_RETROATIVOS_RSS: ${{ github.event.inputs.dias || '3' }}
+          RSS_UFS: ${{ github.event.inputs.ufs || vars.RSS_UFS }}
+        run: python -m pipeline.coletor_estadual
+
+      - name: Publicar dados no repositório
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Sem alterações nos dados."
+          else
+            git commit -m "dados: coleta $(date +%F)"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: Sinalizar falha de fonte
+        if: steps.municipal.outcome == 'failure' || steps.federal.outcome == 'failure' || steps.estadual.outcome == 'failure'
+        run: |
+          echo "::error::Fonte(s) com falha: municipal=${{ steps.municipal.outcome }} federal=${{ steps.federal.outcome }} estadual=${{ steps.estadual.outcome }}. Ver log e data/meta.json."
+          exit 1

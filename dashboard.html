@@ -1,0 +1,454 @@
+<title>Monitor de Desapropriações</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Atos declaratórios de desapropriação publicados em Diários Oficiais (fase administrativa).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: cabeçalho institucional, faixa de filtros, resumo, lista de atos com o trecho do decreto em destaque. */
+:root{
+  --bg:#f5f7f6; --surface:#ffffff; --surface-2:#eef2f0; --line:#d6dedb; --fg:#16211d; --muted:#5a6964;
+  --accent:#17604b; --accent-fg:#ffffff; --accent-soft:#dcebe5; --mark:#fbe7a6;
+  --ok:#1e7a4f; --warn:#a86a06; --low:#8a5a5a;
+  --fed:#2c4f8a; --est:#7a4a12; --mun:#17604b;
+  --font-ui:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-data:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1513; --surface:#161e1b; --surface-2:#1d2723; --line:#2c3833; --fg:#e3ebe7; --muted:#97a6a0;
+  --accent:#5cc49c; --accent-fg:#0c1411; --accent-soft:#1f3a30; --mark:#5b4a12;
+  --ok:#62c48f; --warn:#e0a94a; --low:#d19a9a; --fed:#8fb0e8; --est:#e0ad6e; --mun:#5cc49c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1513; --surface:#161e1b; --surface-2:#1d2723; --line:#2c3833; --fg:#e3ebe7; --muted:#97a6a0;
+  --accent:#5cc49c; --accent-fg:#0c1411; --accent-soft:#1f3a30; --mark:#5b4a12;
+  --ok:#62c48f; --warn:#e0a94a; --low:#d19a9a; --fed:#8fb0e8; --est:#e0ad6e; --mun:#5cc49c; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-ui);font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;padding-block:20px 16px}
+.marca small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.marca h1{margin:2px 0 0;font-size:22px;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.marca p{margin:4px 0 0;color:var(--muted);font-size:13px;max-width:62ch}
+.fonte{display:flex;flex-direction:column;gap:6px;align-items:flex-end;font-size:12px;color:var(--muted);min-width:0}
+.fonte .acoes{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+button,.btn{font:inherit;font-size:13px;font-weight:600;border-radius:var(--r);border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:7px 12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;line-height:1.2}
+button:hover,.btn:hover{border-color:var(--accent)}
+.btn.primario{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.aviso{margin-top:14px;padding:10px 14px;border-radius:var(--r);background:var(--accent-soft);font-size:13px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.aviso.erro{background:color-mix(in srgb,var(--low) 18%,var(--surface))}
+.carregar{display:none;margin-top:12px;gap:8px;flex-wrap:wrap;align-items:center}
+.carregar.aberto{display:flex}
+.carregar input[type=url]{flex:1 1 320px;min-width:0}
+
+main.wrap{padding-block:18px 48px;display:flex;flex-direction:column;gap:18px}
+.filtros{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.filtros .busca{grid-column:1/-1}
+label.campo{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:0}
+input,select{font:inherit;font-size:14px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:7px 9px;min-width:0;width:100%}
+.chips{display:flex;flex-wrap:wrap;gap:6px;grid-column:1/-1;align-items:center}
+.chips span.rot{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.chip{border-radius:999px;padding:4px 11px;font-size:12px;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.limpar{justify-self:start}
+
+.resumo{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:18px}
+@media (max-width:760px){.resumo{grid-template-columns:1fr}}
+.numeros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.numeros div{background:var(--surface);padding:12px 14px}
+.numeros b{display:block;font-family:var(--font-data);font-size:24px;font-weight:500;font-variant-numeric:tabular-nums}
+.numeros span{font-size:12px;color:var(--muted)}
+.porUF{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;min-width:0}
+.porUF h2,.lista-cab h2{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.barras{display:grid;grid-template-columns:auto 1fr auto;gap:5px 10px;align-items:center;font-size:13px}
+.barras button{all:unset;cursor:pointer;font-family:var(--font-data);font-weight:500}
+.barras button:focus-visible{outline:2px solid var(--accent)}
+.barra{height:10px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+.barra i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.barras em{font-style:normal;font-family:var(--font-data);font-variant-numeric:tabular-nums;color:var(--muted);text-align:right}
+
+.lista-cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.lista-cab select{width:auto}
+.atos{display:flex;flex-direction:column;gap:10px;list-style:none;margin:0;padding:0}
+.ato{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--mun);border-radius:var(--r);padding:14px 16px;display:grid;gap:8px;min-width:0}
+.ato[data-esfera="Federal"]{border-left-color:var(--fed)}
+.ato[data-esfera="Estadual"]{border-left-color:var(--est)}
+.ato .linha1{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-size:13px;color:var(--muted)}
+.ato time{font-family:var(--font-data);color:var(--fg);font-variant-numeric:tabular-nums}
+.pill{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid currentColor}
+.pill.Federal{color:var(--fed)}.pill.Estadual{color:var(--est)}.pill.Municipal{color:var(--mun)}
+.ato h3{margin:0;font-size:16px;font-weight:600;line-height:1.35;text-wrap:balance}
+.ato h3 .num{font-family:var(--font-data);font-weight:500}
+.trecho{margin:0;font-size:14px;line-height:1.6;color:var(--fg);background:var(--surface-2);padding:10px 12px;border-radius:var(--r);overflow-wrap:anywhere}
+mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}
+.tag{border:1px solid var(--line);border-radius:4px;padding:1px 7px;color:var(--muted);white-space:nowrap}
+.tag.fim{border-color:transparent;background:var(--accent-soft);color:var(--fg)}
+.tag.dado{font-family:var(--font-data);color:var(--fg)}
+.tag.alerta{border-color:var(--warn);color:var(--warn)}
+.conf{display:inline-flex;align-items:center;gap:5px;font-weight:600}
+.conf::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.conf.alta{color:var(--ok)}.conf.media{color:var(--warn)}.conf.baixa{color:var(--low)}
+.rodape-ato{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center}
+.vazio{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:28px;text-align:center;color:var(--muted)}
+.mais{align-self:center}
+footer.wrap{padding-block:0 32px;font-size:12px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.ato{transition:border-color .15s}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="marca">
+      <small>Decreto-Lei 3.365/1941 · Lei 4.132/1962</small>
+      <h1>Monitor de Desapropriações</h1>
+      <p>Declarações de utilidade pública, necessidade pública e interesse social publicadas em Diários Oficiais, na fase administrativa.</p>
+    </div>
+    <div class="fonte">
+      <span id="status">Carregando dados…</span>
+      <div class="acoes">
+        <button type="button" id="btnFonte" aria-expanded="false" aria-controls="painelFonte">Trocar fonte de dados</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-block:0 14px">
+    <div id="avisoExemplo" class="aviso" hidden>
+      <strong>Dados de exemplo fictícios.</strong>
+      <span>Municípios, atos e links são inventados. Envie o seu <code>atos.json</code> ou informe a URL Raw do repositório.</span>
+    </div>
+    <div id="avisoErro" class="aviso erro" hidden></div>
+    <div id="painelFonte" class="carregar">
+      <input type="url" id="urlJson" placeholder="https://raw.githubusercontent.com/USUARIO/REPOSITORIO/main/data/atos.json" aria-label="URL do atos.json">
+      <button type="button" class="primario btn" id="btnUrl">Carregar URL</button>
+      <label class="btn" for="arquivo">Enviar arquivo</label>
+      <input type="file" id="arquivo" accept=".json,application/json" hidden>
+      <button type="button" id="btnExemplo">Ver exemplo</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="filtros" aria-label="Filtros">
+    <label class="campo busca" for="q">Busca no trecho, órgão, número ou matrícula
+      <input type="search" id="q" placeholder="ex.: rodovia, saneamento, linha de transmissão, matrícula 45.678">
+    </label>
+    <div class="chips" id="chipsEsfera" role="group" aria-label="Esfera"><span class="rot">Esfera</span></div>
+    <label class="campo" for="fUF">UF<select id="fUF"></select></label>
+    <label class="campo" for="fMun">Município<select id="fMun"></select></label>
+    <label class="campo" for="fDe">Publicado de<input type="date" id="fDe"></label>
+    <label class="campo" for="fAte">até<input type="date" id="fAte"></label>
+    <label class="campo" for="fFim">Finalidade<select id="fFim"></select></label>
+    <label class="campo" for="fConf">Confiança mínima<select id="fConf">
+      <option value="baixa">Todas</option><option value="media">Média ou alta</option><option value="alta">Só alta</option></select></label>
+    <div class="chips" id="chipsTag" role="group" aria-label="Características"><span class="rot">Características</span></div>
+    <button type="button" class="limpar" id="btnLimpar">Limpar filtros</button>
+  </section>
+
+  <section class="resumo" aria-label="Resumo">
+    <div class="numeros">
+      <div><b id="nTotal">0</b><span>atos no filtro</span></div>
+      <div><b id="n7">0</b><span>publicados nos últimos 7 dias</span></div>
+      <div><b id="nUrg">0</b><span>com urgência (imissão provisória)</span></div>
+      <div><b id="nMat">0</b><span>com matrícula identificada</span></div>
+    </div>
+    <div class="porUF"><h2>Atos por UF (clique para filtrar)</h2><div class="barras" id="barras"></div></div>
+  </section>
+
+  <section aria-label="Atos">
+    <div class="lista-cab">
+      <h2 id="tituloLista">Atos</h2>
+      <label class="campo" for="ordem" style="flex-direction:row;align-items:center;gap:8px">Ordenar
+        <select id="ordem"><option value="data">Mais recentes</option><option value="score">Maior confiança</option><option value="uf">UF e município</option></select>
+      </label>
+    </div>
+    <ol class="atos" id="lista"></ol>
+    <div style="display:flex;justify-content:center;margin-top:12px"><button type="button" class="mais" id="btnMais" hidden>Mostrar mais</button></div>
+  </section>
+</main>
+<footer class="wrap">
+  Coleta automática diária por expressões regulares, sem inteligência artificial no ciclo. A extração pode conter erros: confira sempre o ato no Diário Oficial antes de qualquer providência.
+</footer>
+
+<script>
+(() => {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  const POR_PAGINA = 40;
+  const ORDEM_CONF = { baixa: 0, media: 1, alta: 2 };
+  const TAG_ROTULO = {
+    utilidade_publica: "Utilidade pública", interesse_social: "Interesse social",
+    necessidade_publica: "Necessidade pública", servidao: "Servidão administrativa",
+    urgencia: "Urgência", reforma_agraria: "Reforma agrária", revogacao: "Revogação",
+    retificacao: "Retificação", matricula: "Matrícula", coordenadas: "Coordenadas",
+    fonte_secundaria: "Fonte secundária (notícia)", sem_declaracao_explicita: "Sem declaração explícita"
+  };
+  const TAGS_FILTRO = ["utilidade_publica", "interesse_social", "servidao", "urgencia", "reforma_agraria", "matricula", "revogacao"];
+  const ESFERAS = ["Federal", "Estadual", "Municipal"];
+
+  let dados = [], meta = null, origem = "", limite = POR_PAGINA;
+  const f = { q: "", esferas: new Set(), uf: "", mun: "", de: "", ate: "", fim: "", conf: "baixa", tags: new Set() };
+
+  // ---------- utilidades ----------
+  const norm = (s) => (s || "").toString().normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const esc = (s) => (s ?? "").toString().replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fmtData = (iso) => { const [a, m, d] = (iso || "").split("-"); return d ? `${d}/${m}/${a}` : iso; };
+  const hojeISO = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+  const ler = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+
+  // Destaca os termos da busca no texto já escapado, ignorando acentos.
+  function destacar(texto, termos) {
+    const seguro = esc(texto);
+    if (!termos.length) return seguro;
+    const base = norm(seguro);
+    const marcas = [];
+    for (const t of termos) {
+      let i = base.indexOf(t);
+      while (i !== -1) { marcas.push([i, i + t.length]); i = base.indexOf(t, i + t.length); }
+    }
+    if (!marcas.length) return seguro;
+    marcas.sort((a, b) => a[0] - b[0]);
+    let out = "", pos = 0;
+    for (const [i, j] of marcas) {
+      if (i < pos) continue;
+      // não corta entidades HTML (&amp; etc.)
+      if (seguro.lastIndexOf("&", i) > seguro.lastIndexOf(";", i)) continue;
+      out += seguro.slice(pos, i) + "<mark>" + seguro.slice(i, j) + "</mark>";
+      pos = j;
+    }
+    return out + seguro.slice(pos);
+  }
+
+  // ---------- carga de dados ----------
+  function validar(lista) {
+    if (!Array.isArray(lista)) throw new Error("o arquivo não contém uma lista de atos");
+    const obrig = ["id", "data_publicacao", "esfera", "uf", "resumo_contexto", "url_fonte"];
+    const ok = lista.filter((a) => a && obrig.every((k) => k in a));
+    if (lista.length && !ok.length) throw new Error("nenhum registro tem os campos obrigatórios do Monitor");
+    return ok.map((a) => ({
+      ...a, tags: a.tags || [], finalidades: a.finalidades || [], matriculas: a.matriculas || [],
+      areas: a.areas || [], confianca: a.confianca || "baixa",
+      _busca: norm([a.resumo_contexto, a.orgao_emissor, a.numero_ato, a.municipio, a.tipo_ato, (a.matriculas || []).join(" "), (a.finalidades || []).join(" ")].join(" "))
+    }));
+  }
+
+  function aplicar(lista, rotulo, exemplo) {
+    dados = validar(lista);
+    origem = rotulo;
+    $("avisoExemplo").hidden = !exemplo;
+    $("avisoErro").hidden = true;
+    montarOpcoes();
+    render();
+  }
+
+  function erro(msg) {
+    const el = $("avisoErro");
+    el.textContent = msg;
+    el.hidden = false;
+  }
+
+  async function buscarJSON(url) {
+    const r = await fetch(url, { cache: "no-cache" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  }
+
+  async function carregarURL(url) {
+    try {
+      const lista = await buscarJSON(url);
+      aplicar(lista, url.replace(/^https?:\/\//, ""), false);
+      guardar("monitor_url", url);
+      try { meta = await buscarJSON(url.replace(/atos\.json(\?.*)?$/, "meta.json")); } catch (e) { meta = null; }
+      render();
+      return true;
+    } catch (e) {
+      erro(`Não foi possível ler ${url} (${e.message}). Se esta página estiver aberta no Claude, endereços externos ficam bloqueados: use "Enviar arquivo". No GitHub Pages a URL Raw funciona.`);
+      return false;
+    }
+  }
+
+  async function carregarExemplo() {
+    try { aplicar(await buscarJSON("data/exemplo.json"), "exemplo fictício", true); }
+    catch (e) { erro("Arquivo de exemplo indisponível."); }
+  }
+
+  async function iniciar() {
+    // 1) Parâmetro ?dados=URL  2) data/atos.json ao lado da página (GitHub Pages)
+    // 3) última URL usada neste navegador  4) exemplo fictício
+    const param = new URLSearchParams(location.search).get("dados");
+    if (param && await carregarURL(param)) return;
+    try {
+      const lista = await buscarJSON("data/atos.json");
+      if (Array.isArray(lista) && lista.length) {
+        aplicar(lista, "data/atos.json", false);
+        try { meta = await buscarJSON("data/meta.json"); } catch (e) { meta = null; }
+        render();
+        return;
+      }
+    } catch (e) { /* ausente: segue para as alternativas */ }
+    const salva = ler("monitor_url");
+    if (salva) { $("urlJson").value = salva; if (await carregarURL(salva)) return; }
+    await carregarExemplo();
+  }
+
+  // ---------- filtros ----------
+  function montarOpcoes() {
+    const ufs = [...new Set(dados.map((a) => a.uf))].sort();
+    $("fUF").innerHTML = `<option value="">Todas</option>` + ufs.map((u) => `<option>${esc(u)}</option>`).join("");
+    $("fUF").value = ufs.includes(f.uf) ? f.uf : (f.uf = "");
+    montarMunicipios();
+    const fins = [...new Set(dados.flatMap((a) => a.finalidades))].sort((a, b) => a.localeCompare(b, "pt-BR"));
+    $("fFim").innerHTML = `<option value="">Todas</option>` + fins.map((x) => `<option>${esc(x)}</option>`).join("");
+    $("fFim").value = fins.includes(f.fim) ? f.fim : (f.fim = "");
+  }
+
+  function montarMunicipios() {
+    const muns = [...new Set(dados.filter((a) => !f.uf || a.uf === f.uf).map((a) => a.municipio).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b, "pt-BR"));
+    $("fMun").innerHTML = `<option value="">Todos</option>` + muns.map((m) => `<option>${esc(m)}</option>`).join("");
+    $("fMun").value = muns.includes(f.mun) ? f.mun : (f.mun = "");
+  }
+
+  function filtrar() {
+    const termos = norm(f.q).split(/\s+/).filter((t) => t.length > 1);
+    const minConf = ORDEM_CONF[f.conf] || 0;
+    return dados.filter((a) =>
+      (!f.esferas.size || f.esferas.has(a.esfera)) &&
+      (!f.uf || a.uf === f.uf) &&
+      (!f.mun || a.municipio === f.mun) &&
+      (!f.de || a.data_publicacao >= f.de) &&
+      (!f.ate || a.data_publicacao <= f.ate) &&
+      (!f.fim || a.finalidades.includes(f.fim)) &&
+      (ORDEM_CONF[a.confianca] || 0) >= minConf &&
+      [...f.tags].every((t) => a.tags.includes(t)) &&
+      termos.every((t) => a._busca.includes(t))
+    );
+  }
+
+  function ordenar(lista) {
+    const modo = $("ordem").value;
+    const porData = (a, b) => b.data_publicacao.localeCompare(a.data_publicacao);
+    if (modo === "score") return lista.sort((a, b) => (b.score || 0) - (a.score || 0) || porData(a, b));
+    if (modo === "uf") return lista.sort((a, b) => a.uf.localeCompare(b.uf) || (a.municipio || "").localeCompare(b.municipio || "", "pt-BR") || porData(a, b));
+    return lista.sort((a, b) => porData(a, b) || (b.score || 0) - (a.score || 0));
+  }
+
+  // ---------- renderização ----------
+  function render() {
+    const lista = ordenar(filtrar());
+    const termos = norm(f.q).split(/\s+/).filter((t) => t.length > 1);
+
+    // status da fonte
+    const ult = meta && meta.ultima_execucao ? ` · última coleta ${fmtData(meta.ultima_execucao.slice(0, 10))} ${meta.ultima_execucao.slice(11, 16)}` : "";
+    $("status").textContent = `${dados.length} atos · fonte: ${origem}${ult}`;
+
+    // números
+    const corte7 = new Date(new Date(hojeISO()).getTime() - 7 * 864e5).toISOString().slice(0, 10);
+    $("nTotal").textContent = lista.length.toLocaleString("pt-BR");
+    $("n7").textContent = lista.filter((a) => a.data_publicacao >= corte7).length.toLocaleString("pt-BR");
+    $("nUrg").textContent = lista.filter((a) => a.tags.includes("urgencia")).length.toLocaleString("pt-BR");
+    $("nMat").textContent = lista.filter((a) => a.matriculas.length).length.toLocaleString("pt-BR");
+
+    // barras por UF (top 10)
+    const cont = {};
+    lista.forEach((a) => { cont[a.uf] = (cont[a.uf] || 0) + 1; });
+    const top = Object.entries(cont).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    const max = top.length ? top[0][1] : 1;
+    $("barras").innerHTML = top.length ? top.map(([uf, n]) =>
+      `<button type="button" data-uf="${esc(uf)}" title="Filtrar ${esc(uf)}">${esc(uf === "BR" ? "BR*" : uf)}</button>` +
+      `<div class="barra"><i style="width:${Math.max(3, (n / max) * 100)}%"></i></div><em>${n}</em>`).join("")
+      : `<span style="grid-column:1/-1;color:var(--muted)">Sem atos no filtro.</span>`;
+
+    // lista
+    $("tituloLista").textContent = lista.length === dados.length ? "Atos" : `Atos filtrados (${lista.length} de ${dados.length})`;
+    const visiveis = lista.slice(0, limite);
+    $("lista").innerHTML = visiveis.length ? visiveis.map((a) => cartao(a, termos)).join("")
+      : `<li class="vazio">Nenhum ato corresponde aos filtros. Use "Limpar filtros" ou amplie o período.</li>`;
+    $("btnMais").hidden = lista.length <= limite;
+    $("btnMais").textContent = `Mostrar mais (${lista.length - limite} restantes)`;
+
+    // chips
+    document.querySelectorAll("#chipsEsfera .chip").forEach((c) => c.setAttribute("aria-pressed", f.esferas.has(c.dataset.v)));
+    document.querySelectorAll("#chipsTag .chip").forEach((c) => c.setAttribute("aria-pressed", f.tags.has(c.dataset.v)));
+  }
+
+  function cartao(a, termos) {
+    const local = [a.municipio, a.uf === "BR" ? "âmbito nacional" : a.uf].filter(Boolean).join(" / ");
+    const numero = a.numero_ato ? `<span class="num">nº ${esc(a.numero_ato.replace(/^s\/nº,?\s*/i, "s/nº "))}</span>` : `<span class="num">sem número identificado</span>`;
+    const numeroTxt = a.numero_ato && a.numero_ato.startsWith("s/nº") ? `<span class="num">${esc(a.numero_ato)}</span>` : numero;
+    const tags = a.tags.filter((t) => TAG_ROTULO[t] && t !== "matricula")
+      .map((t) => `<span class="tag${t === "fonte_secundaria" || t === "revogacao" || t === "sem_declaracao_explicita" ? " alerta" : ""}">${esc(TAG_ROTULO[t])}</span>`).join("");
+    const fins = a.finalidades.map((x) => `<span class="tag fim">${esc(x)}</span>`).join("");
+    const mats = a.matriculas.map((m) => `<span class="tag dado">Matr. ${destacar(m, termos)}</span>`).join("");
+    const areas = a.areas.map((x) => `<span class="tag dado">${esc(x)}</span>`).join("");
+    const confTxt = { alta: "Confiança alta", media: "Confiança média", baixa: "Confiança baixa" }[a.confianca] || "";
+    const ficticio = a.tags.includes("exemplo_ficticio");
+    const link = ficticio
+      ? `<span class="btn" aria-disabled="true" title="Exemplo fictício: sem documento real">Documento fictício</span>`
+      : `<a class="btn primario" href="${esc(a.url_fonte)}" target="_blank" rel="noopener noreferrer">${a.tipo_ato === "Notícia oficial" ? "Abrir notícia oficial" : "Abrir no Diário Oficial"} ↗</a>`;
+    return `<li class="ato" data-esfera="${esc(a.esfera)}">
+      <div class="linha1"><time datetime="${esc(a.data_publicacao)}">${fmtData(a.data_publicacao)}</time>
+        <span class="pill ${esc(a.esfera)}">${esc(a.esfera)}</span><span>${esc(local)}</span><span>${destacar(a.orgao_emissor || "", termos)}</span></div>
+      <h3>${esc(a.tipo_ato && a.tipo_ato !== "Não identificado" ? a.tipo_ato : "Ato")} ${numeroTxt}</h3>
+      <p class="trecho">${destacar(a.resumo_contexto, termos)}</p>
+      <div class="meta">${fins}${tags}${mats}${areas}</div>
+      <div class="rodape-ato"><span class="conf ${esc(a.confianca)}">${confTxt}</span>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <button type="button" data-copiar="${esc(a.id)}">Copiar referência</button>${link}</div></div>
+    </li>`;
+  }
+
+  function referencia(a) {
+    const local = [a.municipio, a.uf].filter(Boolean).join("/");
+    return `${a.tipo_ato || "Ato"} ${a.numero_ato ? "nº " + a.numero_ato : ""} (${a.orgao_emissor || a.esfera}, ${local}), publicado em ${fmtData(a.data_publicacao)}. Fonte: ${a.url_fonte}`.replace(/\s+/g, " ");
+  }
+
+  // ---------- eventos ----------
+  function ligar() {
+    ESFERAS.forEach((e) => $("chipsEsfera").insertAdjacentHTML("beforeend", `<button type="button" class="chip" data-v="${e}" aria-pressed="false">${e}</button>`));
+    TAGS_FILTRO.forEach((t) => $("chipsTag").insertAdjacentHTML("beforeend", `<button type="button" class="chip" data-v="${t}" aria-pressed="false">${TAG_ROTULO[t]}</button>`));
+
+    const reset = () => { limite = POR_PAGINA; render(); };
+    let t;
+    $("q").addEventListener("input", (e) => { clearTimeout(t); t = setTimeout(() => { f.q = e.target.value; reset(); }, 150); });
+    $("chipsEsfera").addEventListener("click", (e) => { const c = e.target.closest(".chip"); if (!c) return; f.esferas.has(c.dataset.v) ? f.esferas.delete(c.dataset.v) : f.esferas.add(c.dataset.v); reset(); });
+    $("chipsTag").addEventListener("click", (e) => { const c = e.target.closest(".chip"); if (!c) return; f.tags.has(c.dataset.v) ? f.tags.delete(c.dataset.v) : f.tags.add(c.dataset.v); reset(); });
+    $("fUF").addEventListener("change", (e) => { f.uf = e.target.value; montarMunicipios(); reset(); });
+    $("fMun").addEventListener("change", (e) => { f.mun = e.target.value; reset(); });
+    $("fDe").addEventListener("change", (e) => { f.de = e.target.value; reset(); });
+    $("fAte").addEventListener("change", (e) => { f.ate = e.target.value; reset(); });
+    $("fFim").addEventListener("change", (e) => { f.fim = e.target.value; reset(); });
+    $("fConf").addEventListener("change", (e) => { f.conf = e.target.value; reset(); });
+    $("ordem").addEventListener("change", reset);
+    $("barras").addEventListener("click", (e) => { const b = e.target.closest("button[data-uf]"); if (!b) return; f.uf = f.uf === b.dataset.uf ? "" : b.dataset.uf; $("fUF").value = f.uf; montarMunicipios(); reset(); });
+    $("btnLimpar").addEventListener("click", () => {
+      Object.assign(f, { q: "", uf: "", mun: "", de: "", ate: "", fim: "", conf: "baixa" }); f.esferas.clear(); f.tags.clear();
+      ["q", "fDe", "fAte"].forEach((id) => { $(id).value = ""; }); $("fUF").value = ""; $("fFim").value = ""; $("fConf").value = "baixa"; montarMunicipios(); reset();
+    });
+    $("btnMais").addEventListener("click", () => { limite += POR_PAGINA; render(); });
+    $("btnFonte").addEventListener("click", () => { const p = $("painelFonte"); const ab = p.classList.toggle("aberto"); $("btnFonte").setAttribute("aria-expanded", ab); if (ab) $("urlJson").focus(); });
+    $("btnUrl").addEventListener("click", () => { const u = $("urlJson").value.trim(); if (u) carregarURL(u); });
+    $("urlJson").addEventListener("keydown", (e) => { if (e.key === "Enter") $("btnUrl").click(); });
+    $("btnExemplo").addEventListener("click", carregarExemplo);
+    $("arquivo").addEventListener("change", (e) => {
+      const arq = e.target.files[0]; if (!arq) return;
+      const leitor = new FileReader();
+      leitor.onload = () => { try { meta = null; aplicar(JSON.parse(leitor.result), arq.name, false); } catch (err) { erro(`Arquivo inválido: ${err.message}`); } };
+      leitor.readAsText(arq, "utf-8");
+      e.target.value = "";
+    });
+    $("lista").addEventListener("click", async (e) => {
+      const b = e.target.closest("button[data-copiar]"); if (!b) return;
+      const a = dados.find((x) => x.id === b.dataset.copiar); if (!a) return;
+      const txt = referencia(a);
+      try { await navigator.clipboard.writeText(txt); b.textContent = "Copiado"; }
+      catch (err) { b.textContent = "Copie: " + txt.slice(0, 40) + "…"; }
+      setTimeout(() => { b.textContent = "Copiar referência"; }, 2200);
+    });
+  }
+
+  ligar();
+  iniciar();
+})();
+</script>
