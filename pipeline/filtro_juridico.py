@@ -70,8 +70,9 @@ _N = r"(?:n\.?\s*[o°º]s?\.?|n[o°º]s?\.?|n\.|numero)"
 RE_DECLARACAO = re.compile(
     # "declara", "fica declarado", "ficam declaradas", "declara como de",
     # "declara a área ... de utilidade pública" (até 8 palavras entre os termos).
-    # Não casa "declarou" (pretérito), típico de referência a ato anterior.
-    r"\bdeclara(?:d[oa]s?|m|ndo)?\b(?:\W+\w+){0,8}?\W+(?:como\s+)?(?:de\s+)?"
+    # Inclui o infinitivo ("Art. 1º Declarar", usado pela ANTT e ANEEL). Não casa
+    # "declarou" (pretérito), típico de referência a ato anterior.
+    r"\bdeclara(?:d[oa]s?|m|ndo|r)?\b(?:\W+\w+){0,8}?\W+(?:como\s+)?(?:de\s+)?"
     r"(?P<tipo>utilidade\s+publica|necessidade\s+publica|interesse\s+social)"
 )
 
@@ -135,7 +136,7 @@ _N_NUM = r"(?:" + _N + r"|n2(?=\s*\d)|n(?=\s+\d))"
 RE_NUMERO = re.compile(
     # Admite uma palavra entre o tipo e o número, como em "DECRETO RIO Nº 58838" ou "DECRETO GP Nº 12".
     r"\b(?P<tipo>decreto(?![\s\-]*lei)(?:\s+(?:municipal|estadual|executivo|governamental|legislativo"
-    r"|regulamentar|numerado|rio|gp|pm\w{0,3}|gab\w{0,6}|sec\w{0,6}))?|resolucao(?:\s+autorizativa)?|portaria"
+    r"|regulamentar|numerado|rio|gp|pm\w{0,3}|gab\w{0,6}|sec\w{0,6}))?|resolucao(?:\s+autorizativa)?|portaria|decisao|deliberacao"
     r"|lei(?:\s+(?:municipal|ordinaria))?)"
     r"\s*(?:" + _N_NUM + r")?\s*[:\-]?\s*"
     r"(?P<num>\d{1,3}(?:\.\d{3})+|\d{1,6})(?:\s*[\/\-]\s*(?P<ano>\d{4}|\d{2})\b)?"
@@ -277,7 +278,7 @@ def _localizar_cabecalho(dob: str, orig: str, pos: int) -> tuple[int | None, str
         caixa_alta = orig[m.start(): m.start() + 3].isupper()
         if tipo == "lei" and not caixa_alta:
             continue  # "Lei nº 7.186/2006" em minúsculas é citação, não cabeçalho do ato
-        prioridade = {"decreto": 3, "resolucao": 2, "portaria": 2, "lei": 1}.get(tipo, 0)
+        prioridade = {"decreto": 3, "resolucao": 2, "portaria": 2, "decisao": 2, "deliberacao": 2, "lei": 1}.get(tipo, 0)
         numero = num + (f"/{m.group('ano')}" if m.group("ano") else "")
         candidatos.append((caixa_alta, prioridade, m.start(), numero, tipo))
     if not candidatos:
@@ -285,7 +286,8 @@ def _localizar_cabecalho(dob: str, orig: str, pos: int) -> tuple[int | None, str
     # Antes da âncora tem precedência sobre depois dela.
     antes = [c for c in candidatos if c[2] <= pos] or candidatos
     melhor = max(antes, key=lambda c: (c[0], c[1], c[2]))
-    nomes = {"decreto": "Decreto", "resolucao": "Resolução", "portaria": "Portaria", "lei": "Lei"}
+    nomes = {"decreto": "Decreto", "resolucao": "Resolução", "portaria": "Portaria", "decisao": "Decisão",
+             "deliberacao": "Deliberação", "lei": "Lei"}
     return melhor[2], melhor[3], nomes.get(melhor[4], "Não identificado")
 
 
@@ -364,9 +366,12 @@ def _avaliar_ancora(dob: str, pos: int, fim_match: int, tipo: str) -> _Ancora | 
             return None
         pontos += 3
     elif tipo == "fins":
-        pontos += 3
+        # "Para fins de desapropriação" sem verbo declaratório por perto é, nos dados
+        # reais, competência em lei orgânica, atribuição de cargo, exposição de motivos
+        # ou ato de fase posterior. Não é a declaração expropriatória: descarta.
         if not declarativo:
-            pontos -= 1  # finalidade sem verbo declaratório: possível fase posterior
+            return None
+        pontos += 3
     else:  # base legal isolada só vale se houver declaração por perto
         if not (declarativo and tem_objeto):
             return None

@@ -182,3 +182,23 @@ def test_rejeita_conteudo_programatico_de_concurso():
     t = ("Desapropriação. Conceito, fundamentos e requisitos. O procedimento e o processo desapropriatório. "
          "A declaração da utilidade pública, a imissão provisória e a justa indenização.")
     assert extrair_atos(t) == []
+
+
+def test_infinitivo_declarar_da_antt():
+    t = ("DECISÃO Nº 1.589, DE 8 DE OUTUBRO DE 2026. A Superintendência da ANTT, com fundamento na Resolução "
+         "ANTT nº 5.818, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação "
+         "a fins rodoviários em favor da União, os bens imóveis delimitados no anexo.")
+    a = extrair_atos(t)
+    assert len(a) == 1 and a[0].numero_ato == "1.589" and a[0].confianca in ("alta", "media")
+
+
+def test_rejeita_competencia_sem_declaracao():
+    t = ("Compete ao Prefeito, mediante decreto: d) declaração de utilidade pública ou necessidade pública, "
+         "ou de interesse social, para efeito de desapropriação ou servidão administrativa; e) aprovação de regulamento.")
+    assert extrair_atos(t) == []
+
+
+def test_rejeita_atribuicao_de_cargo():
+    t = ("Elaborar avaliações imobiliárias de imóveis públicos ou de terceiros, de interesse público, para fins "
+         "de desapropriação, locação, permuta e venda.")
+    assert extrair_atos(t) == []
