@@ -1,5 +1,36 @@
 [
   {
+    "id": "6406c0211f8df1e4",
+    "data_publicacao": "2026-10-30",
+    "esfera": "Municipal",
+    "uf": "AL",
+    "municipio": "Olivença",
+    "orgao_emissor": "Prefeitura Municipal de Olivença",
+    "numero_ato": "05",
+    "resumo_contexto": "DECRETO MUNICIPAL Nº 05, DE 08 DE MAIO DE 2026, QUE DECLARA DE UTILIDADE PÚBLICA, PARA FINS DE DESAPROPRIAÇÃO, IMÓVEL URBANO DESTINADO À IMPLANTAÇÃO DE UNIDADE ESCOLAR EM REGIME DE TEMPO INTEGRAL NO MUNICÍPIO DE OLIVENÇA, E DÁ OUTRAS PROVIDÊNCIAS. O PREFEITO DO MUNICÍPIO DE OLIVENÇA, Estado de Alagoas, Sr. JOSIMAR DIONISIO, no uso das atribuições legais que lhe confere o art. 49, inciso II, da Lei Orgânica Municipal, com fundamento no art. 5º, inciso XXIV, da Constituição Federal e no …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2700000/2026-10-30/f7a3bbf991c5ea838f847565d60e87251853f745.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "retificacao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Educação",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [
+      "6.400,00 m²",
+      "6.050,00 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2706000/2026-10-30/e3a8d7c69c3e942f08e6d70f66ec108d.txt",
+    "edicao": "2924",
+    "coletado_em": "2026-10-30T23:44:47-03:00"
+  },
+  {
     "id": "8254459a6cff1995",
     "data_publicacao": "2026-10-30",
     "esfera": "Municipal",
@@ -137,6 +168,31 @@
     "url_texto": null,
     "edicao": null,
     "coletado_em": "2026-10-30T09:52:56-03:00"
+  },
+  {
+    "id": "acf8ec717d40475c",
+    "data_publicacao": "2026-10-28",
+    "esfera": "Estadual",
+    "uf": "PR",
+    "municipio": "Dois Vizinhos",
+    "orgao_emissor": "Município de Dois Vizinhos",
+    "numero_ato": "23921/2026",
+    "resumo_contexto": "DECRETO Nº 23921/2026 Declara área de utilidade pública para fins de desapropriação amigável ou judicial. Luis Carlos Tura - Município de Dois Vizinhos. DECRETO Nº 23921/2026 Declara área de utilidade pública para fins de desapropriação amigável ou judicial. Luis Carlos Tura Município de Dois Vizinhos",
+    "url_fonte": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMXd3Yks3U0tEQkNMcVAxNDdVRVZjTmN0OU1TWlVnanJ5MFlybHRORnRSSEtWVTU3cVhfa09sYnF1OTd5akhWbm9zM2RDekZ5M092bmM5WGVwQ2NNTS1NMTFXOTZVTjhWV253c1J0Y1pURExvcTNVVklpV25DU05EdF8tU2ZkcGNZTVctTkh4X0I0NUJhdFh2eXNLdFJhNzBxWm1j?oc=5",
+    "tipo_ato": "Notícia oficial",
+    "tags": [
+      "fonte_secundaria",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "google_news_rss",
+    "url_texto": null,
+    "edicao": null,
+    "coletado_em": "2026-10-30T23:46:07-03:00"
   },
   {
     "id": "e1e6bcb0e7447e80",
@@ -444,11 +500,11 @@
     ],
     "matriculas": [],
     "areas": [
-      "324.810,00 m²",
-      "48,10 ha",
       "142.316,00 m²",
       "23,16 ha",
-      "44.935,00 m²"
+      "324.810,00 m²",
+      "44.935,00 m²",
+      "48,10 ha"
     ],
     "score": 10,
     "confianca": "alta",
@@ -506,9 +562,9 @@
     ],
     "finalidades": [],
     "matriculas": [
-      "6522",
       "6051",
-      "6521"
+      "6521",
+      "6522"
     ],
     "areas": [
       "7.920,00 m²"
