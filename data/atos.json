@@ -1327,6 +1327,38 @@
     "coletado_em": "2026-10-30T09:50:35-03:00"
   },
   {
+    "id": "7fe57d86f32fbbff",
+    "data_publicacao": "2026-10-19",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Rio Claro",
+    "orgao_emissor": "Prefeitura Municipal de Rio Claro",
+    "numero_ato": null,
+    "resumo_contexto": "… e integridade. GABINETE DO PREFEITO Gabinete do Prefeito Atos Oficiais Atos Oficiais Decretos Decretos D E C R E T O Nº 13. 956 de 05 de outubro de 2026 (Declara de utilidade pública, para fins de desapropriação, parte de imóvel que especifica, e dá outras providências) GUSTAVO RAMOS PERISSINOTTO, Prefeito do Município de Rio Claro/SP, usando das atribuições que a Lei lhe confere e, CONSIDERANDO que compete ao Município promover o adequado ordenamento territorial e o planejamento do …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3543907/2026-10-19/28a976eccca74bd6600d7c4eb01fcbe5e202865d.pdf",
+    "tipo_ato": "Não identificado",
+    "tags": [
+      "coordenadas",
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "74.579",
+      "3.569",
+      "78.001"
+    ],
+    "areas": [],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3543907/2026-10-19/28a976eccca74bd6600d7c4eb01fcbe5e202865d.txt",
+    "edicao": "2015",
+    "coletado_em": "2026-11-03T01:03:58-03:00"
+  },
+  {
     "id": "b6907a4f962ba80a",
     "data_publicacao": "2026-10-17",
     "esfera": "Municipal",
@@ -2785,6 +2817,32 @@
     "coletado_em": "2026-10-30T09:43:17-03:00"
   },
   {
+    "id": "5de977753345e17f",
+    "data_publicacao": "2026-10-06",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Alagoinhas",
+    "orgao_emissor": "Prefeitura Municipal de Alagoinhas",
+    "numero_ato": null,
+    "resumo_contexto": "… . . . . . . . DEC. Nº 6.707 - PONTO FACULTATIVO - DIA DO SERVIDOR PÚBLICO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . DEC. Nº 6.708 -DECLARA DESAPROPRIADA ÁREA PARA FINS DE UTILIDADE PÚBLICA E DÁOUTRAS PRO- VIDÊNCIAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . PORTARIA PORTARIA Nº 4.625- LICENÇA PRÊMIO- GILMA BATISTA SANTOS . . . . . …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.pdf",
+    "tipo_ato": "Não identificado",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.txt",
+    "edicao": "5.817",
+    "coletado_em": "2026-11-03T01:03:58-03:00"
+  },
+  {
     "id": "d5e0fea85ac96b7e",
     "data_publicacao": "2026-10-06",
     "esfera": "Estadual",
@@ -2837,6 +2895,57 @@
     "coletado_em": "2026-10-30T09:43:18-03:00"
   },
   {
+    "id": "6c6772fc836c992a",
+    "data_publicacao": "2026-10-06",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Alagoinhas",
+    "orgao_emissor": "Prefeitura Municipal de Alagoinhas",
+    "numero_ato": null,
+    "resumo_contexto": "… BAHIA PREFEITURA MUNICIPAL DE ALAGOINHAS GABINETE DO PREFEITO Art. 6º- Integram este Decreto, o levantamento planialtimétrico e o memorial descritivo da área declarada de utilidade pública. Art. 7º- Este decreto entra em vigor na data de sua publicação, revogando disposições em contrário. GABINETE DO PREFEITO MUNICIPAL DE ALAGOINHAS, em 06 de outubro de 2026. GUSTAVO AUGUSTO DE SOUZA CARMO PREFEITO Edição 5.817 | Ano 18 06 de outubro de 2026 Página 16 Certificação Digital: …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.pdf",
+    "tipo_ato": "Não identificado",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "392691"
+    ],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.txt",
+    "edicao": "5.817",
+    "coletado_em": "2026-11-03T01:03:58-03:00"
+  },
+  {
+    "id": "f58ed44f840d8760",
+    "data_publicacao": "2026-10-06",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Alagoinhas",
+    "orgao_emissor": "Prefeitura Municipal de Alagoinhas",
+    "numero_ato": "4.626",
+    "resumo_contexto": "… DECRETO DEC. Nº 6.706- PONTO FACULTATIVO -SEDUC- DIA DOS PROFESSORES DEC. Nº 6.707 - PONTO FACULTATIVO - DIA DO SERVIDOR PÚBLICO DEC. Nº 6.708 -DECLARA DESAPROPRIADA ÁREA PARA FINS DE UTILIDADE PÚBLICA E DÁ OUTRAS PROVIDÊNCIAS PORTARIA PORTARIA Nº 4.625- LICENÇA PRÊMIO- GILMA BATISTA SANTOS PORTARIA Nº 4.626- READAPTAÇÃO FUNCIONAL - MARIA ELIENE PIRES BRAGA ROSEIRA 2026-10-06T17:33:14-0300",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.pdf",
+    "tipo_ato": "Portaria",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.txt",
+    "edicao": "5.817",
+    "coletado_em": "2026-11-03T01:03:58-03:00"
+  },
+  {
     "id": "58aabd0f365dcbb8",
     "data_publicacao": "2026-10-06",
     "esfera": "Municipal",
@@ -2864,6 +2973,40 @@
     "url_texto": "https://data.queridodiario.ok.org.br/5208707/2026-10-06/4989cc5fc2055fc278f3a52d9ab4b5ab850e7d43.txt",
     "edicao": "8878",
     "coletado_em": "2026-10-30T09:42:28-03:00"
+  },
+  {
+    "id": "ad3943909a7ca0e2",
+    "data_publicacao": "2026-10-06",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Alagoinhas",
+    "orgao_emissor": "Prefeitura Municipal de Alagoinhas",
+    "numero_ato": "6.708/2026",
+    "resumo_contexto": "DECRETO Nº 6.708/2026. \"DECLARA DESAPROPRIADA ÁREA PARA FINS DE UTILIDADE PÚBLICA E DÁ OUTRAS PROVIDÊNCIAS.\" O PREFEITO DO MUNICIPÍO DE ALAGOINHAS, no uso de suas atribuições legais que lhes são conferidas pelas Lei Orgânica do Município, com fundamento no decreto- lei 3565/1941; CONSIDERANDO o disposto no art. 5º, inciso XXIV, da Constituição Federal, que assegura a desapropriação por necessidade ou utilidade pública, ou por interesse social, mediante justa e prévia indenização em dinheiro, …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "interesse_social",
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Industrial/Econômico",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "7166"
+    ],
+    "areas": [
+      "13,3150 ha"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2900702/2026-10-06/448bc7b387ac2f3d9fb0a5b59b04769444410b9e.txt",
+    "edicao": "5.817",
+    "coletado_em": "2026-11-03T01:03:58-03:00"
   },
   {
     "id": "7e2bf77224c43ca0",
@@ -2966,6 +3109,94 @@
     "coletado_em": "2026-10-30T09:42:28-03:00"
   },
   {
+    "id": "e7a2e0b3a2f0f491",
+    "data_publicacao": "2026-10-02",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Araçatuba",
+    "orgao_emissor": "Prefeitura Municipal de Araçatuba",
+    "numero_ato": "24.732",
+    "resumo_contexto": "DECRETO N.º 24.732 – DE 29 DE SETEMBRO DE 2026 “Declara de Utilidade Pública, para fins de desapropriação, área de terra parte da matrícula n.º 21.773, de propriedade de Carlos Alberto Mestriner e outros, destinada à regularização de domínio da Rua “H” (anexa ao loteamento Jardim Iporã)” O PREFEITO MUNICIPAL DE ARAÇATUBA, No uso de suas atribuições que lhe são conferidas pelos artigos 4.º, inciso I, 6, e 62, inciso VIII, da Lei Orgânica do Município, combinados com os arts. 2.º, 5.º, alínea …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3502804/2026-10-02/41b92e6fca416552dc4c91a39e5303012e15f5c2.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Habitação/Regularização"
+    ],
+    "matriculas": [
+      "21.773"
+    ],
+    "areas": [],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3502804/2026-10-02/41b92e6fca416552dc4c91a39e5303012e15f5c2.txt",
+    "edicao": "1596",
+    "coletado_em": "2026-11-03T01:04:00-03:00"
+  },
+  {
+    "id": "fa4cbe8df8abe90b",
+    "data_publicacao": "2026-10-02",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Tremembé",
+    "orgao_emissor": "Prefeitura Municipal de Tremembé",
+    "numero_ato": "8.098",
+    "resumo_contexto": "DECRETO N° 8.098, DE 18 DE SETEMBRO DE 2026. “Declara de utilidade pública, i m ó v e i s u r b a n o s p a r a desapropriação, para o fim que especifica.” CLEMENTE ANTONIO DE LIMA NETO, Prefeito Municipal da Estância Turística de Tremembé, Estado de São Paulo, no uso de suas atribuições legais, CONSIDERANDO o artigo 4º, inciso XVIII, da Lei Orgânica do Município, o qual dispõe que, no exercício de sua autonomia, compete ao Município legislar e prover tudo quanto respeite ao interesse local, …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3554805/2026-10-02/3258a764938114a3ad3f6be21dfa72897eeba608.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "interesse_social",
+      "matricula",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Lazer/Ambiental",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "11.516"
+    ],
+    "areas": [],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3554805/2026-10-02/3258a764938114a3ad3f6be21dfa72897eeba608.txt",
+    "edicao": "2454",
+    "coletado_em": "2026-11-03T01:03:55-03:00"
+  },
+  {
+    "id": "f2ad7ab9622e780a",
+    "data_publicacao": "2026-10-02",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Jeremoabo",
+    "orgao_emissor": "Prefeitura Municipal de Jeremoabo",
+    "numero_ato": "052/2026",
+    "resumo_contexto": "DECRETO Nº 052/2026. “Declara de utilidade pública, para fins de desapropriação, uma área de terra situada na Zona Rural do Município de Jeremoabo/BA, destinada abertura de logradouro público no povoado Sítio Velho, conforme coordenadas descritas no Laudo Técnico, e dá outras providências”. O CHEFE DO PODER EXECUTIVO MUNICIPAL DE JEREMOABO, ESTADO DA BAHIA, JOÃO BATISTA MELO DE CARVALHO, no uso das atribuições que lhe confere a Constituição Federal, a Lei Orgânica Municipal e, especialmente, o …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2918100/2026-10-02/0249ffcea499cf2eed1a517059242d3e8d6222f7.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [
+      "362,89 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2918100/2026-10-02/0249ffcea499cf2eed1a517059242d3e8d6222f7.txt",
+    "edicao": "6715",
+    "coletado_em": "2026-11-03T01:03:59-03:00"
+  },
+  {
     "id": "801f6a78327f13bb",
     "data_publicacao": "2026-10-01",
     "esfera": "Federal",
@@ -3020,6 +3251,70 @@
     "coletado_em": "2026-10-30T09:48:24-03:00"
   },
   {
+    "id": "58d174e26bccd13e",
+    "data_publicacao": "2026-10-01",
+    "esfera": "Municipal",
+    "uf": "MG",
+    "municipio": "Betim",
+    "orgao_emissor": "Prefeitura Municipal de Betim",
+    "numero_ato": "53.865",
+    "resumo_contexto": "DECRETO Nº 53.865, DE 04 DE SETEMBRO DE 2026 DECLARA DE UTILIDADE PÚBLICA, PARA FINS DE DESAPROPRIAÇÃO DE PLENO DOMÍNIO, AS ÁREAS DE 1.271,49 M² (MIL, DUZENTOS E SETENTA E UM METROS QUADRADOS E QUARENTA E NOVE DECÍMETROS QUADRADOS), PARTE DA ÁREA MAIOR DE 498.132,19 M² (QUATROCENTOS E NOVENTA E OITO MIL, CENTO E TRINTA E DOIS METROS QUADRADOS E DEZENOVE DECÍMETROS QUADRADOS), CORRESPONDENTE À ÁREA 02; DE 193,37 M² (CENTO E NOVENTA E TRÊS METROS QUADRADOS E TRINTA E SETE DECÍMETROS QUADRADOS), …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3106705/2026-10-01/1e8d4a8d8f80e86399c0c2b2e5c22376e4da38ec.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [
+      "1.271,49 m²",
+      "498.132,19 m²",
+      "193,37 m²",
+      "744,27 m²",
+      "12.634,34 m²"
+    ],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3106705/2026-10-01/1e8d4a8d8f80e86399c0c2b2e5c22376e4da38ec.txt",
+    "edicao": "3503",
+    "coletado_em": "2026-11-03T01:04:00-03:00"
+  },
+  {
+    "id": "b8b50c714edde225",
+    "data_publicacao": "2026-10-01",
+    "esfera": "Municipal",
+    "uf": "MG",
+    "municipio": "Betim",
+    "orgao_emissor": "Prefeitura Municipal de Betim",
+    "numero_ato": null,
+    "resumo_contexto": "… (31) 3512-3342 R. Pará de Minas, 640, Brasiléia, Betim/MG - 32600-412 O Prefeito Municipal de Betim, no uso de suas atribuições legais, DECRETA: Art. 1º Ficam declaradas de utilidade pública para fins de desapropriação de pleno domínio, a ser realizada de forma amigável ou por via judicial, destinadas ao prolongamento da Rua Vila Real, as seguintes áreas, todas situadas no Bairro São João, neste Município, de propriedade presumida de Construtora Pereira de Almeida, conforme informações …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3106705/2026-10-01/1e8d4a8d8f80e86399c0c2b2e5c22376e4da38ec.pdf",
+    "tipo_ato": "Não identificado",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "134.323"
+    ],
+    "areas": [
+      "1.271,49 m²",
+      "498.132,19 m²",
+      "193,37 m²",
+      "744,27 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3106705/2026-10-01/1e8d4a8d8f80e86399c0c2b2e5c22376e4da38ec.txt",
+    "edicao": "3503",
+    "coletado_em": "2026-11-03T01:04:00-03:00"
+  },
+  {
     "id": "eb0f729f94a73c5b",
     "data_publicacao": "2026-10-01",
     "esfera": "Municipal",
@@ -3045,6 +3340,66 @@
     "url_texto": "https://data.queridodiario.ok.org.br/2708402/2026-10-01/b7cccdefe19c0e716c3b41bb5b1aecb3.txt",
     "edicao": "2904",
     "coletado_em": "2026-10-30T09:42:29-03:00"
+  },
+  {
+    "id": "d30432197c47c686",
+    "data_publicacao": "2026-10-01",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Teolândia",
+    "orgao_emissor": "Prefeitura Municipal de Teolândia",
+    "numero_ato": "079",
+    "resumo_contexto": "DECRETO Nº 079, DE 01 DE OUTUBRO DE 2026 Declara de utilidade pública, para fins de desapropriação, a área de terra que especifica, destinada à construção de uma Escola Municipal no Povoado do Km 85, e dá outras providências. A PREFEITA MUNICIPAL DE TEOLÂNDIA, Estado da Bahia, no uso de suas atribuições legais e constitucionais conferidas pelo artigo 85, inciso VI, da Lei Orgânica do Município, e com fundamento no artigo 2º, caput, e no artigo 5º, alínea \"m\", do Decreto-Lei Federal nº 3.365, de …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2931608/2026-10-01/9871f88a462523e895704b2d2abf70c1319d4546.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Educação"
+    ],
+    "matriculas": [],
+    "areas": [
+      "300,00 m²",
+      "3,7 ha"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2931608/2026-10-01/9871f88a462523e895704b2d2abf70c1319d4546.txt",
+    "edicao": "2.820",
+    "coletado_em": "2026-11-03T01:04:01-03:00"
+  },
+  {
+    "id": "a1044b9e7ed1be38",
+    "data_publicacao": "2026-10-01",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Tapiraí",
+    "orgao_emissor": "Prefeitura Municipal de Tapiraí",
+    "numero_ato": "062/2026",
+    "resumo_contexto": "DECRETO Nº 062/2026 DE 01 DE OUTUBRO DE 2026 “Declara imóvel de utilidade pública para fins de Desapropriação e/ou Instituição de Servidão de Passagem, imóvel situado neste município necessário à Companhia de Saneamento Básico do Estado de São Paulo - SABESP”. ARALDO TODESCO, Prefeito do Município de Tapiraí, Estado de São Paulo, no uso de suas atribuições legais e nos termos da Lei Orgânica do Município, combinada com os arts. 2º, 6º e 40 do Decreto-Lei Federal n° 3.365, de 21 de junho de …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3553500/2026-10-01/cef77623b9ebc87de6cdcbb351733aabfc6c738e.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Saneamento",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [
+      "119,53 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3553500/2026-10-01/cef77623b9ebc87de6cdcbb351733aabfc6c738e.txt",
+    "edicao": "1433",
+    "coletado_em": "2026-11-03T01:03:55-03:00"
   },
   {
     "id": "8dec5aef3e00bc7d",
