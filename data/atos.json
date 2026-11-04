@@ -1,5 +1,138 @@
 [
   {
+    "id": "e7efe7155d90c1af",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Federal",
+    "uf": "PR",
+    "municipio": "Moreira Sales",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.822",
+    "resumo_contexto": "… Interno da ANEEL, resolve: Processo nº 48500.018103/2026-69. Interessado: Água Tremida Geração de Energia SPE Ltda. CNPJ nº 27.780.961/0001-12 Objeto: Declarar de utilidade pública áreas necessárias à implantação da PCH Água Tremida, CEG nº PCH.PH.PR.040826-3.01, localizadas nos municípios de Moreira Sales e Tuneiras do Oeste, no estado do Paraná. A íntegra desta Resolução consta dos autos e encontra-se disponível no endereço eletrônico legislacao.aneel.gov.br. SANDOVAL DE ARAÚJO …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.822-de-27-outubro-de-2026-741539574",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "207",
+    "coletado_em": "2026-11-04T14:28:53-03:00"
+  },
+  {
+    "id": "ae9674d48df23d18",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Federal",
+    "uf": "SP",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.820",
+    "resumo_contexto": "RESOLUÇÃO AUTORIZATIVA Nº 16.820, DE 27 OUTUBRO DE 2026 O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA - ANEEL, com base no Art. 6º, IX, do Regimento Interno da ANEEL, resolve: Processo nº: 48500.028767/2026-36. Interessado: Elektro Redes S.A., CNPJ nº 02.328.280/0001-97. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 138/13,8 kV Porangaba, localizada no estado de São Paulo. A íntegra desta …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.820-de-27-outubro-de-2026-741539676",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "207",
+    "coletado_em": "2026-11-04T14:28:55-03:00"
+  },
+  {
+    "id": "40272e0a6d62ce57",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Federal",
+    "uf": "SC",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.824",
+    "resumo_contexto": "… IV, do Regimento Interno da ANEEL, resolve: Processo nº: 48500.016132/2026-96. Interessada: Arrozeira Meyer Energia S.A., CNPJ nº 41.085.050/0001-04. Objeto: Declarar de utilidade pública, em favor da Interessada, para instituição de servidão administrativa, as áreas de terra necessárias à passagem da LT 69 kV PCH Arrozeira Meyer - Rio dos Cedros Alto e à passagem do trecho de linha de transmissão que perfaz o seccionamento da LD 69 kV Palmeiras - Timbó, na SE Rio dos Cedros Alto, e para …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.824-de-27-de-outubro-de-2026-741538169",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "207",
+    "coletado_em": "2026-11-04T14:28:59-03:00"
+  },
+  {
+    "id": "afcd017f09c0a714",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Federal",
+    "uf": "MT",
+    "municipio": "Cuiabá",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.823",
+    "resumo_contexto": "… da ANEEL, resolve: Processo nº: 48500.017000/2026-81. Interessado: Energisa Mato Grosso - Distribuidora de Energia S.A., CNPJ nº 03.467.321/0001-99. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da estrada de acesso à Subestação 138/13,8 kV Sucuri, localizada no município de Cuiabá, estado de Mato Grosso. A íntegra desta Resolução consta dos autos e encontra-se disponível no endereço eletrônico …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.823-de-27-de-outubro-de-2026-741545490",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "207",
+    "coletado_em": "2026-11-04T14:28:57-03:00"
+  },
+  {
+    "id": "2f2f2acfb7edac44",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Federal",
+    "uf": "RJ",
+    "municipio": "Rio das Ostras",
+    "orgao_emissor": "ANTT",
+    "numero_ato": null,
+    "resumo_contexto": "… Na Decisão Surod nº 746, de 12 de junho de 2026, publicada no Diário Oficial da União - DOU de 23 de junho de 2026, Seção 1, página 94. Onde se lê: \"Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras de Implantação de Interseção do tipo Diamante na BR-101/RJ, km 182+000, no município de Rio das Ostras/RJ. Parágrafo …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/retificacao-741533613",
+    "tipo_ato": "Retificação",
+    "tags": [
+      "retificacao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "207",
+    "coletado_em": "2026-11-04T14:28:51-03:00"
+  },
+  {
     "id": "b081fab02b3cfbd9",
     "data_publicacao": "2026-11-03",
     "esfera": "Municipal",
