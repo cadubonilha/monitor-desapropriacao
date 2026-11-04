@@ -1,22 +1,22 @@
 {
   "fontes": {
     "querido_diario": {
-      "executado_em": "2026-11-03T14:13:14-03:00",
-      "periodo": "2026-10-30 a 2026-11-03",
+      "executado_em": "2026-11-04T00:20:36-03:00",
+      "periodo": "2026-10-31 a 2026-11-04",
       "modo": "indexacao",
       "consultas_ok": 5,
       "consultas_total": 5,
-      "diarios_candidatos": 17,
-      "textos_integrais_baixados": 17,
-      "atos_extraidos": 15,
-      "novos": 0,
-      "atualizados": 7,
+      "diarios_candidatos": 14,
+      "textos_integrais_baixados": 14,
+      "atos_extraidos": 13,
+      "novos": 1,
+      "atualizados": 4,
       "erros": [],
       "base_api": "https://api.queridodiario.org.br"
     },
     "dou": {
-      "executado_em": "2026-11-03T14:13:18-03:00",
-      "periodo": "2026-11-01 a 2026-11-03",
+      "executado_em": "2026-11-04T00:20:43-03:00",
+      "periodo": "2026-11-02 a 2026-11-04",
       "modo": "leitura",
       "materias_analisadas": 0,
       "atos_extraidos": 0,
@@ -25,8 +25,8 @@
       "erros": []
     },
     "dioe_pr": {
-      "executado_em": "2026-11-03T14:13:24-03:00",
-      "periodo": "2026-10-30 a 2026-11-03",
+      "executado_em": "2026-11-04T00:20:50-03:00",
+      "periodo": "2026-10-31 a 2026-11-04",
       "consultas_ok": 4,
       "consultas_total": 4,
       "paginas_analisadas": 0,
@@ -36,16 +36,16 @@
       "erros": []
     },
     "google_news_rss": {
-      "executado_em": "2026-11-03T14:14:42-03:00",
-      "periodo": "2026-10-31 a 2026-11-03",
+      "executado_em": "2026-11-04T00:22:09-03:00",
+      "periodo": "2026-11-01 a 2026-11-04",
       "ufs_consultadas": 27,
       "consultas_ok": 27,
-      "atos_extraidos": 0,
-      "novos": 0,
+      "atos_extraidos": 1,
+      "novos": 1,
       "atualizados": 0,
       "erros": []
     }
   },
-  "ultima_execucao": "2026-11-03T14:14:42-03:00",
-  "total_atos": 247
+  "ultima_execucao": "2026-11-04T00:22:09-03:00",
+  "total_atos": 249
 }

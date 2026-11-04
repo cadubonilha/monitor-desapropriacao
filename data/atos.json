@@ -1,5 +1,61 @@
 [
   {
+    "id": "b081fab02b3cfbd9",
+    "data_publicacao": "2026-11-03",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": null,
+    "orgao_emissor": "Prefeitura Municipal de Itaberá",
+    "numero_ato": null,
+    "resumo_contexto": "Declara de utilidade pública, para fins de desapropriação amigável ou judicial, área localizada na... - Prefeitura Municipal de Itaberá. Declara de utilidade pública, para fins de desapropriação amigável ou judicial, área localizada na... Prefeitura Municipal de Itaberá",
+    "url_fonte": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5qQjQ2TTN6LVI5NHNVMnNLUW85Y3FfVmVRMlg5RHZOanI2cjBvb2dOQzI5d1hsdkNsbnYzQ0xEcjZXcHJ6VHgxNFZsSi1LZzhYSk1MNG10TVpzYURpSkhvTnd5bkdEWWs?oc=5",
+    "tipo_ato": "Notícia oficial",
+    "tags": [
+      "fonte_secundaria",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 4,
+    "confianca": "baixa",
+    "fonte": "google_news_rss",
+    "url_texto": null,
+    "edicao": null,
+    "coletado_em": "2026-11-04T00:22:06-03:00"
+  },
+  {
+    "id": "771db96723960ebd",
+    "data_publicacao": "2026-11-03",
+    "esfera": "Municipal",
+    "uf": "CE",
+    "municipio": "Horizonte",
+    "orgao_emissor": "Prefeitura Municipal de Horizonte",
+    "numero_ato": "945",
+    "resumo_contexto": "DECRETO Nº 945, DE 22 DE OUTUBRO DE 2026. DECLARA DE UTILIDADE PÚBLICA E DESAPROPRIA UM IMÓVEL NO MUNICÍPIO DE HORIZONTE, DESTINADO À CONSTRUÇÃO DE UM CAMPO DE FUTEBOL NO BAIRRO PLANALTO DA GALILÉIA E DÁ OUTRAS PROVIDÊNCIAS. O PREFEITO MUNICIPAL DE HORIZONTE, no uso de suas atribuições legais previstas no art. 83, V da Lei Orgânica do Município, e sob o fundamento contido no art. 6° do Decreto-Lei n° 3.365, de 21 de junho de 1941. DECRETA: Art. 1º. Fica declarada de utilidade pública, para fins …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2305233/2026-11-03/c9b39b08d67e03d7cba0b2aaea4886f8570d9765.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "6051",
+      "6522"
+    ],
+    "areas": [
+      "2.376,00 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2305233/2026-11-03/c9b39b08d67e03d7cba0b2aaea4886f8570d9765.txt",
+    "edicao": "800",
+    "coletado_em": "2026-11-04T00:20:31-03:00"
+  },
+  {
     "id": "6406c0211f8df1e4",
     "data_publicacao": "2026-10-30",
     "esfera": "Municipal",
