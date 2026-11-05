@@ -133,6 +133,41 @@
     "coletado_em": "2026-11-04T14:28:51-03:00"
   },
   {
+    "id": "b149fa7fe141e8de",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Municipal",
+    "uf": "PR",
+    "municipio": "Londrina",
+    "orgao_emissor": "Prefeitura Municipal de Londrina",
+    "numero_ato": "1280",
+    "resumo_contexto": "DECRETO Nº 1280 DE 27 DE OUTUBRO DE 2026 SÚMULA: Declara de utilidade pública áreas de terras para fins de desapropriação destinadas à consecução do viaduto da Rua Primo Campana. O PREFEITO DO MUNICÍPIO DE LONDRINA, ESTADO DO PARANÁ, no exercício de suas atribuições legais, em conformidade com o disposto nos artigos 2º, 5º, alíneas \"h\" e \"i\" e 6º do Decreto-Lei nº 3.365 de 1941 e considerando os processos SEI 19.008.165067/2026-94, 19.021.111733/2026-04 e demais relacionados, DECRETA: Art. 1º …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/4113700/2026-11-04/c9c75d1a9e0beab0d60abc78f75c9ee5b4810946.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "4.188",
+      "122.351"
+    ],
+    "areas": [
+      "753,16 m²",
+      "1.651,75 m²",
+      "211,64 m²",
+      "23,35 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/4113700/2026-11-04/c9c75d1a9e0beab0d60abc78f75c9ee5b4810946.txt",
+    "edicao": "5908",
+    "coletado_em": "2026-11-05T00:54:05-03:00"
+  },
+  {
     "id": "b081fab02b3cfbd9",
     "data_publicacao": "2026-11-03",
     "esfera": "Municipal",
@@ -156,6 +191,38 @@
     "url_texto": null,
     "edicao": null,
     "coletado_em": "2026-11-04T00:22:06-03:00"
+  },
+  {
+    "id": "1962dc2472c5c70e",
+    "data_publicacao": "2026-11-03",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Caetité",
+    "orgao_emissor": "Prefeitura Municipal de Caetité",
+    "numero_ato": "304",
+    "resumo_contexto": "DECRETO Nº 304, DE 3 DE NOVEMBRO DE 2026. DECLARA DE UTILIDADE PÚBLICA, PARA FINS DE DESAPROPRIAÇÃO, A ÁREA DE TERRA QUE INDICA E DÁ OUTRAS PROVIDÊNCIAS. . . . . . . . . . . . . . . . . . . . Certificação Digital: HQDWBUXS-MET8XJ0L-UFZAMLR6-RJYRVPCB Versão eletrônica disponível em: http://caetite.ba.gov.br Estado da Bahia Prefeitura do Município de Caetité Gabinete do Prefeito Prefeitura de Caetité CNPJ: 13.811.476/0001-54 Avenida Marlene Montenegro Cerqueira de Oliveira, 1000 – Centro …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2905206/2026-11-03/dc3cec1981e253366d9ffa82dbf6d31090bc6bae.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Educação",
+      "Equipamento público"
+    ],
+    "matriculas": [
+      "15.452"
+    ],
+    "areas": [
+      "330,00 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2905206/2026-11-03/dc3cec1981e253366d9ffa82dbf6d31090bc6bae.txt",
+    "edicao": "4.033",
+    "coletado_em": "2026-11-05T00:54:04-03:00"
   },
   {
     "id": "771db96723960ebd",
