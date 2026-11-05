@@ -1,5 +1,298 @@
 [
   {
+    "id": "e1fa90677c17305a",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "PR",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.081",
+    "resumo_contexto": "DESPACHO Nº 4.081, DE 23 DE OUTUBRO DE 2026 Processo nº: 48500.031120/2026-91 Interessado: Copel Distribuição S.A., CNPJ nº 04.368.898/0001-06. Decisão: declarar de utilidade pública, para instituição de servidão administrativa, em favor da interessada, a área de terra necessária à passagem da LD 138 kV Palmital - Pitanga, localizada no estado do Paraná. A íntegra deste Despacho (e seu anexo) consta dos autos e estará disponível em legislacao.aneel.gov.br. THAIS BARBOSA COELHO Superintendente …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.081-de-23-de-outubro-de-2026-741864654",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:31:12-03:00"
+  },
+  {
+    "id": "001e90a00db9416e",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "BR",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.139",
+    "resumo_contexto": "… OUTUBRO DE 2026 Processo nº: 48500.030707/2026-83. Interessado: Companhia Energética do Ceará - Enel Distribuição Ceará, CNPJ nº 07.047.251/0001-70. Decisão: declarar de utilidade pública, para instituição de servidão administrativa, em favor da interessada, as áreas de terra necessárias à passagem de trechos da LD 69 kV Acarape - Baturité 02C1 , localizadas no estado d o Ceará. A íntegra deste Despacho (e seu anexo) consta dos autos e estará disponível em legislacao.aneel.gov.br. THAIS …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.139-de-28-de-outubro-de-2026-741854266",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:31:02-03:00"
+  },
+  {
+    "id": "bf386c33a57a5eed",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "PR",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.154",
+    "resumo_contexto": "DESPACHO Nº 4.154, DE 28 DE OUTUBRO DE 2026 Processo nº: 48500.029447/2026-01. Interessado: Copel Distribuição S.A., CNPJ nº 04.368.898/0001-06. Decisão: declarar de utilidade pública, para instituição de servidão administrativa, em favor do interessado, a área de terra necessária à passagem do trecho de linha de distribuição que perfaz o seccionamento da Linha de Distribuição 138 kV Foz do Chopim - Dois Vizinhos, na Subestação Laticínios Bela Vista, localizada no estado do Paraná. A íntegra …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.154-de-28-de-outubro-de-2026-741859891",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:31:04-03:00"
+  },
+  {
+    "id": "3232ffdc488b3494",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "CE",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.155",
+    "resumo_contexto": "… OUTUBRO DE 2026 Processo nº: 48500.030868/2026-77. Interessado: Companhia Energética do Ceará - Enel Distribuição Ceará, CNPJ nº 07.047.251/0001-70. Decisão: declarar de utilidade pública, para instituição de servidão administrativa, em favor da interessada, as áreas de terra necessárias à passagem de trechos da Linha de Distribuição 69 kV Acarape - Baturité 02C3, localizadas no estado do Ceará. A íntegra deste Despacho (e seu anexo) consta dos autos e estará disponível em …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.155-de-29-de-outubro-de-2026-741859336",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:31:06-03:00"
+  },
+  {
+    "id": "e44b15c23db3e590",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "BA",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.185",
+    "resumo_contexto": "… DE 2026 Processo nº: 48500.031632/2026-58. Interessado: Companhia de Eletricidade do Estado da Bahia - Neoenergia Coelba, CNPJ Nº 15.139.629/0001-94. Decisão: declarar de utilidade pública, para instituição de servidão administrativa, em favor do Interessado, a área de terra necessária à passagem da Linha de Distribuição 69 kV Jacaracanga - HEFA, localizada no estado da Bahia. A íntegra deste Despacho (e seu anexo) consta dos autos e estará disponível em https://legislacao.aneel.gov.br. THAIS …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.185-de-29-de-outubro-de-2026-741849983",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:30:56-03:00"
+  },
+  {
+    "id": "fbb170cfad04c2fb",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "MA",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.186",
+    "resumo_contexto": "… DE 29 DE OUTUBRO DE 2026 Processo nº: 48500.030778/2026-86. Interessada: Equatorial Maranhão Distribuidora de Energia S.A., CNPJ nº 06.272.793/0001-84 Objeto: Declarar de utilidade pública, para instituição de servidão administrativa, em favor da interessada, a área de terra necessária à passagem do trecho de linha de distribuição que perfaz o seccionamento da LD 69 kV Encruzo Novo - Nova Olinda, na SE Presidente Médici, localizada no estado do Maranhão. A íntegra deste Despacho consta dos …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.186-de-29-de-outubro-de-2026-741861051",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:31:08-03:00"
+  },
+  {
+    "id": "fa12aafde39b0988",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "RS",
+    "municipio": "Machadinho",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.827",
+    "resumo_contexto": "… do Regimento Interno da ANEEL, resolve: Processo nº 48500.017893/2026-65. Interessado: Forquilha II Geração de Energia Ltda CNPJ nº 42.772.409/0001-76 Objeto: Declarar de utilidade pública áreas necessárias à implantação da PCH Forquilha II, CEG nº PCH.PH.RS.037658-2.0, localizadas nos municípios de Machadinho e Maximiliano de Almeida, no estado do Rio Grande do Sul. A íntegra desta Resolução consta dos autos e encontra-se disponível no endereço eletrônico legislacao.aneel.gov.br. AGNES MARIA …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.827-de-3-de-novembro-de-2026-741844207",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:30:54-03:00"
+  },
+  {
+    "id": "ad8ea1fc9a2ad43a",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "PR",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.826",
+    "resumo_contexto": "… 6º, IX, do Regimento Interno da ANEEL, resolve: Processo nº: 48500.029448/2026-48. Interessado: Copel Distribuição S.A., CNPJ nº 04.368.898/0001-06. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 138/13,8 kV Albatroz, localizada no estado do Paraná. A íntegra desta Resolução consta dos autos e encontra-se disponível no endereço eletrônico legislacao.aneel.gov.br. AGNES MARIA DE ARAGÃO DA COSTA",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.826-de-3-de-novembro-de-2026-741853425",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:30:58-03:00"
+  },
+  {
+    "id": "b1333d3923a70b96",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "TO",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.828",
+    "resumo_contexto": "… da ANEEL, resolve: Processo nº: 48500.030304/2026-34. Interessado: Energisa Tocantins - Distribuidora de Energia S.A., CNPJ nº 25.086.034/0001-71. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da SE 138/13,8 kV Jardim Taquari, localizada no estado de Tocantins . A íntegra desta Resolução consta dos autos e encontra-se disponível no endereço eletrônico legislacao.aneel.gov.br. AGNES MARIA DE ARAGÃO DA COSTA",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.828-de-3-de-novembro-de-2026-741863042",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:31:10-03:00"
+  },
+  {
+    "id": "581a538059627efe",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Federal",
+    "uf": "SP",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.831",
+    "resumo_contexto": "… no art. 6, IX, do Regimento Interno da ANEEL, resolve: Processo nº: 48500.029247/2026-41. Interessado: Elektro Redes S.A., CNPJ nº 02.328.280/0001-97. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 138/13,8 kV Mairiporã, localizada no estado de São Paulo. A íntegra desta Resolução consta dos autos e encontra-se disponível no endereço eletrônico http://legislacao.aneel.gov.br. AGNES MARIA DE ARAGÃO DA …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.831-de-3-de-novembro-de-2026-741856016",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "208",
+    "coletado_em": "2026-11-05T14:31:00-03:00"
+  },
+  {
+    "id": "24224076d8fe202a",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Salto",
+    "orgao_emissor": "Prefeitura Municipal de Salto",
+    "numero_ato": "406",
+    "resumo_contexto": "DECRETO Nº 406, DE 04 DE NOVEMBRO DE 2026 “Declara de utilidade pública, para fins de desapropriação, parte de bem imóvel localizado no Bairro do Lageado.\" JOSÉ GERALDO GARCIA, Prefeito da Estância Turística de Salto, Estado de São Paulo, usando das atribuições que lhe são conferidas por Lei, e CONSIDERANDO a necessidade garantir área para futura duplicação da Rua John Kennedy, no trecho situado entre o Córrego do Ajudante e a Rodovia SP-75; DECRETA Art. 1º. Fica declarada de utilidade pública, …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3545209/2026-11-05/0c54c7a06d56585e409e7ad0e7cec4df8e5194d2.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "26.591",
+      "70.622"
+    ],
+    "areas": [],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3545209/2026-11-05/0c54c7a06d56585e409e7ad0e7cec4df8e5194d2.txt",
+    "edicao": "2355",
+    "coletado_em": "2026-11-05T14:30:27-03:00"
+  },
+  {
     "id": "e7efe7155d90c1af",
     "data_publicacao": "2026-11-04",
     "esfera": "Federal",
@@ -133,6 +426,37 @@
     "coletado_em": "2026-11-04T14:28:51-03:00"
   },
   {
+    "id": "70479a159b16ffc2",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Municipal",
+    "uf": "SE",
+    "municipio": "Itabaiana",
+    "orgao_emissor": "Prefeitura Municipal de Itabaiana",
+    "numero_ato": "383/2026",
+    "resumo_contexto": "DECRETO Nº 383/2026. DE 04 DE NOVEMBRO DE 2026 DECLARA DE UTILIDADE PÚBLICA PARA FINS DE DESAPROPRIAÇÃO 1.601,17 M² DA ÁREA REMANESCENTE 1 DE UM TERRENO BALDIO, LOCALIZADO NA AV. VEREADOR OLÍMPIO ARCANJO DE SANTANA, ESQUINA COM A RUA JAILTON DE MELO REZENDE E RUA MARIVAN DOS SANTOS BRITO, BAIRRO PORTO, INTEGRANTE DA TRANSCRIÇÃO/MATRÍCULA Nº 4.914 DO CARTÓRIO DO 1º OFÍCIO DA COMARCA DE ITABAIANA, DE PROPRIEDADE DO ESPÓLIO DE JOÃO CÂNDIDO DA SILVA, TENDO COMO A COPROPRIETÁRIOS/HERDEIROS SENHORA …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2802908/2026-11-04/85727aec96ed59faafaf197412e90a485891330b.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Saúde"
+    ],
+    "matriculas": [
+      "4.914"
+    ],
+    "areas": [
+      "1.601,17 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2802908/2026-11-04/85727aec96ed59faafaf197412e90a485891330b.txt",
+    "edicao": "1024",
+    "coletado_em": "2026-11-05T14:30:28-03:00"
+  },
+  {
     "id": "b149fa7fe141e8de",
     "data_publicacao": "2026-11-04",
     "esfera": "Municipal",
@@ -151,14 +475,14 @@
       "Viário/Rodovia"
     ],
     "matriculas": [
-      "4.188",
-      "122.351"
+      "122.351",
+      "4.188"
     ],
     "areas": [
-      "753,16 m²",
       "1.651,75 m²",
       "211,64 m²",
-      "23,35 m²"
+      "23,35 m²",
+      "753,16 m²"
     ],
     "score": 11,
     "confianca": "alta",

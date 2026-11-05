@@ -1,34 +1,31 @@
 {
   "fontes": {
     "querido_diario": {
-      "executado_em": "2026-11-05T00:54:11-03:00",
+      "executado_em": "2026-11-05T14:30:34-03:00",
       "periodo": "2026-11-01 a 2026-11-05",
       "modo": "indexacao",
-      "consultas_ok": 3,
+      "consultas_ok": 5,
       "consultas_total": 5,
-      "diarios_candidatos": 18,
-      "textos_integrais_baixados": 18,
-      "atos_extraidos": 15,
+      "diarios_candidatos": 21,
+      "textos_integrais_baixados": 21,
+      "atos_extraidos": 17,
       "novos": 2,
-      "atualizados": 4,
-      "erros": [
-        "consulta falhou: (\"interesse social\") + (desapropria* | expropria*) (offset 0)",
-        "consulta falhou: (\"necessidade pública\" | \"necessidade publica\") + (desapropria* | expropria*) (offset 0)"
-      ],
-      "base_api": "https://queridodiario.ok.org.br/api"
+      "atualizados": 5,
+      "erros": [],
+      "base_api": "https://api.queridodiario.org.br"
     },
     "dou": {
-      "executado_em": "2026-11-05T00:54:29-03:00",
+      "executado_em": "2026-11-05T14:31:12-03:00",
       "periodo": "2026-11-03 a 2026-11-05",
       "modo": "leitura",
-      "materias_analisadas": 5,
-      "atos_extraidos": 5,
-      "novos": 0,
+      "materias_analisadas": 15,
+      "atos_extraidos": 15,
+      "novos": 10,
       "atualizados": 0,
       "erros": []
     },
     "dioe_pr": {
-      "executado_em": "2026-11-05T00:54:36-03:00",
+      "executado_em": "2026-11-05T14:31:18-03:00",
       "periodo": "2026-11-01 a 2026-11-05",
       "consultas_ok": 4,
       "consultas_total": 4,
@@ -39,16 +36,16 @@
       "erros": []
     },
     "google_news_rss": {
-      "executado_em": "2026-11-05T00:55:55-03:00",
+      "executado_em": "2026-11-05T14:32:36-03:00",
       "periodo": "2026-11-02 a 2026-11-05",
       "ufs_consultadas": 27,
       "consultas_ok": 27,
-      "atos_extraidos": 1,
+      "atos_extraidos": 0,
       "novos": 0,
       "atualizados": 0,
       "erros": []
     }
   },
-  "ultima_execucao": "2026-11-05T00:55:55-03:00",
-  "total_atos": 256
+  "ultima_execucao": "2026-11-05T14:32:36-03:00",
+  "total_atos": 268
 }
