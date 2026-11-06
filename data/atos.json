@@ -1,5 +1,30 @@
 [
   {
+    "id": "d79822a70544cb60",
+    "data_publicacao": "2026-11-06",
+    "esfera": "Federal",
+    "uf": "AL",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.127",
+    "resumo_contexto": "DESPACHO Nº 4.127, DE 28 DE OUTUBRO DE 2026 Processo nº: 48500.030163/2026-50. Interessado: Origem Energia Pilar S.A., CNPJ nº 43.094.886/0001-92. Decisão: (i) declarar de utilidade pública, para instituição de servidão administrativa, a área de terra necessária à passagem da LT 230 kV Pilar - Rio Largo II, localizada no estado de Alagoas. A íntegra deste Despacho (e seu anexo) consta dos autos e estará disponível em legislacao.aneel.gov.br. THAIS BARBOSA COELHO Superintendente Substituta",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.127-de-28-de-outubro-de-2026-742128860",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "209",
+    "coletado_em": "2026-11-06T13:52:09-03:00"
+  },
+  {
     "id": "e1fa90677c17305a",
     "data_publicacao": "2026-11-05",
     "esfera": "Federal",
@@ -262,6 +287,35 @@
     "coletado_em": "2026-11-05T14:31:00-03:00"
   },
   {
+    "id": "773f22bda20b1e93",
+    "data_publicacao": "2026-11-05",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Tucano",
+    "orgao_emissor": "Prefeitura Municipal de Tucano",
+    "numero_ato": "688",
+    "resumo_contexto": "DECRETO Nº 688, DE 05 DE NOVEMBRO DE 2026. “Declara de Utilidade Pública, para fins de DESAPROPRIAÇÃO de Pleno Domínio, uma área de 11.375,56 m² (onze mil, trezentos e setenta e cinco metros quadrados e cinquenta e seis decímetros quadrados) e um perímetro de 492,01 m, situada no Município de Tucano, Estado da Bahia, na forma que indica, e dá outras providências”. O PREFEITO MUNICIPAL DE TUCANO, Estado da Bahia, no uso de suas atribuições legais, com fulcro no que lhe faculta a alínea “m”, do …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2931905/2026-11-05/4c92e6b6a7a7dd7ec5258474fb3587a11b3f0819.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Habitação/Regularização",
+      "Saneamento"
+    ],
+    "matriculas": [],
+    "areas": [
+      "11.375,56 m²"
+    ],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2931905/2026-11-05/4c92e6b6a7a7dd7ec5258474fb3587a11b3f0819.txt",
+    "edicao": "3.946",
+    "coletado_em": "2026-11-06T13:51:18-03:00"
+  },
+  {
     "id": "24224076d8fe202a",
     "data_publicacao": "2026-11-05",
     "esfera": "Municipal",
@@ -424,6 +478,32 @@
     "url_texto": null,
     "edicao": "207",
     "coletado_em": "2026-11-04T14:28:51-03:00"
+  },
+  {
+    "id": "aceb9d4bfecd97f6",
+    "data_publicacao": "2026-11-04",
+    "esfera": "Municipal",
+    "uf": "AL",
+    "municipio": "Maceió",
+    "orgao_emissor": "Prefeitura Municipal de Maceió",
+    "numero_ato": "10.451",
+    "resumo_contexto": "DECRETO Nº. 10.451 MACEIÓ/AL, 04 DE NOVEMBRO DE 2026. DECLARA DE UTILIDADE PÚBLICA, PARA FINS DE DESAPROPRIAÇÃO, OS IMÓVEIS SITUADOS NO BAIRRO POÇO, NECESSÁRIOS À REQUALIFICAÇÃO DA MOBILIDADE URBANA NO ENTORNO DO RIACHO DO SAPO. O PREFEITO DO MUNICÍPIO DE MACEIÓ, no uso de suas atribuições conferidas pelo art. 55, inciso V, da Lei Orgânica do Município, e em conformidade com os arts. 2º e 5º, alíneas ―e‖ , do Decreto-Lei nº 3.365, de 21 de junho de 1941, tendo em vista o que consta no Processo …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2704302/2026-11-04/5e032e7ef3edc0dfe494594caf5187b367980935.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2704302/2026-11-04/5e032e7ef3edc0dfe494594caf5187b367980935.txt",
+    "edicao": "7519a",
+    "coletado_em": "2026-11-06T13:51:23-03:00"
   },
   {
     "id": "70479a159b16ffc2",
