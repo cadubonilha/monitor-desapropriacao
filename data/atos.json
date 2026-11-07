@@ -49,6 +49,67 @@
     "coletado_em": "2026-11-06T13:52:09-03:00"
   },
   {
+    "id": "d28389d0e2ae6211",
+    "data_publicacao": "2026-11-06",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Osasco",
+    "orgao_emissor": "Prefeitura Municipal de Osasco",
+    "numero_ato": "15.318",
+    "resumo_contexto": "DECRETO Nº 15.318, DE 05 DE NOVEMBRO DE 2026 Declara de utilidade pública, para fins de desapropriação e/ou instituição de servidão de passagem, pela Companhia de Saneamento Básico do Estado de São Paulo – SABESP, áreas necessárias à implantação da obra do Coletor Tronco João Guimarães Rosa do Programa de Despoluição do Rio Tietê 4ª Etapa. GERSON PESSOA, Prefeito do Município de Osasco, usando das atribuições que lhe são conferidas por lei, DECRETA: Art. 1º Fica declarado de utilidade pública, …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3534401/2026-11-06/b9787d209217c6b3dcf8afca6f57f259c1b98536.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Saneamento"
+    ],
+    "matriculas": [],
+    "areas": [
+      "618,05 m²"
+    ],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3534401/2026-11-06/b9787d209217c6b3dcf8afca6f57f259c1b98536.txt",
+    "edicao": "3119",
+    "coletado_em": "2026-11-07T12:47:27-03:00"
+  },
+  {
+    "id": "27d152b62db5ef5d",
+    "data_publicacao": "2026-11-06",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Osasco",
+    "orgao_emissor": "Prefeitura Municipal de Osasco",
+    "numero_ato": "15.317",
+    "resumo_contexto": "DECRETO Nº 15.317, DE 05 DE NOVEMBRO DE 2026 Declara de utilidade pública, para fins de desapropriação e/ou instituição de servidão de passagem, pela Companhia de Saneamento Básico do Estado de São Paulo – SABESP, áreas necessárias à implantação da obra do Coletor Tronco São Pedro GERSON PESSOA, Prefeito do Município de Osasco, usando das atribuições que lhe são conferidas por lei, DECRETA: Art. 1º Fica declarado de utilidade pública, para fins de instituição de servidão administrativa pela …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3534401/2026-11-06/b9787d209217c6b3dcf8afca6f57f259c1b98536.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Saneamento"
+    ],
+    "matriculas": [
+      "86.479"
+    ],
+    "areas": [
+      "2.013,40 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3534401/2026-11-06/b9787d209217c6b3dcf8afca6f57f259c1b98536.txt",
+    "edicao": "3119",
+    "coletado_em": "2026-11-07T12:47:27-03:00"
+  },
+  {
     "id": "6b8ff493d7485afa",
     "data_publicacao": "2026-11-06",
     "esfera": "Municipal",
