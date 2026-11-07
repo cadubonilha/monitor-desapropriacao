@@ -1,5 +1,29 @@
 [
   {
+    "id": "737e593e7e1c1576",
+    "data_publicacao": "2026-11-06",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": null,
+    "orgao_emissor": "Câmara Municipal de Guapiaçu",
+    "numero_ato": null,
+    "resumo_contexto": "Ankigo 20. A desapropriação de que trata o anti go 1° deste dianto è declarado de natureza ingente - Câmara Municipal de Guapiaçu. Ankigo 20. A desapropriação de que trata o anti go 1° deste dianto è declarado de natureza ingente Câmara Municipal de Guapiaçu",
+    "url_fonte": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5DelRQLTFJakVpQ3BBQllmbUdjem8xZnY3ejNLWFFhcTRuYy1ZeHBXMTJ1T3hlc3Z0ck1iRmRmaG4wdTFhNHM1RF95NnFjTXQyWUJ2bG5CVUZsTmNkU3MxVElNYndYZw?oc=5",
+    "tipo_ato": "Notícia oficial",
+    "tags": [
+      "fonte_secundaria"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 4,
+    "confianca": "baixa",
+    "fonte": "google_news_rss",
+    "url_texto": null,
+    "edicao": null,
+    "coletado_em": "2026-11-07T00:16:12-03:00"
+  },
+  {
     "id": "d79822a70544cb60",
     "data_publicacao": "2026-11-06",
     "esfera": "Federal",
@@ -23,6 +47,66 @@
     "url_texto": null,
     "edicao": "209",
     "coletado_em": "2026-11-06T13:52:09-03:00"
+  },
+  {
+    "id": "6b8ff493d7485afa",
+    "data_publicacao": "2026-11-06",
+    "esfera": "Municipal",
+    "uf": "SE",
+    "municipio": "Simão Dias",
+    "orgao_emissor": "Prefeitura Municipal de Simão Dias",
+    "numero_ato": "186/2026",
+    "resumo_contexto": "DECRETO Nº 186/2026 - Declara utilidade pública para fins de desapropriação, a área rural abaixo caracterizada e dá outras providências. SUMÁRIO: Ano I Edição Nº MCDLXXXII de sexta-feira, 6 de novembro de 2026 Nº de páginas: 6 PREFEITURA MUNICIPAL DE SIMÃO DIAS MUNICÍPIO Diário Oficial do RUA PRESIDENTE VARGAS CEP: 49.480-000 TELEFONE: (79)36111-211 EMAIL: gabinete@simaodias.se.gov.br DIÁRIO OFICIAL DO MUNICÍPIO Esta edição encontra-se no site: …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2807105/2026-11-06/8eb5b295a39c1aa9740ba7f034e894f9c4b37ff1.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "interesse_social",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Lazer/Ambiental",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [
+      "400,00 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2807105/2026-11-06/8eb5b295a39c1aa9740ba7f034e894f9c4b37ff1.txt",
+    "edicao": "1482",
+    "coletado_em": "2026-11-07T00:14:14-03:00"
+  },
+  {
+    "id": "1512bed09727545e",
+    "data_publicacao": "2026-11-06",
+    "esfera": "Municipal",
+    "uf": "PR",
+    "municipio": "Apucarana",
+    "orgao_emissor": "Prefeitura Municipal de Apucarana",
+    "numero_ato": "358/2026",
+    "resumo_contexto": "DECRETO Nº. 358/2026 Declara de utilidade pública áreas de terras para fins de desapropriação e instituição de servidão administrativa em favor da SANEPAR, destinadas à ampliação do Sistema de Esgotamento Sanitário de Apucarana, como especifica. O PREFEITO DO MUNICÍPIO DE APUCARANA, ESTADO DO PARANÁ, RODOLFO MOTA, NO USO DAS ATRIBUIÇÕES QUE LHE SÃO CONFERIDAS PELA LEI ORGÂNICA DO MUNICÍPIO; CONSIDERANDO os critérios de conveniência e oportunidade motivadores dos atos da administração pública; …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/4101408/2026-11-06/ce93947bc28c6d27da2673495e1d63596022b559.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Saneamento"
+    ],
+    "matriculas": [],
+    "areas": [
+      "740,85 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/4101408/2026-11-06/ce93947bc28c6d27da2673495e1d63596022b559.txt",
+    "edicao": "10373",
+    "coletado_em": "2026-11-07T00:14:13-03:00"
   },
   {
     "id": "e1fa90677c17305a",
