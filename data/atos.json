@@ -1,5 +1,31 @@
 [
   {
+    "id": "daac370cbfebeedf",
+    "data_publicacao": "2026-11-10",
+    "esfera": "Municipal",
+    "uf": "AL",
+    "municipio": "Jundiá",
+    "orgao_emissor": "Prefeitura Municipal de Jundiá",
+    "numero_ato": "17",
+    "resumo_contexto": "DECRETO Nº 17, DE 09 DE NOVEMBRO DE 2026 Declara de utilidade pública, para fins de desapropriação amigável ou judicial, o imóvel urbano situado na Rua do Comércio, S/N, Centro, visando ao uso público do Município para a construção e implantação da Farmácia Popular Municipal. CONSIDERANDO que é dever do administrador público assegurar a oferta de serviços essenciais de saúde e a estruturação administrativa adequada para o atendimento digno da população; CONSIDERANDO que a proposta de utilização …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2700000/2026-11-10/52c0efcf636a25a52aa712e448dfe92fc878e102.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [
+      "102,48 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2703908/2026-11-10/14151bd430852e4b85548a088f488498.txt",
+    "edicao": "2930",
+    "coletado_em": "2026-11-11T00:04:36-03:00"
+  },
+  {
     "id": "0c678c63ed81a81f",
     "data_publicacao": "2026-11-09",
     "esfera": "Federal",
@@ -56,6 +82,96 @@
     "url_texto": "https://data.queridodiario.ok.org.br/3509502/2026-11-09/6051c2c6cb8706f7225c18b604a7b6d5530f1438.txt",
     "edicao": "13944",
     "coletado_em": "2026-11-09T17:02:32-03:00"
+  },
+  {
+    "id": "5613b4b5caabbf1e",
+    "data_publicacao": "2026-11-09",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Tucano",
+    "orgao_emissor": "Prefeitura Municipal de Tucano",
+    "numero_ato": "693",
+    "resumo_contexto": "DECRETO Nº 693, DE 09 DE NOVEMBRO DE 2026. “Declara de Utilidade Pública, para fins de DESAPROPRIAÇÃO de Pleno Domínio, uma área de 10.701,18 m² (dez mil, setecentos e um metros quadrados e dezoito decímetros quadrados) e um perímetro de 569,67 m situada no Município de Tucano, Estado da Bahia, na forma que indica, e dá outras providências”. O PREFEITO MUNICIPAL DE TUCANO, Estado da Bahia, no uso de suas atribuições legais, com fulcro no que lhe faculta a alínea “m”, do art. 5º, do Decreto Lei …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2931905/2026-11-09/1f98aaa6a8017c0dd0919826ecbefa8d32ea1a80.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Habitação/Regularização",
+      "Saneamento"
+    ],
+    "matriculas": [],
+    "areas": [
+      "10.701,18 m²"
+    ],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2931905/2026-11-09/1f98aaa6a8017c0dd0919826ecbefa8d32ea1a80.txt",
+    "edicao": "3.948",
+    "coletado_em": "2026-11-11T00:04:35-03:00"
+  },
+  {
+    "id": "7f8f73eba557c4c1",
+    "data_publicacao": "2026-11-09",
+    "esfera": "Municipal",
+    "uf": "AL",
+    "municipio": "Craíbas",
+    "orgao_emissor": "Prefeitura Municipal de Craíbas",
+    "numero_ato": "99/2026",
+    "resumo_contexto": "DECRETO Nº 99/2026, DE 19 DE OUTUBRO DE 2026 DECLARA A UTILIDADE PÚBLICA DE IMÓVEL PARA FINS DE DESAPROPRIAÇÃO, DESTINADO À AMPLIAÇÃO DE UNIDADE ESCOLAR NO POVOADO AREIA BRANCA, E DÁ OUTRAS PROVIDÊNCIAS. O PREFEITO DO MUNICÍPIO DE CRAÍBAS, ESTADO DE ALAGOAS, no uso das atribuições que lhe são conferidas pela Lei Orgânica do Município, pela legislação correlata e, CONSIDERANDO a previsão contida no art. 5º, inciso XXIV, e nos arts. 205, 208 e 211, § 2º, da Constituição Federal de 1988; …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2700000/2026-11-09/040458cba67a0122ad2bb916c5d58df3c403eb20.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Educação",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [
+      "81.818,00 m²",
+      "2.984,85 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2702355/2026-11-09/ca7eef903fc464d2b1b2bbeda4411f72.txt",
+    "edicao": "2929",
+    "coletado_em": "2026-11-11T00:04:36-03:00"
+  },
+  {
+    "id": "fa5c8d2f6fe397b5",
+    "data_publicacao": "2026-11-09",
+    "esfera": "Municipal",
+    "uf": "AL",
+    "municipio": "Craíbas",
+    "orgao_emissor": "Prefeitura Municipal de Craíbas",
+    "numero_ato": "98/2026",
+    "resumo_contexto": "DECRETO Nº 98/2026, DE 19 DE OUTUBRO DE 2026 DECLARA A UTILIDADE PÚBLICA DE IMÓVEL PARA FINS DE DESAPROPRIAÇÃO, DESTINADO À AMPLIAÇÃO DE UNIDADE ESCOLAR NO POVOADO GILA, E DÁ OUTRAS PROVIDÊNCIAS. O PREFEITO DO MUNICÍPIO DE CRAÍBAS, ESTADO DE ALAGOAS, no uso das atribuições que lhe são conferidas pela Lei Orgânica do Município, pela legislação correlata e, CONSIDERANDO a previsão contida no art. 5º, inciso XXIV, e nos arts. 205, 208 e 211, § 2º, da Constituição Federal de 1988; CONSIDERANDO as …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2700000/2026-11-09/040458cba67a0122ad2bb916c5d58df3c403eb20.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Educação",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [
+      "1.302,50 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2702355/2026-11-09/ca7eef903fc464d2b1b2bbeda4411f72.txt",
+    "edicao": "2929",
+    "coletado_em": "2026-11-11T00:04:36-03:00"
   },
   {
     "id": "737e593e7e1c1576",
