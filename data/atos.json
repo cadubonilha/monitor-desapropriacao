@@ -1,5 +1,58 @@
 [
   {
+    "id": "f925b10cb404cb44",
+    "data_publicacao": "2026-11-11",
+    "esfera": "Municipal",
+    "uf": "SE",
+    "municipio": null,
+    "orgao_emissor": "Prefeitura de Aracaju",
+    "numero_ato": null,
+    "resumo_contexto": "Prefeita Emília revoga decreto que previa desapropriação de área para cemitério municipal - Prefeitura de Aracaju. Prefeita Emília revoga decreto que previa desapropriação de área para cemitério municipal Prefeitura de Aracaju",
+    "url_fonte": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbWNSOHdBb0JUVGRnRi1Jb1Byem9qdnE3REk5M2JLZ21vOEtHTGY5aDM4MnRqLThKNmMtYk04aERYVHVaNVd1a2duUFZ0Ukc1UE9KZzNwQU5YRkp2RjRHX2pBUUEyVUVKT0c3cDY1WEttbWUzUm5qMzN3MjhuQ0JIenAwV0JQaVZXdFBRZVZnYXhaSTRyTkwyc1pJc2QtR3VaZjZocTlPNVpoTUZ1bjgxZ3Q3T29rR1lSQ3duZzJ6clAxcU15NUxkTnRfZWdmZDQ4?oc=5",
+    "tipo_ato": "Notícia oficial",
+    "tags": [
+      "fonte_secundaria"
+    ],
+    "finalidades": [
+      "Equipamento público"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "google_news_rss",
+    "url_texto": null,
+    "edicao": null,
+    "coletado_em": "2026-11-12T01:32:33-03:00"
+  },
+  {
+    "id": "543d3d4180ffe71c",
+    "data_publicacao": "2026-11-10",
+    "esfera": "Estadual",
+    "uf": "PR",
+    "municipio": null,
+    "orgao_emissor": "Governo do Estado do Paraná",
+    "numero_ato": "127/2026",
+    "resumo_contexto": "… Terminal Metropolitano de Curitiba, compreendendo as alternativas de ocupação territorial em estudo e, após a sua definição formal, as áreas que vierem a ser declaradas de utilidade pública. § 1º Enquanto não houver definição formal da área do Terminal e declaração de utilidade pública que a abranja, a atuação da Comissão quanto ao empreendimento previsto no inciso II do caput ficará restrita aos estudos, aos levantamentos, aos contatos de caráter informativo e à instrução preparatória, …",
+    "url_fonte": "https://dioe.pr.gov.br/portal/edicoes/download/17447/46",
+    "tipo_ato": "Portaria",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dioe_pr",
+    "url_texto": null,
+    "edicao": "12266",
+    "coletado_em": "2026-11-12T01:31:20-03:00"
+  },
+  {
     "id": "cbe248f543b990ee",
     "data_publicacao": "2026-11-10",
     "esfera": "Municipal",
@@ -53,6 +106,31 @@
     "url_texto": "https://data.queridodiario.ok.org.br/2703908/2026-11-10/14151bd430852e4b85548a088f488498.txt",
     "edicao": "2930",
     "coletado_em": "2026-11-11T00:04:36-03:00"
+  },
+  {
+    "id": "c533dd72e5c70a04",
+    "data_publicacao": "2026-11-09",
+    "esfera": "Municipal",
+    "uf": "PR",
+    "municipio": null,
+    "orgao_emissor": "Prefeitura Municipal de Nova Esperança/PR",
+    "numero_ato": "6.766",
+    "resumo_contexto": "DECRETO Nº 6.766, DE 9 DE NOVEMBRO DE 2026 Declara de utilidade pública a intervenção em área localizada no lote de terras - Prefeitura Municipal de Nova Esperança/PR. DECRETO Nº 6.766, DE 9 DE NOVEMBRO DE 2026 Declara de utilidade pública a intervenção em área localizada no lote de terras Prefeitura Municipal de Nova Esperança/PR",
+    "url_fonte": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTDlEZHFBaE5JVTJTdEp1ekFrYXRoeW5WSzFjUzFmcnFaX3hDempkeDZrRU4tQkpMdmhTYzhKVVhWVE1iTG8tSm1ZWWdNbDU3bXgyaWt0NUNfRmhXaV82M1FHRkNxcGRQZ2VKMUhtcWhuSVRjbU5pYnk1QUNMTUJuMW9vMExhSmhwT2VN?oc=5",
+    "tipo_ato": "Notícia oficial",
+    "tags": [
+      "fonte_secundaria",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 4,
+    "confianca": "baixa",
+    "fonte": "google_news_rss",
+    "url_texto": null,
+    "edicao": null,
+    "coletado_em": "2026-11-12T01:32:12-03:00"
   },
   {
     "id": "0c678c63ed81a81f",
