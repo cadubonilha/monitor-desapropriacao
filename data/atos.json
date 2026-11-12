@@ -1,5 +1,62 @@
 [
   {
+    "id": "566d7bbdb38b6eaa",
+    "data_publicacao": "2026-11-12",
+    "esfera": "Federal",
+    "uf": "SP",
+    "municipio": "Rio Claro e Santa Gertrudes",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "133",
+    "resumo_contexto": "Resolução nº 5.818, de 3 de maio de 2018, e alterações, e tendo em vista o que consta no Processo Administrativo SEI nº 50505.073230/2026-22, decide: Art. 1º Declarar de utilidade pública, para efeito de desapropriação e afetação para fins ferroviários, em favor da União, os bens imóveis alcançados pelas coordenadas planas descritas no Anexo (SEI Nº 46719912) a esta Decisão, as quais definem as poligonais de utilidade pública referentes ao projeto de investimento obrigatório para a duplicação …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-sufer-n-133-de-20-de-outubro-de-2026-743866642",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "coordenadas",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Mobilidade/Transporte",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "213",
+    "coletado_em": "2026-11-12T14:45:07-03:00"
+  },
+  {
+    "id": "4ef95b4e43f74b86",
+    "data_publicacao": "2026-11-12",
+    "esfera": "Federal",
+    "uf": "MG",
+    "municipio": "Belo Horizonte",
+    "orgao_emissor": "Presidência da República",
+    "numero_ato": "13.161",
+    "resumo_contexto": "DECRETO Nº 13.161, DE 11 DE NOVEMBRO DE 2026 Declara de utilidade pública, para fins de desapropriação, em favor da União, o imóvel que menciona, localizado no Município de Belo Horizonte, Estado de Minas Gerais. O VICE-PRESIDENTE DA REPÚBLICA , no exercício do cargo dePRESIDENTE DA REPÚBLICA, no uso da atribuição que lhe confere o art. 84, caput , inciso IV, da Constituição, e tendo em vista o disposto nos art. 5º, caput , alíneas \"h\" e \"m\", e art. 6º do Decreto-Lei nº 3.365, de 21 de junho de …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decreto-n-13.161-de-11-de-novembro-de-2026-743875209",
+    "tipo_ato": "Decreto numerado",
+    "tags": [
+      "matricula",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "63.972"
+    ],
+    "areas": [],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "213",
+    "coletado_em": "2026-11-12T14:45:05-03:00"
+  },
+  {
     "id": "f925b10cb404cb44",
     "data_publicacao": "2026-11-11",
     "esfera": "Municipal",

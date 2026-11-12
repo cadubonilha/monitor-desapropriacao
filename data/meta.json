@@ -1,10 +1,10 @@
 {
   "fontes": {
     "querido_diario": {
-      "executado_em": "2026-11-12T01:31:04-03:00",
+      "executado_em": "2026-11-12T14:44:54-03:00",
       "periodo": "2026-11-08 a 2026-11-12",
       "modo": "indexacao",
-      "consultas_ok": 1,
+      "consultas_ok": 2,
       "consultas_total": 5,
       "diarios_candidatos": 1,
       "textos_integrais_baixados": 1,
@@ -13,44 +13,43 @@
       "atualizados": 0,
       "erros": [
         "consulta falhou: (\"utilidade pública\" | \"utilidade publica\") + (desapropria* | expropria*) (offset 0)",
-        "consulta falhou: (\"necessidade pública\" | \"necessidade publica\") + (desapropria* | expropria*) (offset 0)",
         "consulta falhou: (\"servidão administrativa\" | \"servidao administrativa\") + decreto (offset 0)",
         "consulta falhou: (\"3.365\" | \"3365\") + decret* (offset 0)"
       ],
-      "base_api": "https://queridodiario.ok.org.br/api"
+      "base_api": "https://api.queridodiario.org.br"
     },
     "dou": {
-      "executado_em": "2026-11-12T01:31:13-03:00",
+      "executado_em": "2026-11-12T14:45:09-03:00",
       "periodo": "2026-11-10 a 2026-11-12",
       "modo": "leitura",
-      "materias_analisadas": 0,
-      "atos_extraidos": 0,
-      "novos": 0,
+      "materias_analisadas": 2,
+      "atos_extraidos": 2,
+      "novos": 2,
       "atualizados": 0,
       "erros": []
     },
     "dioe_pr": {
-      "executado_em": "2026-11-12T01:31:20-03:00",
+      "executado_em": "2026-11-12T14:45:14-03:00",
       "periodo": "2026-11-08 a 2026-11-12",
       "consultas_ok": 4,
       "consultas_total": 4,
       "paginas_analisadas": 1,
       "atos_extraidos": 1,
-      "novos": 1,
+      "novos": 0,
       "atualizados": 0,
       "erros": []
     },
     "google_news_rss": {
-      "executado_em": "2026-11-12T01:32:39-03:00",
+      "executado_em": "2026-11-12T14:46:33-03:00",
       "periodo": "2026-11-09 a 2026-11-12",
       "ufs_consultadas": 27,
       "consultas_ok": 27,
-      "atos_extraidos": 2,
-      "novos": 2,
+      "atos_extraidos": 1,
+      "novos": 0,
       "atualizados": 0,
       "erros": []
     }
   },
-  "ultima_execucao": "2026-11-12T01:32:39-03:00",
-  "total_atos": 287
+  "ultima_execucao": "2026-11-12T14:46:33-03:00",
+  "total_atos": 289
 }
