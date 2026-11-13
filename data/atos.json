@@ -1,5 +1,30 @@
 [
   {
+    "id": "60ff306120917b8c",
+    "data_publicacao": "2026-11-12",
+    "esfera": "Municipal",
+    "uf": "GO",
+    "municipio": null,
+    "orgao_emissor": "Câmara Municipal de Itumbiara",
+    "numero_ato": null,
+    "resumo_contexto": "PROJETO DE LEI SUBSTITUTIVO 01 AO PROJETO DE LEI Nº 32/2026 Declara de utilidade pública, para fins de desapropriação, imóv - Câmara Municipal de Itumbiara. PROJETO DE LEI SUBSTITUTIVO 01 AO PROJETO DE LEI Nº 32/2026 Declara de utilidade pública, para fins de desapropriação, imóv Câmara Municipal de Itumbiara",
+    "url_fonte": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQjJIS1JoZFhTR09kQjlnMjY4aWlrTGpwZ3RCajM2dTFpNXgyUnFHN2VWbk5INUxnQU1nODdQVFQ0WlhEbmtPT1JMS2FXZHduaTd3ZHQ5VVZ0SmswYVR3V0xxQUVJTjkwTEZDVC1zMTRWbzNoemR5WTd2cnNMSi0wenNOVHk4TkZvR2RwMHFWT25wRzB2dmVENzBqZTVBUnF5TmEtY0hHMGgxZXM?oc=5",
+    "tipo_ato": "Notícia oficial",
+    "tags": [
+      "fonte_secundaria",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [],
+    "score": 4,
+    "confianca": "baixa",
+    "fonte": "google_news_rss",
+    "url_texto": null,
+    "edicao": null,
+    "coletado_em": "2026-11-13T00:51:06-03:00"
+  },
+  {
     "id": "566d7bbdb38b6eaa",
     "data_publicacao": "2026-11-12",
     "esfera": "Federal",
