@@ -1,5 +1,112 @@
 [
   {
+    "id": "c6ded9d1206bf6b1",
+    "data_publicacao": "2026-11-13",
+    "esfera": "Federal",
+    "uf": "BA",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.272",
+    "resumo_contexto": "… DE 2026 Processo nº: 48500.032735/2026-35. Interessado: Companhia de Eletricidade do Estado da Bahia - Neoenergia Coelba, CNPJ Nº 15.139.629/0001-94. Decisão: declarar de utilidade pública, para instituição de servidão administrativa, em favor do Interessado, a área de terra necessária à passagem do trecho de linha de distribuição que perfaz o Secc. LD 69 kV Nova Tourão - Nova Curaçá, na SE Maniçoba, localizada no estado da Bahia. A íntegra deste Despacho (e seu anexo) consta dos autos e …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.272-de-10-de-novembro-de-2026-744164462",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "214",
+    "coletado_em": "2026-11-13T14:29:09-03:00"
+  },
+  {
+    "id": "6255bef9fd796c19",
+    "data_publicacao": "2026-11-13",
+    "esfera": "Federal",
+    "uf": "CE",
+    "municipio": "Caucaia",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.225",
+    "resumo_contexto": "DESPACHO Nº 4.225, DE 4 DE NOVEMBRO DE 2026 Processo nº: 48500.905029/2019-91. Interessada: Enel Distribuição Ceará, CNPJ nº 07.047.251/0001-70. Objeto: Declarar de utilidade pública, para instituição de servidão administrativa, em favor da interessada, a área de terra de 6 metros de largura para o trecho urbano e 15 metros de largura para o trecho rural necessária à passagem da Linha de Distribuição Complexo Industrial do Pecém - São Luís do Curu 02L1, circuito simples, 69 kV, com …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.225-de-4-de-novembro-de-2026-744144225",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "214",
+    "coletado_em": "2026-11-13T14:29:05-03:00"
+  },
+  {
+    "id": "ae4fd18a9bda8d94",
+    "data_publicacao": "2026-11-13",
+    "esfera": "Federal",
+    "uf": "GO",
+    "municipio": "Davinópolis",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.836",
+    "resumo_contexto": "RESOLUÇÃO AUTORIZATIVA Nº 16.836, DE 10 DE NOVEMBRO DE 2026 O DIRETOR-GERAL SUBSTITUTO DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA - ANEEL, com base no art. 6º, IX, do Regimento Interno da ANEEL, resolve: Processo nº 48500.015211/2026-80. Interessado: PCH São Bento SPE Ltda. Objeto: Declarar de utilidade pública áreas necessárias à implantação da PCH São Bento, CEG nº PCH.PH.GO.035499-6.01, localizadas no município de Davinópolis, no estado de Goiás. A íntegra desta Resolução consta dos autos e …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.836-de-10-de-novembro-de-2026-744153227",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "214",
+    "coletado_em": "2026-11-13T14:29:07-03:00"
+  },
+  {
+    "id": "4e021dc2aaba660f",
+    "data_publicacao": "2026-11-13",
+    "esfera": "Federal",
+    "uf": "CE",
+    "municipio": "São Gonçalo do Amarante",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.235",
+    "resumo_contexto": "DESPACHO Nº 4.235, DE 5 DE NOVEMBRO DE 2026 Processo nº: 48500.029511/2026-46. Interessada: SPE Complexo Jandaia S.A., CNPJ nº 66.996.099/0001-31. Objeto: Declarar de utilidade pública, para instituição de servidão administrativa, em favor da interessada, a área de terra de 50 (cinquenta) metros de largura necessária à passagem da Linha de Transmissão UTE Jandaia - Pecém II, circuito simples, 500 kV, com aproximadamente 5,5 (cinco vírgula cinco) km de extensão, que interligará a Subestação UTE …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.235-de-5-de-novembro-de-2026-744138359",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "214",
+    "coletado_em": "2026-11-13T14:29:03-03:00"
+  },
+  {
     "id": "60ff306120917b8c",
     "data_publicacao": "2026-11-12",
     "esfera": "Municipal",
@@ -188,6 +295,66 @@
     "url_texto": "https://data.queridodiario.ok.org.br/2703908/2026-11-10/14151bd430852e4b85548a088f488498.txt",
     "edicao": "2930",
     "coletado_em": "2026-11-11T00:04:36-03:00"
+  },
+  {
+    "id": "096c71aa76e43896",
+    "data_publicacao": "2026-11-10",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Monte Alto",
+    "orgao_emissor": "Prefeitura Municipal de Monte Alto",
+    "numero_ato": "5.284",
+    "resumo_contexto": "Decreto nº 5.284, de 9 de novembro de 2026 Declara de utilidade pública, para fins de desapropriação, por via amigável ou judicial, parte de bem imóvel localizado no Município de Monte Alto, de propriedade de Alcides Fenerich e Ana Maria Gonzalez Fenerich, necessário à implantação da obra denominada “Interligação de Bairros”, e dá outras providências. MARIA HELENA AGUIAR RETTONDINI, Prefeita do Município de Monte Alto, Estado de São Paulo, no uso das atribuições que lhe confere o artigo 87, …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3531308/2026-11-10/c6dc31cdd18956c0524cd425f73867dd03473578.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "9.553"
+    ],
+    "areas": [
+      "706,54 m²"
+    ],
+    "score": 12,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3531308/2026-11-10/c6dc31cdd18956c0524cd425f73867dd03473578.txt",
+    "edicao": "2205",
+    "coletado_em": "2026-11-13T14:28:41-03:00"
+  },
+  {
+    "id": "ff96f3263e17ad31",
+    "data_publicacao": "2026-11-10",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Monte Alto",
+    "orgao_emissor": "Prefeitura Municipal de Monte Alto",
+    "numero_ato": "5.285",
+    "resumo_contexto": "Decreto nº 5.285, de 9 de novembro de 2026 Declara de utilidade pública, para fins de desapropriação, por via amigável ou judicial, parte de bem imóvel localizado no Município de Monte Alto, de propriedade de José Carlos de Souza Lima e Izildinha de Fátima Fumagali de Souza Lima, necessário à implantação da obra denominada “Interligação de Bairros”, e dá outras providências. MARIA HELENA AGUIAR RETTONDINI, Prefeita do Município de Monte Alto, Estado de São Paulo, no uso das atribuições que lhe …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3531308/2026-11-10/c6dc31cdd18956c0524cd425f73867dd03473578.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "8.599"
+    ],
+    "areas": [
+      "567,42 m²"
+    ],
+    "score": 12,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3531308/2026-11-10/c6dc31cdd18956c0524cd425f73867dd03473578.txt",
+    "edicao": "2205",
+    "coletado_em": "2026-11-13T14:28:41-03:00"
   },
   {
     "id": "c533dd72e5c70a04",
