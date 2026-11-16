@@ -1,8 +1,8 @@
 {
   "fontes": {
     "querido_diario": {
-      "executado_em": "2026-11-15T13:34:01-03:00",
-      "periodo": "2026-11-11 a 2026-11-15",
+      "executado_em": "2026-11-16T00:15:52-03:00",
+      "periodo": "2026-11-12 a 2026-11-16",
       "modo": "indexacao",
       "consultas_ok": 0,
       "consultas_total": 5,
@@ -21,18 +21,18 @@
       "base_api": null
     },
     "dou": {
-      "executado_em": "2026-11-15T13:34:16-03:00",
-      "periodo": "2026-11-13 a 2026-11-15",
+      "executado_em": "2026-11-16T00:15:57-03:00",
+      "periodo": "2026-11-14 a 2026-11-16",
       "modo": "leitura",
-      "materias_analisadas": 4,
-      "atos_extraidos": 4,
+      "materias_analisadas": 0,
+      "atos_extraidos": 0,
       "novos": 0,
       "atualizados": 0,
       "erros": []
     },
     "dioe_pr": {
-      "executado_em": "2026-11-15T13:34:21-03:00",
-      "periodo": "2026-11-11 a 2026-11-15",
+      "executado_em": "2026-11-16T00:16:04-03:00",
+      "periodo": "2026-11-12 a 2026-11-16",
       "consultas_ok": 4,
       "consultas_total": 4,
       "paginas_analisadas": 0,
@@ -42,16 +42,16 @@
       "erros": []
     },
     "google_news_rss": {
-      "executado_em": "2026-11-15T13:35:40-03:00",
-      "periodo": "2026-11-12 a 2026-11-15",
+      "executado_em": "2026-11-16T00:17:22-03:00",
+      "periodo": "2026-11-13 a 2026-11-16",
       "ufs_consultadas": 27,
       "consultas_ok": 27,
-      "atos_extraidos": 1,
+      "atos_extraidos": 0,
       "novos": 0,
       "atualizados": 0,
       "erros": []
     }
   },
-  "ultima_execucao": "2026-11-15T13:35:40-03:00",
+  "ultima_execucao": "2026-11-16T00:17:22-03:00",
   "total_atos": 296
 }
