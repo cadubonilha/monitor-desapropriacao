@@ -1,5 +1,59 @@
 [
   {
+    "id": "7a4814eaa34c41e9",
+    "data_publicacao": "2026-11-17",
+    "esfera": "Federal",
+    "uf": "ES",
+    "municipio": "Iconha e Rio Novo do Sul",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.925",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 3 de maio de 2018 e fundamentado no que consta do Processo nº 50505.052376/2025-53, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras de Duplicação na BR-101/ES, nos km 379+820 ao km 398+860 nos municípios de Iconha e Rio Novo do Sul/ES, conforme …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.925-de-9-de-novembro-de-2026-744747576",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "216",
+    "coletado_em": "2026-11-17T15:56:52-03:00"
+  },
+  {
+    "id": "fef16b2ee0954c92",
+    "data_publicacao": "2026-11-17",
+    "esfera": "Federal",
+    "uf": "RJ",
+    "municipio": "Magé",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.908",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 03 de maio de 2018 e fundamentado no que consta do Processo nº 50505.049354/2026-97decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras de Dispositivo em Desnível na BR-116/RJ, nos km 116+010, no município de Magé/RJ, conforme informações de …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.908-de-9-de-novembro-de-2026-744738533",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "216",
+    "coletado_em": "2026-11-17T15:56:50-03:00"
+  },
+  {
     "id": "7d2713f6c48f424a",
     "data_publicacao": "2026-11-16",
     "esfera": "Federal",
