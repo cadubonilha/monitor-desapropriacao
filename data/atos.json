@@ -1,5 +1,86 @@
 [
   {
+    "id": "d1c24faddd20c06a",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Federal",
+    "uf": "PR",
+    "municipio": "Piraí do Sul",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.936",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 3 de maio de 2018 e fundamentado no que consta do Processo nº 50505.144772/2026-97, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras de Implantação de passarela na PR-151, no km 240+220, no município de Piraí do Sul/PR, conforme informações de …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.936-de-11-de-novembro-de-2026-745275865",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "218",
+    "coletado_em": "2026-11-19T15:36:50-03:00"
+  },
+  {
+    "id": "1431093d45ed3c24",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Federal",
+    "uf": "MS",
+    "municipio": "Rio Verde de Mato Grosso",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.944",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 3 de maio de 2018 e fundamentado no que consta do Processo nº 50505.091431/2026-10, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras do dispositivo tipo rotatória e acesso na BR-163/MS, no km 668+500 ao km 669+500 no município de Rio Verde de Mato …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.944-de-11-de-novembro-de-2026-745273489",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "218",
+    "coletado_em": "2026-11-19T15:36:54-03:00"
+  },
+  {
+    "id": "ebab7620fb58a51c",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Federal",
+    "uf": "MS",
+    "municipio": "Rio Verde de Mato Grosso",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.948",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 3 de maio de 2018 e fundamentado no que consta do Processo nº 50505.091421/2026-76, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras do retorno em x na BR-163/MS, no km 661+000 no município de Rio Verde de Mato Grosso/MS conforme informações de …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.948-de-11-de-novembro-de-2026-745270813",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "218",
+    "coletado_em": "2026-11-19T15:36:52-03:00"
+  },
+  {
     "id": "0af5b8dd9ec3c330",
     "data_publicacao": "2026-11-18",
     "esfera": "Federal",
