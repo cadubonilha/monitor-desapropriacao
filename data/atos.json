@@ -81,6 +81,39 @@
     "coletado_em": "2026-11-19T15:36:52-03:00"
   },
   {
+    "id": "a0c69bafb6e720bc",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Campinas",
+    "orgao_emissor": "Prefeitura Municipal de Campinas",
+    "numero_ato": "24.740",
+    "resumo_contexto": "DECRETO Nº 24.740, DE 18 DE NOVEMBRO DE 2026 Declara de utilidade pública, para fins de desapropriação amigável ou judicial, as faixas de terreno que especifica, destacadas dos Lotes 13 e 14 da Quadra 3 do loteamento Chácara Formosa, necessárias à composição do sistema viário do Município. O PREFEITO DO MUNICÍPIO DE CAMPINAS, no uso da atribuição que lhe confere o art. 75, VIII, da Lei Orgânica do Município, tendo em vista o disposto na alínea \"i\" do art. 5º e no art. 6º do Decreto-Lei Federal …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3509502/2026-11-19/7516bc12e605abc53502acee736777cd1ac8d9e9.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "67.935",
+      "67.936"
+    ],
+    "areas": [
+      "200,03 m²",
+      "384,80 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3509502/2026-11-19/7516bc12e605abc53502acee736777cd1ac8d9e9.txt",
+    "edicao": "13952",
+    "coletado_em": "2026-11-20T14:55:04-03:00"
+  },
+  {
     "id": "0af5b8dd9ec3c330",
     "data_publicacao": "2026-11-18",
     "esfera": "Federal",
@@ -133,6 +166,41 @@
     "url_texto": null,
     "edicao": "217",
     "coletado_em": "2026-11-18T15:26:23-03:00"
+  },
+  {
+    "id": "dc0180b375583a05",
+    "data_publicacao": "2026-11-18",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Valinhos",
+    "orgao_emissor": "Prefeitura Municipal de Valinhos",
+    "numero_ato": "13.174",
+    "resumo_contexto": "DECRETO N° 13.174, DE 18 DE NOVEMBRO DE 2026 Declara de utilidade pública, para fins de desapropriação judicial ou por via amigável, áreas a serem destacadas da Gleba A-2 da Fazenda São Domingos, Bairro Jurema, destinadas ao prolongamento do sistema viário, à implantação de sistema de lazer e à drenagem, na forma que especifica. FRANKLIN DUARTE DE LIMA, Prefeito do Município de Valinhos, no uso das atribuições que lhe são conferidas pelo art. 80, inciso VIII, da Lei Orgânica do Município, e …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3556206/2026-11-18/4ac67a9d222537962d8bdd383ef5de91decc3110.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "interesse_social",
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Drenagem/Hídrico",
+      "Lazer/Ambiental",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "3.409"
+    ],
+    "areas": [
+      "39.902,00 m²",
+      "3.242,77 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3556206/2026-11-18/4ac67a9d222537962d8bdd383ef5de91decc3110.txt",
+    "edicao": "3071",
+    "coletado_em": "2026-11-20T14:55:06-03:00"
   },
   {
     "id": "384deaa56fdc87bc",
@@ -216,6 +284,37 @@
     "url_texto": null,
     "edicao": "216",
     "coletado_em": "2026-11-17T15:56:50-03:00"
+  },
+  {
+    "id": "933943e19ed21cbd",
+    "data_publicacao": "2026-11-17",
+    "esfera": "Municipal",
+    "uf": "PR",
+    "municipio": "Londrina",
+    "orgao_emissor": "Prefeitura Municipal de Londrina",
+    "numero_ato": "1388",
+    "resumo_contexto": "DECRETO Nº 1388 DE 13 DE NOVEMBRO DE 2026 SÚMULA: Declara de utilidade pública área de terras para fins de desapropriação, destinada à implantação do alargamento e duplicação da Avenida Gil de Abreu e Souza. O PREFEITO DO MUNICÍPIO DE LONDRINA, ESTADO DO PARANÁ, no exercício de suas atribuições legais, em conformidade com o disposto nos artigos 2º, 5º, alíneas \"h\" e \"i\" e 6º do Decreto-Lei nº 3.365 de 1941 e considerando os processos SEI 19.008.171682/2026-30, 19.021.096139/2026-78 e demais …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/4113700/2026-11-17/339a49b0a82dbee7757957ad74692a5c53ad1821.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "65.810"
+    ],
+    "areas": [
+      "850,69 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/4113700/2026-11-17/339a49b0a82dbee7757957ad74692a5c53ad1821.txt",
+    "edicao": "5920",
+    "coletado_em": "2026-11-20T14:55:06-03:00"
   },
   {
     "id": "7d2713f6c48f424a",
