@@ -135,6 +135,35 @@
     "coletado_em": "2026-11-18T15:26:23-03:00"
   },
   {
+    "id": "384deaa56fdc87bc",
+    "data_publicacao": "2026-11-18",
+    "esfera": "Estadual",
+    "uf": "PR",
+    "municipio": "Ivaiporã",
+    "orgao_emissor": "Governo do Estado do Paraná",
+    "numero_ato": "15.842",
+    "resumo_contexto": "DECRETO Nº 15.842 Declara de utilidade pública para fins de desapropriação o imóvel que especifica. GOVERNADOR DO ESTADO DO PARANÁ, no uso das atribuições que lhe confere o art. 10 e inciso V do art. 87 da Constituição Estadual, e alínea “h” do art. 5º do Decreto-Lei nº 3.365, de 21 de junho de 1941 e tendo em vista o contido no protocolo nº 26.584.930-0, DECRETA: Art. 1° Declara de utilidade pública, para fins de desapropriação, o imóvel com área total de 393,75 m² (trezentos e noventa e três …",
+    "url_fonte": "https://dioe.pr.gov.br/portal/edicoes/download/17479/14",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "25.185"
+    ],
+    "areas": [
+      "393,75 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "dioe_pr",
+    "url_texto": null,
+    "edicao": "12272",
+    "coletado_em": "2026-11-20T01:29:00-03:00"
+  },
+  {
     "id": "7a4814eaa34c41e9",
     "data_publicacao": "2026-11-17",
     "esfera": "Federal",
