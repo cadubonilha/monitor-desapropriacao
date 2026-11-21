@@ -1,5 +1,32 @@
 [
   {
+    "id": "78e1c1f9baa9f32a",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Senhor do Bonfim",
+    "orgao_emissor": "Prefeitura Municipal de Senhor do Bonfim",
+    "numero_ato": null,
+    "resumo_contexto": "… DO BONFIM - BAHIA GABINETE DO PREFEITO VII - Zelar pela boa qualidade do serviço, receber, apurar e solucionar queixas e reclamações dos usuários; VIII - Declarar de utilidade pública os bens necessários à execução do serviço, promovendo as desapropriações, diretamente ou mediante outorga de poderes à concessionária, caso em que será desta a responsabilidade pelas indenizações cabíveis; IX - Declarar de necessidade ou utilidade pública, para fins de instituição de servidão administrativa, …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2930105/2026-11-19/1f6ffa922a46641b7f1682b89b59f184429f99f1.pdf",
+    "tipo_ato": "Não identificado",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Lazer/Ambiental"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2930105/2026-11-19/1f6ffa922a46641b7f1682b89b59f184429f99f1.txt",
+    "edicao": "6.687",
+    "coletado_em": "2026-11-21T13:52:04-03:00"
+  },
+  {
     "id": "d1c24faddd20c06a",
     "data_publicacao": "2026-11-19",
     "esfera": "Federal",
@@ -81,6 +108,100 @@
     "coletado_em": "2026-11-19T15:36:52-03:00"
   },
   {
+    "id": "cc82b7d5dcaa0846",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Municipal",
+    "uf": "MG",
+    "municipio": "Juatuba",
+    "orgao_emissor": "Prefeitura Municipal de Juatuba",
+    "numero_ato": null,
+    "resumo_contexto": "… XXIV, da Constituição Federal e nos artigos 2º, 5º, alíneas \"d\", \"e\", \"h\" e \"i\", e 6º do Decreto 3.365, de 21 de junho de 1941; DECRETA: Art. 1º Fica declarado de utilidade pública, para fins de desapropriação plena por via amigável ou judicial, o imóvel urbano constituído pelo II, neste Município de Juatuba/MG, registrado sob a Matrícula nº 7.843 no Cartório de Registro de Imóveis de Mateus Leme/MG (Comarca de Juatuba e Comércio Ltda. (CNPJ nº 17.185.588/0001 de acordo com o …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3136652/2026-11-19/0414a1f4bd2f80ca568d47aecb714a9b10be99e3.pdf",
+    "tipo_ato": "Não identificado",
+    "tags": [
+      "coordenadas",
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Lazer/Ambiental"
+    ],
+    "matriculas": [
+      "7.843"
+    ],
+    "areas": [],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3136652/2026-11-19/0414a1f4bd2f80ca568d47aecb714a9b10be99e3.txt",
+    "edicao": "3302",
+    "coletado_em": "2026-11-21T13:52:07-03:00"
+  },
+  {
+    "id": "20ab00ea97d4a0c2",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Municipal",
+    "uf": "SE",
+    "municipio": "Simão Dias",
+    "orgao_emissor": "Prefeitura Municipal de Simão Dias",
+    "numero_ato": "180/2026",
+    "resumo_contexto": "DECRETO Nº 180/2026 - Declara utilidade pública para fins de desapropriação, a área rural abaixo caracterizada e dá outras providências. SUMÁRIO: Ano I Edição Nº MCDXCI de quinta-feira, 19 de novembro de 2026 Nº de páginas: 6 PREFEITURA MUNICIPAL DE SIMÃO DIAS MUNICÍPIO Diário Oficial do RUA PRESIDENTE VARGAS CEP: 49.480-000 TELEFONE: (79)36111-211 EMAIL: gabinete@simaodias.se.gov.br DIÁRIO OFICIAL DO MUNICÍPIO Esta edição encontra-se no site: …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2807105/2026-11-19/f0e1476c6eac718811c362c2bf7a50573f4fdee5.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "interesse_social",
+      "retificacao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Educação",
+      "Lazer/Ambiental",
+      "Mobilidade/Transporte",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [
+      "355,35 m²",
+      "365,65 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2807105/2026-11-19/f0e1476c6eac718811c362c2bf7a50573f4fdee5.txt",
+    "edicao": "1491",
+    "coletado_em": "2026-11-21T13:52:07-03:00"
+  },
+  {
+    "id": "604957bf7564c720",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Municipal",
+    "uf": "SE",
+    "municipio": "Simão Dias",
+    "orgao_emissor": "Prefeitura Municipal de Simão Dias",
+    "numero_ato": "196/2026",
+    "resumo_contexto": "DECRETO Nº 196/2026 DE 19 DE NOVEMBRO DE 2026 - Altera o art. 1º do Decreto nº 180, de 18 de setembro de 2026, que declara de utilidade pública, para fins de desapropriação, área rural situada no Povoado Sítio Alto, e dá outras providências. ● REPUBLICAÇÃO DO DECRETO Nº 180/2026 - Declara utilidade pública para fins de desapropriação, a área rural abaixo caracterizada e dá outras providências. SUMÁRIO: Ano I Edição Nº MCDXCI de quinta-feira, 19 de novembro de 2026 Nº de páginas: 6 PREFEITURA …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2807105/2026-11-19/f0e1476c6eac718811c362c2bf7a50573f4fdee5.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "retificacao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Educação",
+      "Lazer/Ambiental"
+    ],
+    "matriculas": [],
+    "areas": [
+      "355,35 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2807105/2026-11-19/f0e1476c6eac718811c362c2bf7a50573f4fdee5.txt",
+    "edicao": "1491",
+    "coletado_em": "2026-11-21T13:52:07-03:00"
+  },
+  {
     "id": "a0c69bafb6e720bc",
     "data_publicacao": "2026-11-19",
     "esfera": "Municipal",
@@ -112,6 +233,39 @@
     "url_texto": "https://data.queridodiario.ok.org.br/3509502/2026-11-19/7516bc12e605abc53502acee736777cd1ac8d9e9.txt",
     "edicao": "13952",
     "coletado_em": "2026-11-20T14:55:04-03:00"
+  },
+  {
+    "id": "a68768d3d561f794",
+    "data_publicacao": "2026-11-19",
+    "esfera": "Municipal",
+    "uf": "MG",
+    "municipio": "Juatuba",
+    "orgao_emissor": "Prefeitura Municipal de Juatuba",
+    "numero_ato": null,
+    "resumo_contexto": "… a ingressar na área Procuradoria Geral Praça dos Três Poderes, s/nº – Centro – Juatuba / MG - Telefone: (31) 3535-8241 Nº 3.432, DE 19 DE NOVEMBRO DE 2026 Declara de utilidade pública, para fins de desapropriação plena em favor do Município de Juatuba/MG, o Lote 30 da Quadra 12 situado no Bairro Veredas da Serra II, autoriza a alegação de urgência para imissão provisória na posse e dá outras providências. PREFEITO DO MUNICÍPIO DE JUATUBA, Estado de Minas Gerais, no uso das atribuições que …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3136652/2026-11-19/0414a1f4bd2f80ca568d47aecb714a9b10be99e3.pdf",
+    "tipo_ato": "Não identificado",
+    "tags": [
+      "coordenadas",
+      "matricula",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Lazer/Ambiental"
+    ],
+    "matriculas": [
+      "7.843"
+    ],
+    "areas": [
+      "1.997,62 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3136652/2026-11-19/0414a1f4bd2f80ca568d47aecb714a9b10be99e3.txt",
+    "edicao": "3302",
+    "coletado_em": "2026-11-21T13:52:07-03:00"
   },
   {
     "id": "0af5b8dd9ec3c330",
@@ -192,8 +346,8 @@
       "3.409"
     ],
     "areas": [
-      "39.902,00 m²",
-      "3.242,77 m²"
+      "3.242,77 m²",
+      "39.902,00 m²"
     ],
     "score": 10,
     "confianca": "alta",
