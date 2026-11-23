@@ -1,5 +1,188 @@
 [
   {
+    "id": "6c0b57dad52f9791",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Federal",
+    "uf": "SC",
+    "municipio": "Lauro Muller",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.330",
+    "resumo_contexto": "… DE NOVEMBRO DE 2026 Processo nº: 48500.030842/2026-29. Interessada: Cooperativa de Eletrificação Lauro Müller - Coopermila, CNPJ nº 5.568.154/0001-83. Objeto: Declarar de utilidade pública, para instituição de servidão administrativa, em favor da interessada, a área de terra de 15 metros de largura necessária à passagem da Linha de Distribuição LMR02 - Morro da Palha, circuito simples, 13,8 kV, com aproximadamente 5,9 km de extensão, que interligará a Subestação Lauro Muller a Poste …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.330-de-16-de-novembro-de-2026-745565921",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "219",
+    "coletado_em": "2026-11-23T18:34:45-03:00"
+  },
+  {
+    "id": "1d313c7e02a866f1",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Federal",
+    "uf": "RS",
+    "municipio": "Nova Roma do Sul",
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.837",
+    "resumo_contexto": "RESOLUÇÃO AUTORIZATIVA Nº 16.837, DE 17 DE NOVEMBRO DE 2026 O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA - ANEEL, com base no art. 6º, IX, do Regimento Interno da ANEEL, resolve: Processo nº: 48500.018583/2026-68. Interessado: Foz do Prata Energia S.A. Objeto: Declarar de utilidade pública áreas necessárias à implantação da UHE Foz do Prata, CEG nº UHE.PH.RS.032517-1.01, localizadas nos municípios de Nova Roma do Sul e Veranópolis, no estado do Rio Grande do Sul. A íntegra desta …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.837-de-17-de-novembro-de-2026-745556425",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "219",
+    "coletado_em": "2026-11-23T18:34:39-03:00"
+  },
+  {
+    "id": "5ccca0cfd7b9430e",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Federal",
+    "uf": "BA",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.839",
+    "resumo_contexto": "… resolve: Processo nº: 48500.031637/2026-81. Interessado: Companhia de Eletricidade do Estado da Bahia - Neoenergia Coelba, CNPJ nº 15.139.629/0001-94. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 69/13,8 kV Vera Cruz, localizada no estado da Bahia. A íntegra desta Resolução consta dos autos e encontra-se disponível em legislacao.aneel.gov.br. SANDOVAL DE ARAÚJO FEITOSA NETO",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.839-de-17-de-novembro-de-2026-745563291",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "219",
+    "coletado_em": "2026-11-23T18:34:49-03:00"
+  },
+  {
+    "id": "e5a5df7f34ef6281",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Federal",
+    "uf": "BA",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.840",
+    "resumo_contexto": "… resolve: Processo nº: 48500.031634/2026-47. Interessado: Companhia de Eletricidade do Estado da Bahia - Neoenergia Coelba, CNPJ nº 15.139.629/0001-94. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 138/34,5/13,8 kV Porto Seguro II, localizada no estado Bahia. A íntegra desta Resolução consta dos autos e encontra-se disponível em legislacao.aneel.gov.br. SANDOVAL DE ARAÚJO FEITOSA NETO",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.840-de-17-de-novembro-de-2026-745566040",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "219",
+    "coletado_em": "2026-11-23T18:34:37-03:00"
+  },
+  {
+    "id": "01d58263a5f2e5e7",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Federal",
+    "uf": "SP",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.843",
+    "resumo_contexto": "RESOLUÇÃO AUTORIZATIVA Nº 16.843, DE 17 DE NOVEMBRO DE 2026 O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA - ANEEL, com base no art. 6º, IX, do Regimento Interno da ANEEL, resolve: Processo nº: 48500.030853/2026-17. Interessado: Elektro Redes S.A., CNPJ nº 02.328.280/0001-97. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 88/13,8 kV Santa Isabel 2, localizada no estado de São Paulo. A íntegra …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.843-de-17-de-novembro-de-2026-745557242",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "219",
+    "coletado_em": "2026-11-23T18:34:43-03:00"
+  },
+  {
+    "id": "598db6ea83a4c6e1",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Federal",
+    "uf": "SP",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.844",
+    "resumo_contexto": "… da ANEEL, resolve: Processo nº: 48500.030870/2026-46. Interessado: Companhia Paulista de Força e Luz - CPFL Paulista, CNPJ nº 33.050.196/0001-88. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 138/13,8 kV Guaiçara, localizada no estado de São Paulo. A íntegra desta Resolução consta dos autos e encontra-se disponível em legislacao.aneel.gov.br. SANDOVAL DE ARAÚJO FEITOSA NETO",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.844-de-17-de-novembro-de-2026-745579017",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "219",
+    "coletado_em": "2026-11-23T18:34:41-03:00"
+  },
+  {
+    "id": "33f0fa2a99a6c5db",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Federal",
+    "uf": "BA",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.848",
+    "resumo_contexto": "… resolve: Processo nº: 48500.031631/2026-11. Interessado: Companhia de Eletricidade do Estado da Bahia - Neoenergia Coelba, CNPJ nº 15.139.629/0001-94. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à implantação da Subestação 34,5/13,8 kV Taipus de Fora II, localizada no estado da Bahia. A íntegra desta Resolução consta dos autos e encontra-se disponível no endereço eletrônico legislacao.aneel.gov.br. SANDOVAL DE ARAÚJO FEITOSA …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.848-de-17-de-novembro-de-2026-745563210",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "219",
+    "coletado_em": "2026-11-23T18:34:47-03:00"
+  },
+  {
     "id": "78e1c1f9baa9f32a",
     "data_publicacao": "2026-11-19",
     "esfera": "Municipal",
