@@ -1,5 +1,86 @@
 [
   {
+    "id": "5ef294ff4cb89b70",
+    "data_publicacao": "2026-11-24",
+    "esfera": "Federal",
+    "uf": "RS",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "4.381",
+    "resumo_contexto": "… nº: 48500.031654/2026-18. Interessado: Cooperativa de Distribuição e Geração de Energia das Missões - Cermissões, CNPJ nº 97.081.434/0001-03. Decisão: declarar de utilidade pública, para instituição de servidão administrativa, em favor do Interessado, a área de terra necessária à passagem da Linha de Distribuição 69 kV Missões - São Miguel Arcanjo, localizada no estado do Rio Grande do Sul. A íntegra deste Despacho (e seu anexo) consta dos autos e estará disponível em …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/despacho-n-4.381-de-19-de-novembro-de-2026-745814988",
+    "tipo_ato": "Despacho",
+    "tags": [
+      "servidao",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "220",
+    "coletado_em": "2026-11-24T04:07:12-03:00"
+  },
+  {
+    "id": "7d1740de6579cac0",
+    "data_publicacao": "2026-11-24",
+    "esfera": "Federal",
+    "uf": "BR",
+    "municipio": null,
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.853",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 3 de maio de 2018 e fundamentado no que consta do Processo nº 50500.046209/2026-02, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras de ampliação de viaduto na BR-050/MG, no km 178+030 ao km 179+300. Parágrafo único. A declaração de utilidade pública …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.853-de-3-de-novembro-de-2026-745803689",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "220",
+    "coletado_em": "2026-11-24T04:07:10-03:00"
+  },
+  {
+    "id": "2f7e072a2947dcfb",
+    "data_publicacao": "2026-11-24",
+    "esfera": "Federal",
+    "uf": "RS",
+    "municipio": "Três Cachoeiras",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.958",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 03 de maio de 2018 e fundamentado no que consta do Processo nº 50505.187751/2026-66, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras do readequação de parada de ônibus na BR-101/RS, no km 36+300 no município de Três Cachoeiras/RS conforme informações …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.958-de-12-de-novembro-de-2026-745820286",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "220",
+    "coletado_em": "2026-11-24T04:07:08-03:00"
+  },
+  {
     "id": "6c0b57dad52f9791",
     "data_publicacao": "2026-11-23",
     "esfera": "Federal",
