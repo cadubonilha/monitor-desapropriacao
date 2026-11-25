@@ -81,6 +81,32 @@
     "coletado_em": "2026-11-24T04:07:08-03:00"
   },
   {
+    "id": "0c9ae8e5961af566",
+    "data_publicacao": "2026-11-24",
+    "esfera": "Municipal",
+    "uf": "AL",
+    "municipio": "Tanque d'Arca",
+    "orgao_emissor": "Prefeitura Municipal de Tanque d'Arca",
+    "numero_ato": "090",
+    "resumo_contexto": "DECRETO Nº 090 - GPTV, DE 23 DE NOVEMBRO DE 2026. “Declara de utilidade pública, para fins de desapropriação, o imóvel que menciona e dá outras providências.” www.diariomunicipal.com.br/ama 59 O PREFEITO DO MUNICÍPIO DE TEOTÔNIO VILELA, ESTADO DE ALAGOAS, no uso de suas atribuições legais, em especial pelo inciso XII do artigo 73 da Lei Orgânica do Município, artigo 5º, XXIV da Constituição Federal, Lei Municipal nº 992, de 04 de setembro de 2017 e de acordo com o disposto nos artigos 5º, …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2700000/2026-11-24/10f6a75b5cdbfd04e51442edfdeb09a874917076.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [],
+    "areas": [
+      "2.954,75 m²"
+    ],
+    "score": 10,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2709004/2026-11-24/b1bcbe20ad7c57efb46d0bdc76ec29b6.txt",
+    "edicao": "2939",
+    "coletado_em": "2026-11-25T02:50:51-03:00"
+  },
+  {
     "id": "6c0b57dad52f9791",
     "data_publicacao": "2026-11-23",
     "esfera": "Federal",
@@ -106,6 +132,32 @@
     "url_texto": null,
     "edicao": "219",
     "coletado_em": "2026-11-23T18:34:45-03:00"
+  },
+  {
+    "id": "5d711a4fb5414394",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Municipal",
+    "uf": "PR",
+    "municipio": "Londrina",
+    "orgao_emissor": "Prefeitura Municipal de Londrina",
+    "numero_ato": "14301",
+    "resumo_contexto": "… lei as doações realizadas para pessoas jurídicas de direito público, bem como as doações realizadas a associações, entidades filantrópicas ou outras entidades declaradas de utilidade pública pelo Município de Londrina. § 2º A contrapartida prevista nesta Lei não substituirá nem afastará a obrigatoriedade de adesão ao Programa Boa Praça, prevista no Art. 18 da Lei Municipal nº 5.669, de 1993, podendo ser adotada de forma complementar, mediante manifestação técnica dos órgãos competentes. Art. …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/4113700/2026-11-23/9eaf7a1785ca95b12bcf7ccaf351d5771de3b966.pdf",
+    "tipo_ato": "Lei",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Lazer/Ambiental"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 5,
+    "confianca": "media",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/4113700/2026-11-23/9eaf7a1785ca95b12bcf7ccaf351d5771de3b966.txt",
+    "edicao": "5923",
+    "coletado_em": "2026-11-25T02:50:52-03:00"
   },
   {
     "id": "1d313c7e02a866f1",
@@ -262,6 +314,37 @@
     "url_texto": null,
     "edicao": "219",
     "coletado_em": "2026-11-23T18:34:47-03:00"
+  },
+  {
+    "id": "d1364533c5f908a0",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Municipal",
+    "uf": "PR",
+    "municipio": "Londrina",
+    "orgao_emissor": "Prefeitura Municipal de Londrina",
+    "numero_ato": "1365",
+    "resumo_contexto": "DECRETO Nº 1365 DE 10 DE NOVEMBRO DE 2026 SÚMULA: Declara de utilidade pública área de terras para fins de desapropriação, destinada à pavimentação, prolongamento e duplicação da Rua Pedro Boratin. O PREFEITO DO MUNICÍPIO DE LONDRINA, ESTADO DO PARANÁ, no exercício de suas atribuições legais, em conformidade com o disposto nos artigos 2º, 5º, alíneas \"h\" e \"i\" e 6º do Decreto-Lei nº 3.365 de 1941 e considerando os processos SEI 19.021.083287/2026-22 e 19.008.171601/2026-00 e demais …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/4113700/2026-11-23/9eaf7a1785ca95b12bcf7ccaf351d5771de3b966.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "3.336"
+    ],
+    "areas": [
+      "17.630,23 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/4113700/2026-11-23/9eaf7a1785ca95b12bcf7ccaf351d5771de3b966.txt",
+    "edicao": "5923",
+    "coletado_em": "2026-11-25T02:50:52-03:00"
   },
   {
     "id": "78e1c1f9baa9f32a",

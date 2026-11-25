@@ -1,39 +1,39 @@
 {
   "fontes": {
     "querido_diario": {
-      "executado_em": "2026-11-24T17:25:42-03:00",
-      "periodo": "2026-11-20 a 2026-11-24",
+      "executado_em": "2026-11-25T02:50:54-03:00",
+      "periodo": "2026-11-21 a 2026-11-25",
       "modo": "indexacao",
-      "consultas_ok": 1,
+      "consultas_ok": 2,
       "consultas_total": 5,
-      "diarios_candidatos": 0,
-      "textos_integrais_baixados": 0,
-      "atos_extraidos": 0,
-      "novos": 0,
-      "atualizados": 0,
+      "diarios_candidatos": 6,
+      "textos_integrais_baixados": 6,
+      "atos_extraidos": 8,
+      "novos": 3,
+      "atualizados": 3,
       "erros": [
-        "consulta falhou: (\"utilidade pública\" | \"utilidade publica\") + (desapropria* | expropria*) (offset 0)",
         "consulta falhou: (\"interesse social\") + (desapropria* | expropria*) (offset 0)",
-        "consulta falhou: (\"servidão administrativa\" | \"servidao administrativa\") + decreto (offset 0)",
-        "consulta falhou: (\"3.365\" | \"3365\") + decret* (offset 0)"
+        "consulta falhou: (\"necessidade pública\" | \"necessidade publica\") + (desapropria* | expropria*) (offset 0)",
+        "consulta falhou: (\"servidão administrativa\" | \"servidao administrativa\") + decreto (offset 0)"
       ],
-      "base_api": "https://queridodiario.ok.org.br/api"
+      "base_api": "https://api.queridodiario.org.br"
     },
     "dou": {
-      "executado_em": "2026-11-24T17:27:19-03:00",
-      "periodo": "2026-11-22 a 2026-11-24",
+      "executado_em": "2026-11-25T02:53:16-03:00",
+      "periodo": "2026-11-23 a 2026-11-25",
       "modo": "leitura",
       "materias_analisadas": 7,
       "atos_extraidos": 7,
       "novos": 0,
       "atualizados": 0,
       "erros": [
-        "leitura 2026-11-24 do1: 502 Server Error: Bad Gateway for url: https://www.in.gov.br/leiturajornal?data=24-11-2026&secao=do1"
+        "leitura 2026-11-24 do1: 502 Server Error: Bad Gateway for url: https://www.in.gov.br/leiturajornal?data=24-11-2026&secao=do1",
+        "leitura 2026-11-25 do1: 502 Server Error: Bad Gateway for url: https://www.in.gov.br/leiturajornal?data=25-11-2026&secao=do1"
       ]
     },
     "dioe_pr": {
-      "executado_em": "2026-11-24T17:27:25-03:00",
-      "periodo": "2026-11-20 a 2026-11-24",
+      "executado_em": "2026-11-25T02:53:22-03:00",
+      "periodo": "2026-11-21 a 2026-11-25",
       "consultas_ok": 4,
       "consultas_total": 4,
       "paginas_analisadas": 0,
@@ -43,37 +43,16 @@
       "erros": []
     },
     "google_news_rss": {
-      "executado_em": "2026-11-24T17:56:26-03:00",
-      "periodo": "2026-11-21 a 2026-11-24",
+      "executado_em": "2026-11-25T02:54:40-03:00",
+      "periodo": "2026-11-22 a 2026-11-25",
       "ufs_consultadas": 27,
-      "consultas_ok": 0,
+      "consultas_ok": 27,
       "atos_extraidos": 0,
       "novos": 0,
       "atualizados": 0,
-      "erros": [
-        "AC: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Acre%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "AL: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Alagoas%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "AM: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Amazonas%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "AP: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Amap%C3%A1%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "BA: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Bahia%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "CE: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Cear%C3%A1%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "DF: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Distrito+Federal%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "ES: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Esp%C3%ADrito+Santo%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "GO: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Goi%C3%A1s%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "MA: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Maranh%C3%A3o%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "MG: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Minas+Gerais%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "MS: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Mato+Grosso+do+Sul%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "MT: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Mato+Grosso%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "PA: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Par%C3%A1%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "PB: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Para%C3%ADba%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "PE: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Pernambuco%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "PI: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Piau%C3%AD%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "PR: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Paran%C3%A1%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "RJ: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Rio+de+Janeiro%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-        "RN: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28%22utilidade+p%C3%BAblica%22+OR+%22interesse+social%22+OR+desapropria%C3%A7%C3%A3o%29+decreto+%22Rio+Grande+do+Norte%22+site%3Agov.br+when%3A3d&hl=pt-BR&gl=BR&ceid=BR:pt-419"
-      ]
+      "erros": []
     }
   },
-  "ultima_execucao": "2026-11-24T17:56:26-03:00",
-  "total_atos": 329
+  "ultima_execucao": "2026-11-25T02:54:40-03:00",
+  "total_atos": 332
 }
