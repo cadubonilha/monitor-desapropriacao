@@ -1,5 +1,58 @@
 [
   {
+    "id": "20f598b78f68c010",
+    "data_publicacao": "2026-11-25",
+    "esfera": "Federal",
+    "uf": "MG",
+    "municipio": null,
+    "orgao_emissor": "ANEEL",
+    "numero_ato": "16.850",
+    "resumo_contexto": "RESOLUÇÃO AUTORIZATIVA Nº 16.850, DE 17 DE NOVEMBRO DE 2026 O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA - ANEEL, com base no art. 16º, IV, do Regimento Interno da ANEEL, resolve: Processo nº: 48500.031023/2026-07. Interessado: AXIA Energia S.A., CNPJ nº 00.001.180/0001-26. Objeto: Declarar de utilidade pública, para desapropriação, em favor da interessada, a área de terra necessária à ampliação da Subestação 345 kV Poços de Caldas, localizada no estado de Minas Gerais. A íntegra …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/resolucao-autorizativa-n-16.850-de-17-de-novembro-de-2026-746085470",
+    "tipo_ato": "Resolução",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Energia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 6,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "221",
+    "coletado_em": "2026-11-25T16:34:50-03:00"
+  },
+  {
+    "id": "e468d0c525cc948e",
+    "data_publicacao": "2026-11-25",
+    "esfera": "Federal",
+    "uf": "PR",
+    "municipio": "Apucarana",
+    "orgao_emissor": "ANTT",
+    "numero_ato": "1.952",
+    "resumo_contexto": "… com o Art. 6º, X, da Resolução ANTT nº 5.818, de 3 de maio de 2018 e fundamentado no que consta do Processo nº 50500.055434/2026-21, decide: Art. 1º Declarar de utilidade pública, para fins de desapropriação e afetação a fins rodoviários em favor da União, os bens imóveis delimitados pelas poligonais descritas no Anexo desta Decisão, necessários à execução das obras do Contorno na BR-376/PR, do km 200+400 ao km 547+500 no município de Apucarana/PR conforme informações de …",
+    "url_fonte": "https://www.in.gov.br/web/dou/-/decisao-surod-n-1.952-de-12-de-novembro-de-2026-746072453",
+    "tipo_ato": "Decisão",
+    "tags": [
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Equipamento público",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [],
+    "areas": [],
+    "score": 7,
+    "confianca": "media",
+    "fonte": "dou",
+    "url_texto": null,
+    "edicao": "221",
+    "coletado_em": "2026-11-25T16:34:48-03:00"
+  },
+  {
     "id": "5ef294ff4cb89b70",
     "data_publicacao": "2026-11-24",
     "esfera": "Federal",
@@ -105,6 +158,70 @@
     "url_texto": "https://data.queridodiario.ok.org.br/2709004/2026-11-24/b1bcbe20ad7c57efb46d0bdc76ec29b6.txt",
     "edicao": "2939",
     "coletado_em": "2026-11-25T02:50:51-03:00"
+  },
+  {
+    "id": "afaefaea90e32ac0",
+    "data_publicacao": "2026-11-24",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Birigui",
+    "orgao_emissor": "Prefeitura Municipal de Birigui",
+    "numero_ato": "8.115",
+    "resumo_contexto": "DECRETO Nº 8.115, DE 27 DE OUTUBRO DE 2026 DECLARA DE UTILIDADE PÚBLICA, PARA FINS DE DESAPROPRIAÇÃO, ÁREA DE 1.987,11 M², PARTE DO IMÓVEL RURAL OBJETO DA MATRÍCULA Nº 4.508, DESTINADA AO ALARGAMENTO DA RUA SHIGUERO SAKAI, NOS TERMOS QUE ESPECIFICA. MARCELO PARIZATI, Vice-Prefeito de Birigui, do Estado de São Paulo, em substituição à Prefeita Municipal exclusivamente para a expedição deste Decreto, em razão do impedimento da titular formalizado nos autos, nos termos do art. 57 da Lei Orgânica …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3506508/2026-11-24/24ed7c8b852629d8231fdfc676107b780af4a06a.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Lazer/Ambiental",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "4.508"
+    ],
+    "areas": [
+      "1.987,11 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3506508/2026-11-24/24ed7c8b852629d8231fdfc676107b780af4a06a.txt",
+    "edicao": "1276",
+    "coletado_em": "2026-11-25T16:34:16-03:00"
+  },
+  {
+    "id": "7e6e0e72755720b2",
+    "data_publicacao": "2026-11-24",
+    "esfera": "Municipal",
+    "uf": "AL",
+    "municipio": "Marechal Deodoro",
+    "orgao_emissor": "Prefeitura Municipal de Marechal Deodoro",
+    "numero_ato": "029/2026",
+    "resumo_contexto": "… 19/2025, o Parecer nº 01/2026, o Parecer nº 02/2026 – DINC/IFAL, o Ofício nº E: 2008/2026/IMA e o Parecer nº 22/2026 – DIEX/PRDI/IFAL; DECRETA: Art. 1º Fica declarada de utilidade pública, para fins de desapropriação, por via amigável ou judicial, a área rural total de 50.000,00 m² (cinquenta mil metros quadrados), situada no Sítio Riacho Verde, s/nº, Zona Rural do Município de Mata Grande – AL, constituída pelos imóveis registrados sob a Matrícula nº 5.247 (Ficha nº 182) e Matrícula nº 511 …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2700000/2026-11-24/10f6a75b5cdbfd04e51442edfdeb09a874917076.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "matricula",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "5.247",
+      "511"
+    ],
+    "areas": [
+      "50.000,00 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2704708/2026-11-24/ac4ec792ea0e94be5cf3c62440e21aa9.txt",
+    "edicao": "2939",
+    "coletado_em": "2026-11-25T16:34:15-03:00"
   },
   {
     "id": "6c0b57dad52f9791",
@@ -314,6 +431,35 @@
     "url_texto": null,
     "edicao": "219",
     "coletado_em": "2026-11-23T18:34:47-03:00"
+  },
+  {
+    "id": "8b9de853e7db0c59",
+    "data_publicacao": "2026-11-23",
+    "esfera": "Municipal",
+    "uf": "SP",
+    "municipio": "Campinas",
+    "orgao_emissor": "Prefeitura Municipal de Campinas",
+    "numero_ato": "24.238",
+    "resumo_contexto": "… - Notificações Extrajudiciais de Oferta de Indenização por Desapropriação NOTIFICAÇÃO EXTRAJUDICIAL DE OFERTA DE INDENIZAÇÃO POR DESAPROPRIAÇÃO(Art. 10-A do Decreto-Lei nº 3.365/1941) O MUNICÍPIO DE CAMPINAS, por intermédio da Secretaria Municipal de Serviços Públicos, NOTIFICA a empresa GMV Gerenciamento de Transportes EIRELI, inscrita no CNPJ nº 09.548.787/0001-03, acerca da oferta administrativa de indenização referente à desapropriação de área declarada de utilidade pública pelo Decreto …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/3509502/2026-11-23/ca2ae7bc0d92716bb18dc06d435d89164722af21.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [],
+    "matriculas": [
+      "206.492"
+    ],
+    "areas": [
+      "121.997,80 m²"
+    ],
+    "score": 9,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/3509502/2026-11-23/ca2ae7bc0d92716bb18dc06d435d89164722af21.txt",
+    "edicao": "13953",
+    "coletado_em": "2026-11-25T16:34:16-03:00"
   },
   {
     "id": "d1364533c5f908a0",
