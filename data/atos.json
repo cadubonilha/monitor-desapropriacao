@@ -53,6 +53,86 @@
     "coletado_em": "2026-11-25T16:34:48-03:00"
   },
   {
+    "id": "da1a9c39eda91af3",
+    "data_publicacao": "2026-11-25",
+    "esfera": "Municipal",
+    "uf": "PR",
+    "municipio": "Londrina",
+    "orgao_emissor": "Prefeitura Municipal de Londrina",
+    "numero_ato": "1417",
+    "resumo_contexto": "DECRETO Nº 1417 DE 19 DE NOVEMBRO DE 2026 SÚMULA: Declara de utilidade pública área de terras para fins de desapropriação, destinada à implantação do alargamento e duplicação da Avenida Gil de Abreu e Souza. O PREFEITO DO MUNICÍPIO DE LONDRINA, ESTADO DO PARANÁ, no exercício de suas atribuições legais, em conformidade com o disposto nos artigos 2º, 5º, alíneas \"h\" e \"i\" e 6º do Decreto-Lei nº 3.365 de 1941 e considerando os processos SEI 19.008.175471/2026-76, 19.021.094224/2026-00 e demais …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/4113700/2026-11-25/5910182b8bbef03345a0ee970f90292b8388a3b6.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "matricula",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "15.098"
+    ],
+    "areas": [
+      "789,00 m²"
+    ],
+    "score": 11,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/4113700/2026-11-25/5910182b8bbef03345a0ee970f90292b8388a3b6.txt",
+    "edicao": "5925",
+    "coletado_em": "2026-11-26T02:28:54-03:00"
+  },
+  {
+    "id": "dc081efb9490a6be",
+    "data_publicacao": "2026-11-25",
+    "esfera": "Municipal",
+    "uf": "BA",
+    "municipio": "Caetité",
+    "orgao_emissor": "Prefeitura Municipal de Caetité",
+    "numero_ato": "312",
+    "resumo_contexto": "DECRETO Nº 312, DE 23 DE NOVEMBRO DE 2026. DECLARA DE UTILIDADE PÚBLICA, PARA FINS DE DE- SAPROPRIAÇÃO, A ÁREA DE TERRA QUE INDICA E DÁ OUTRAS PROVIDÊNCIAS. . . . . . . . . . . . . . . . . . . . DECRETO Nº 316, DE 25 DE NOVEMBRO DE 2026. DISPÕE SOBRE A CONCLUSÃO DO PROCESSO DE REGULARIZAÇÃO FUNDIÁRIA DO LOTE 04 DO NÚCLEO URBANO INFORMAL 09 DO BAIRRO OVÍDIO TEIXEIRA, E DÁ OUTRAS PROVIDÊNCIAS. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . …",
+    "url_fonte": "https://data.queridodiario.ok.org.br/2905206/2026-11-25/d1ba800ac9e533abcf3ea572b5b15ea91a9168d4.pdf",
+    "tipo_ato": "Decreto",
+    "tags": [
+      "coordenadas",
+      "interesse_social",
+      "matricula",
+      "urgencia",
+      "utilidade_publica"
+    ],
+    "finalidades": [
+      "Drenagem/Hídrico",
+      "Educação",
+      "Equipamento público",
+      "Habitação/Regularização",
+      "Lazer/Ambiental",
+      "Saneamento",
+      "Saúde",
+      "Viário/Rodovia"
+    ],
+    "matriculas": [
+      "12.049",
+      "8.089",
+      "8.458",
+      "10.531",
+      "10.150"
+    ],
+    "areas": [
+      "22,27 m²",
+      "33,88 m²",
+      "222,48 m²",
+      "197,63 m²",
+      "188,60 m²"
+    ],
+    "score": 12,
+    "confianca": "alta",
+    "fonte": "querido_diario",
+    "url_texto": "https://data.queridodiario.ok.org.br/2905206/2026-11-25/d1ba800ac9e533abcf3ea572b5b15ea91a9168d4.txt",
+    "edicao": "4.060",
+    "coletado_em": "2026-11-26T02:28:53-03:00"
+  },
+  {
     "id": "5ef294ff4cb89b70",
     "data_publicacao": "2026-11-24",
     "esfera": "Federal",
