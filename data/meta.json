@@ -1,7 +1,7 @@
 {
   "fontes": {
     "querido_diario": {
-      "executado_em": "2026-11-28T02:06:46-03:00",
+      "executado_em": "2026-11-28T14:49:23-03:00",
       "periodo": "2026-11-24 a 2026-11-28",
       "modo": "indexacao",
       "consultas_ok": 0,
@@ -21,7 +21,7 @@
       "base_api": null
     },
     "dou": {
-      "executado_em": "2026-11-28T02:08:32-03:00",
+      "executado_em": "2026-11-28T14:52:00-03:00",
       "periodo": "2026-11-26 a 2026-11-28",
       "modo": "leitura",
       "materias_analisadas": 0,
@@ -29,13 +29,13 @@
       "novos": 0,
       "atualizados": 0,
       "erros": [
-        "leitura 2026-11-26 do1: bloco <script id='params'> ausente (layout do in.gov.br mudou?)",
+        "leitura 2026-11-26 do1: 502 Server Error: Bad Gateway for url: https://www.in.gov.br/leiturajornal?data=26-11-2026&secao=do1",
         "leitura 2026-11-27 do1: 502 Server Error: Bad Gateway for url: https://www.in.gov.br/leiturajornal?data=27-11-2026&secao=do1",
         "leitura 2026-11-28 do1: 502 Server Error: Bad Gateway for url: https://www.in.gov.br/leiturajornal?data=28-11-2026&secao=do1"
       ]
     },
     "dioe_pr": {
-      "executado_em": "2026-11-28T02:08:39-03:00",
+      "executado_em": "2026-11-28T14:52:05-03:00",
       "periodo": "2026-11-24 a 2026-11-28",
       "consultas_ok": 4,
       "consultas_total": 4,
@@ -46,7 +46,7 @@
       "erros": []
     },
     "google_news_rss": {
-      "executado_em": "2026-11-28T02:09:57-03:00",
+      "executado_em": "2026-11-28T14:53:24-03:00",
       "periodo": "2026-11-25 a 2026-11-28",
       "ufs_consultadas": 27,
       "consultas_ok": 27,
@@ -56,6 +56,6 @@
       "erros": []
     }
   },
-  "ultima_execucao": "2026-11-28T02:09:57-03:00",
+  "ultima_execucao": "2026-11-28T14:53:24-03:00",
   "total_atos": 347
 }
